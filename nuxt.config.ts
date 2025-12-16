@@ -3,15 +3,15 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
-
   ssr: true,
 
-  devtools: { enabled: true },
+  nitro: {
+    preset: "netlify",
+  },
 
   app: {
     head: {
-      title: "mychro!",
+      title: "mychro",
       htmlAttrs: {
         lang: "en",
       },
@@ -52,6 +52,7 @@ export default defineNuxtConfig({
     ],
     langDir: "locales/",
   },
+
   colorMode: {
     classSuffix: "",
     preference: "light",
@@ -60,4 +61,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  compatibilityDate: "2025-07-15",
+  devtools: { enabled: true },
 });
