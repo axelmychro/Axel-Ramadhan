@@ -8,9 +8,9 @@ import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
-import meImage from "~/assets/images/ID_Info_Update_Card.webp";
-import philosophyImage from "~/assets/images/Curio_Written_in_Water.webp";
-import styleImage from "~/assets/images/Curio_Punklorde_Mentality.webp";
+import meImage from "/images/ID_Info_Update_Card.webp";
+import philosophyImage from "/images/Curio_Written_in_Water.webp";
+import styleImage from "/images/Curio_Punklorde_Mentality.webp";
 
 const aboutButtons = [
   {
@@ -133,12 +133,8 @@ function hidePreview() {
 
         <button
           type="button"
-          class="absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition duration-300 lg:top-8 lg:right-8 dark:bg-neutral-100"
-          :class="
-            showButtons
-              ? 'scale-0 rounded-xs opacity-0'
-              : 'scale-100 rounded-none opacity-100'
-          "
+          class="absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform duration-500 lg:top-8 lg:right-8 dark:bg-neutral-100"
+          :class="showButtons ? 'scale-0 rounded-xs' : 'scale-100 rounded-none'"
           @click="
             showButtons = true;
             selectedButton = null;
@@ -150,7 +146,7 @@ function hidePreview() {
         </button>
 
         <div
-          class="pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 duration-300 select-none *:size-8 *:text-black *:opacity-20 *:transition dark:*:text-white"
+          class="pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 select-none *:size-8 *:text-black *:opacity-20 *:transition *:duration-500 dark:*:text-white"
           :class="showButtons ? '*:scale-100' : '*:scale-0'"
         >
           <LucidePlus /><LucideSquare /><LucideX /><LucideCircle />

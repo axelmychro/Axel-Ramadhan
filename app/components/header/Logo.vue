@@ -1,16 +1,20 @@
 <template>
   <a
     tabindex="0"
-    href="#"
-    class="logo-link flex flex-row items-center gap-2 select-none group"
+    href="/"
+    class="logo-link group flex flex-row items-center gap-2 select-none"
   >
-    <img
-      src="~/assets/images/imathe.webp"
+    <NuxtImg
+      src="/images/imathe.webp"
+      width="48"
+      height="48"
+      loading="eager"
       alt="Logo"
-      class="aspect-square size-12 object-cover bg-[#0f0f0f] border-2 border-fuchsia-300 rounded-full transition duration-500 sm:opacity-0 sm:scale-0 group-hover:opacity-100 group-hover:scale-100 group-focus:opacity-100 group-focus:scale-100"
+      class="aspect-square rounded-full border-2 border-fuchsia-300 bg-[#0f0f0f] object-cover transition duration-500 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 sm:scale-0 sm:opacity-0"
     />
+
     <span
-      class="hidden sm:inline font-zain text-4xl text-sky-300 transition duration-500 -translate-x-14 group-hover:translate-x-0 group-focus:translate-x-0"
+      class="font-dela-gothic-one hidden -translate-x-14 text-4xl text-sky-300 transition duration-500 group-hover:translate-x-0 group-focus:translate-x-0 sm:inline"
     >
       mychro!
     </span>

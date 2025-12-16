@@ -1,46 +1,55 @@
 <script lang="ts" setup>
-  import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 
-  const linkItems = [
-    { label: "nav.home", icon: "House", href: "#" },
-    { label: "nav.projects", icon: "Code", href: "#projects" },
-    { label: "nav.about", icon: "Info", href: "#about" },
-    { label: "nav.timeline", icon: "Map", href: "#timeline" },
-    { label: "nav.contact", icon: "User", href: "#contact" },
-  ];
+const linkItems = [
+  { label: "nav.home", icon: "House", index: 0 },
+  { label: "nav.projects", icon: "Code", index: 1 },
+  { label: "nav.about", icon: "Info", index: 2 },
+  { label: "nav.timeline", icon: "Map", index: 3 },
+  { label: "nav.contact", icon: "User", index: 4 },
+];
 
-  const showLinks = useState("showLinks");
+const activeSectionIndex = useActiveSection();
+const isAnimating = useState<boolean>("isAnimating", () => false);
 
-  const isLargeScreen = useState(
-    "isLargeScreen",
-    () => typeof window !== "undefined" && window.innerWidth >= 1024
-  );
+function goTo(index: number) {
+  if (isAnimating.value) return;
+  activeSectionIndex.value = index;
+  closeLinks();
+}
 
-  const checkScreenSize = () => {
-    if (typeof window !== "undefined") {
-      isLargeScreen.value = window.innerWidth >= 1024;
-      if (isLargeScreen.value) {
-        showLinks.value = true;
-      }
-    }
-  };
+const showLinks = useState("showLinks");
 
-  onMounted(() => {
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-  });
-  onUnmounted(() => {
-    window.removeEventListener("resize", checkScreenSize);
-  });
+const isLargeScreen = useState(
+  "isLargeScreen",
+  () => typeof window !== "undefined" && window.innerWidth >= 1024,
+);
 
-  function handleBackdropClick() {
-    if (!isLargeScreen.value) {
-      showLinks.value = false;
+const checkScreenSize = () => {
+  if (typeof window !== "undefined") {
+    isLargeScreen.value = window.innerWidth >= 1024;
+    if (isLargeScreen.value) {
+      showLinks.value = true;
     }
   }
-  function closeLinks() {
+};
+
+onMounted(() => {
+  checkScreenSize();
+  window.addEventListener("resize", checkScreenSize);
+});
+onUnmounted(() => {
+  window.removeEventListener("resize", checkScreenSize);
+});
+
+function handleBackdropClick() {
+  if (!isLargeScreen.value) {
     showLinks.value = false;
   }
+}
+function closeLinks() {
+  showLinks.value = false;
+}
 </script>
 
 <template>
@@ -55,17 +64,20 @@
     <div
       @click="handleBackdropClick"
       v-show="showLinks || isLargeScreen"
-      class="bg-black/50 lg:bg-transparent w-full h-screen lg:h-fit absolute lg:static inset-0 pl-2 pr-14 pt-16 flex lg:p-0 z-50 flex-1"
+      class="absolute inset-0 z-50 flex h-screen w-full flex-1 bg-black/50 pt-16 pr-14 pl-2 lg:static lg:h-fit lg:bg-transparent lg:p-0"
     >
       <div
-        class="flex flex-col lg:flex-row lg:items-center justify-start lg:justify-end w-full lg:w-full h-screen lg:h-fit lg:gap-2 lg:mx-4"
+        class="flex h-screen w-full flex-col justify-start lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2"
       >
-        <a
+        <button
           v-for="item in linkItems"
           :key="item.label"
-          :href="item.href"
-          @click="closeLinks"
-          class="text-lg text-gray-100 lg:text-inherit p-2 font-oswald uppercase leading-0 flex flex-row items-center justify-between border-b-2 lg:border-transparent lg:gap-2 hover:text-sky-300 focus:text-sky-300 hover:border-sky-300 focus:border-sky-300 transition-colors duration-300"
+          @click="
+            goTo(item.index);
+            closeLinks();
+          "
+          class="font-oswald flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"
+          :class="{ 'text-sky-300': activeSectionIndex === item.index }"
         >
           <LucideHouse v-if="item.icon === 'House'" />
           <LucideCode v-else-if="item.icon === 'Code'" />
@@ -73,7 +85,7 @@
           <LucideMap v-else-if="item.icon === 'Map'" />
           <LucideUser v-else-if="item.icon === 'User'" />
           {{ $t(item.label) }}
-        </a>
+        </button>
       </div>
     </div>
   </Transition>

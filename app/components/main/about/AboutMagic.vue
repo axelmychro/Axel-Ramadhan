@@ -22,14 +22,14 @@ watch(
     } else {
       previewVisible.value = false;
     }
-  }
+  },
 );
 
 watch(
   () => props.mouse,
   (newPos) => {
     targetPosition.value = { ...newPos };
-  }
+  },
 );
 
 function startAnimation() {
@@ -50,13 +50,18 @@ onUnmounted(() => cancelAnimationFrame(animationFrame));
 
 <template>
   <div
-    class="fixed pointer-events-none select-none -z-10 transition-opacity transform -translate-x-1/2 -translate-y-1/2"
+    class="pointer-events-none fixed -z-10 -translate-x-1/2 -translate-y-1/2 transform transition-opacity select-none"
     :class="previewVisible ? 'opacity-100' : 'opacity-0'"
     :style="{
       left: `${previewPosition.x}px`,
       top: `${previewPosition.y}px`,
     }"
   >
-    <img :src="currentImage" alt="" class="min-w-64 min-h-64 object-cover" />
+    <NuxtImg
+      :src="currentImage"
+      loading="eager"
+      alt="hey! i'm a preview~"
+      class="min-h-64 min-w-64 object-cover"
+    />
   </div>
 </template>

@@ -1,49 +1,47 @@
 <template>
   <div
-    class="flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-800 sm:max-w-md md:max-w-xl"
+    class="flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-800 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
   >
     <div class="flex flex-col md:flex-row">
       <div
-        class="flex place-items-center rounded-t-md bg-neutral-950 p-2 md:max-w-32 md:rounded-tr-none md:p-0 lg:max-w-full"
+        class="flex max-h-32 place-items-center rounded-t-md bg-neutral-950 p-2 md:max-h-full md:max-w-full md:rounded-tr-none"
       >
-        <img
-          src="~/assets/images/imathe.webp"
+        <NuxtImg
+          src="/images/imathe.webp"
           alt="imathe"
-          class="pointer-events-none size-full max-h-32 object-contain select-none md:max-h-full"
+          class="pointer-events-none size-full object-scale-down select-none"
         />
       </div>
 
-      <div
-        class="flex w-full flex-col items-stretch justify-center bg-purple-800 p-2 py-4 md:rounded-tr-md"
-      >
+      <div class="flex flex-1 flex-col bg-purple-800 p-4 md:rounded-tr-md">
         <h1
-          class="font-zain text-center text-xl text-neutral-300 sm:text-2xl md:text-start"
+          class="text-center text-xl text-neutral-300 sm:text-2xl md:text-start"
         >
           {{ $t("section.home.card.greeting") }}
-          <span class="block text-2xl text-neutral-100 sm:text-4xl">
+          <span class="block text-3xl text-neutral-100 sm:text-4xl">
             Axel Ramadhan!
           </span>
         </h1>
         <h2
-          class="font-google-sans-code text-center text-lg text-purple-300 sm:text-xl md:text-start"
+          class="font-fira-code text-md text-center text-purple-300 sm:text-lg md:text-start"
         >
           Junior Frontend Developer
         </h2>
         <hr class="my-2 border-white" />
         <div
-          class="flex flex-row items-center justify-center gap-4 md:justify-end [&>a]:rounded-sm [&>a]:p-2"
+          class="[&>a]: flex flex-row items-center justify-center gap-4 md:justify-end [&>a]:rounded-sm [&>a]:p-2 [&>a>*]:size-8"
         >
           <a href="mailto:axelmychro@gmail.com" class="bg-black text-white"
-            ><lucide-mail class="size-4 sm:size-8"
+            ><lucide-mail
           /></a>
           <a
             href="https://linkedin.com/in/axelramadhan"
             target="_blank"
             class="bg-[#0077B5] text-white"
-            ><lucide-linkedin class="size-4 sm:size-8"
+            ><lucide-linkedin
           /></a>
           <a href="https://github.com/axelmychro" class="bg-black text-white"
-            ><lucide-github class="size-4 sm:size-8"
+            ><lucide-github
           /></a>
         </div>
       </div>
@@ -53,7 +51,7 @@
       <div
         class="flex w-full items-center justify-center bg-neutral-800 p-4 lg:rounded-bl-md"
       >
-        <p class="text-center text-neutral-100 sm:text-lg md:text-start">
+        <p class="sm:text-md text-center text-neutral-100 md:text-start">
           {{ $t("section.home.card.bio") }}
         </p>
       </div>

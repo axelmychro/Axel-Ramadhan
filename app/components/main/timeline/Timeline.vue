@@ -13,9 +13,10 @@
         <div class="space-y-2">
           <div class="flex">
             <img
-              class="border-r-none z-10 aspect-square size-16 rounded-l-xs border-y-2 border-l-2 border-neutral-900 object-cover p-2 backdrop-blur-xs dark:border-neutral-100"
               src="~/assets/images/USU.webp"
-              alt=""
+              loading="lazy"
+              alt="Universitas Sumatera Utara"
+              class="border-r-none z-10 aspect-square size-16 rounded-l-xs border-y-2 border-l-2 border-neutral-900 object-cover p-2 backdrop-blur-xs dark:border-neutral-100"
             />
             <div
               class="flex-1 rounded-r-xs border-2 border-neutral-900 p-2 backdrop-blur-xs dark:border-neutral-100"
@@ -29,9 +30,10 @@
 
           <div class="flex">
             <img
-              class="border-r-none z-10 aspect-square size-16 rounded-l-xs border-y-2 border-l-2 border-neutral-900 object-cover p-2 backdrop-blur-xs dark:border-neutral-100"
               src="~/assets/images/GDGoC.webp"
-              alt=""
+              loading="lazy"
+              alt="Google Developer Group on Campus"
+              class="border-r-none z-10 aspect-square size-16 rounded-l-xs border-y-2 border-l-2 border-neutral-900 object-cover p-2 backdrop-blur-xs dark:border-neutral-100"
             />
             <div
               class="flex-1 rounded-r-xs border-2 border-neutral-900 p-2 backdrop-blur-xs dark:border-neutral-100"

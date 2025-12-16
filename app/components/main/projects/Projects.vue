@@ -54,7 +54,7 @@ const projects = [
           <a
             href="https://github.com/axelmychro"
             target="_blank"
-            class="animate-float font-google-sans-code flex aspect-3/4 w-32 -rotate-4 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 dark:bg-gray-100 dark:text-gray-900"
+            class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 transition-colors duration-300 dark:bg-gray-100 dark:text-gray-900"
             ><LucideGithub class="size-16" />visit my GitHub!</a
           >
         </div>
@@ -62,3 +62,21 @@ const projects = [
     </div>
   </Section>
 </template>
+
+<style scoped>
+@media (width >= 40rem) {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(3px) rotate(6deg);
+    }
+    50% {
+      transform: translateY(-3px) rotate(3deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+</style>

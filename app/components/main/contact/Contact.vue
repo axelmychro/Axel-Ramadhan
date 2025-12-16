@@ -11,7 +11,7 @@ import Section from "~/components/Section.vue";
             <div
               class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"
             >
-              <p class="font-zain">AR</p>
+              <p>AR</p>
             </div>
             <p class="text-xl">Axel</p>
             <time>4:02</time>
@@ -46,7 +46,7 @@ import Section from "~/components/Section.vue";
             <div
               class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"
             >
-              <p class="font-zain">U</p>
+              <p>U</p>
             </div>
             <p class="text-xl">You</p>
             <time>4:11</time>
@@ -64,7 +64,7 @@ import Section from "~/components/Section.vue";
             <div
               class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"
             >
-              <p class="font-zain">AR</p>
+              <p>AR</p>
             </div>
             <p class="text-xl">Axel</p>
             <time>4:17</time>
