@@ -4,12 +4,12 @@
   >
     <div class="flex flex-col md:flex-row">
       <div
-        class="flex max-h-32 place-items-center rounded-t-md bg-neutral-950 p-2 md:max-h-full md:max-w-full md:rounded-tr-none"
+        class="flex max-h-32 items-center justify-center rounded-t-md bg-neutral-950 p-2 md:max-h-full md:max-w-full md:rounded-tr-none"
       >
         <NuxtImg
           src="/images/imathe.webp"
           alt="imathe"
-          class="pointer-events-none size-full object-scale-down select-none"
+          class="pointer-events-none size-fit object-contain select-none"
         />
       </div>
 

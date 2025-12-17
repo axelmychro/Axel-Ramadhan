@@ -39,7 +39,7 @@ const projects = [
             class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition duration-300 group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100"
           ></div>
           <h2
-            class="flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100"
+            class="flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900"
           >
             {{ project.title }}
           </h2>
