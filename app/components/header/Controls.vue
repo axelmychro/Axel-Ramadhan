@@ -5,6 +5,8 @@ const { locale, setLocale } = useI18n();
 const colorMode = useColorMode();
 const sound = ref(false);
 
+const showLinks = useState<boolean>("showLinks", () => false);
+
 function toggleLocale() {
   setLocale(locale.value === "en" ? "id" : "en");
 }
@@ -27,8 +29,12 @@ function toggleSound() {
       type="button"
       class="relative cursor-pointer transition-all duration-300 active:scale-90"
     >
-      <lucide-languages class="size-8" :class="locale" /><span
-        class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50"
+      <lucide-languages
+        class="size-8 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+      /><span
+        class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
         >{{ locale }}</span
       >
     </button>
@@ -38,9 +44,21 @@ function toggleSound() {
       type="button"
       class="cursor-pointer transition-all duration-300 active:scale-90"
     >
-      <lucide-moon v-if="colorMode.value === 'dark'" class="size-8" />
-      <lucide-sun v-else-if="colorMode.value === 'light'" class="size-8" />
-      <lucide-orbit v-else class="size-8" />
+      <lucide-moon
+        v-if="colorMode.value === 'dark'"
+        class="size-8 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+      />
+      <lucide-sun
+        v-else-if="colorMode.value === 'light'"
+        class="size-8 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+      />
+      <lucide-orbit
+        v-else
+        class="size-8 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+      />
     </button>
 
     <button
@@ -49,8 +67,16 @@ function toggleSound() {
       class="cursor-pointer transition-all duration-300 active:scale-90"
       :class="sound ? 'opacity-100' : 'opacity-50'"
     >
-      <lucide-headphone-off v-if="sound === false" class="size-8" />
-      <lucide-headphones v-else="sound === true" class="size-8" />
+      <lucide-headphone-off
+        v-if="sound === false"
+        class="size-8 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+      />
+      <lucide-headphones
+        v-else="sound === true"
+        class="size-8 transition-colors duration-300"
+        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+      />
     </button>
   </div>
 </template>

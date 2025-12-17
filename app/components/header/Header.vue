@@ -6,12 +6,12 @@ import Menu from "./Menu.vue";
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 z-10 h-16 w-full backdrop-blur-[1px]">
+  <header class="fixed top-0 left-0 h-16 w-full">
     <nav class="flex flex-row items-center justify-stretch p-2">
-      <Logo />
-      <Links />
-      <Controls />
-      <Menu />
+      <Logo class="z-50" />
+      <Links class="z-40" />
+      <Controls class="z-50" />
+      <Menu class="z-50" />
     </nav>
   </header>
 </template>

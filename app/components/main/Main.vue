@@ -65,7 +65,7 @@ const navigateToSection = (targetSectionIndex: number) => {
 </script>
 
 <template>
-  <div class="max-h-full max-w-full overflow-hidden">
+  <div class="overflow-hidden">
     <div
       class="stage flex size-full flex-row"
       @touchstart.passive="handleTouchStart"

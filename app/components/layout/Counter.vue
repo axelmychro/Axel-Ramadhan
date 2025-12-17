@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="pointer-events-none fixed right-0 bottom-16 z-40 flex h-24 w-12 items-center justify-center select-none lg:bottom-1/2 lg:w-32"
+    class="pointer-events-none fixed right-0 bottom-16 flex h-24 w-12 items-center justify-center select-none lg:bottom-1/2 lg:w-32"
   >
     <div
       class="relative flex h-full w-full flex-col justify-center lg:h-fit lg:w-fit lg:items-end"

@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["~/assets/css/main.css", "devicon/devicon.min.css"],
+  css: ["~/assets/styles/main.css", "devicon/devicon.min.css"],
 
   modules: [
     "@nuxt/eslint",

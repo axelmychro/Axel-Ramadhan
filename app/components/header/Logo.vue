@@ -2,7 +2,7 @@
   <a
     tabindex="0"
     href="/"
-    class="logo-link group flex flex-row items-center gap-2 select-none"
+    class="logo-link group flex flex-row items-center gap-2 backdrop-blur-xs select-none"
   >
     <NuxtImg
       src="/images/imathe.webp"

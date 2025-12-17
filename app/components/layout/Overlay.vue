@@ -6,50 +6,45 @@ const props = defineProps<{
 }>();
 
 const showTop = computed(() => ![1, 4].includes(props.section));
-const showRight = computed(() => true);
+const showRight = computed(() => ![4].includes(props.section));
 const showBottom = computed(() => ![3, 4].includes(props.section));
+
+const overlayBorder = (visible: boolean) => {
+  if (!visible) return "border-transparent";
+  return "border-black/50 dark:border-white/50 ";
+};
 </script>
 
 <template>
-  <!-- top lane -->
   <div
-    class="overlay-top fixed top-16 left-0 z-30 w-screen shrink-0 border-b border-black/50 dark:border-white/50"
-    :class="{ hidden: !showTop }"
+    class="overlays fixed top-16 left-0 w-screen border-b"
+    :class="[
+      showTop ? 'translate-y-0' : '-translate-y-16',
+      overlayBorder(showTop),
+    ]"
   ></div>
 
-  <!-- mid lane -->
   <div
-    class="fixed right-12 bottom-0 z-40 h-screen shrink-0 border-l border-black/50 lg:right-32 dark:border-white/50"
+    class="overlays fixed right-12 bottom-0 h-screen border-l lg:right-32"
+    :class="[
+      showRight ? 'translate-x-0' : 'translate-x-12 lg:translate-x-32',
+      overlayBorder(showRight),
+    ]"
   ></div>
 
-  <!-- anything else -->
+  <div
+    class="overlays fixed right-0 bottom-16 w-screen border-t"
+    :class="[
+      showBottom ? 'translate-y-0' : 'translate-y-16',
+      overlayBorder(showBottom),
+    ]"
+  ></div>
+
   <Counter />
-
-  <!-- mid projects -->
-
-  <!-- bot -->
-  <div
-    class="overlay-bottom fixed right-0 bottom-16 z-30 w-screen shrink-0 border-b border-black/50 dark:border-white/50"
-    :class="{ hidden: !showTop }"
-  ></div>
 </template>
 
 <style scoped>
-
-.overlay-top {
-  position: fixed;
-  top: 4rem;
-  left: 0;
-  width: 100vw;
-  border-bottom: 1px solid;
-  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+.overlays {
+  transition: 1.5s cubic-bezier(0.6, 0, 0.3, 1);
 }
-
-.overlay-top.hidden {
-  transform: translateY(-100%);
-}
-.overlay-bottom.hidden {
-  transform: translateY(100%);
-}
-
 </style>

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { onMounted, onUnmounted } from "vue";
-
 const linkItems = [
   { label: "nav.home", icon: "House", index: 0 },
   { label: "nav.projects", icon: "Code", index: 1 },
@@ -18,7 +16,7 @@ function goTo(index: number) {
   closeLinks();
 }
 
-const showLinks = useState("showLinks");
+const showLinks = useState<boolean>("showLinks", () => false);
 
 const isLargeScreen = useState(
   "isLargeScreen",
@@ -28,9 +26,6 @@ const isLargeScreen = useState(
 const checkScreenSize = () => {
   if (typeof window !== "undefined") {
     isLargeScreen.value = window.innerWidth >= 1024;
-    if (isLargeScreen.value) {
-      showLinks.value = true;
-    }
   }
 };
 
@@ -64,29 +59,36 @@ function closeLinks() {
     <div
       @click="handleBackdropClick"
       v-show="showLinks || isLargeScreen"
-      class="absolute inset-0 z-50 flex h-screen w-full flex-1 bg-black/50 pt-16 pr-14 pl-2 lg:static lg:h-fit lg:bg-transparent lg:p-0"
+      class="absolute inset-0 flex h-screen w-screen bg-black/90 pt-16 pr-12 lg:static lg:h-fit lg:w-full lg:bg-transparent lg:p-0"
     >
       <div
-        class="flex h-screen w-full flex-col justify-start lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2"
+        class="flex size-full flex-col justify-start p-4 lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2 lg:p-0"
       >
         <button
-          v-for="item in linkItems"
-          :key="item.label"
+          v-for="linkItem in linkItems"
+          :key="linkItem.label"
           @click="
-            goTo(item.index);
+            goTo(linkItem.index);
             closeLinks();
           "
           class="font-oswald flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"
-          :class="{ 'text-sky-300': activeSectionIndex === item.index }"
+          :class="{ 'text-sky-300': activeSectionIndex === linkItem.index }"
         >
-          <LucideHouse v-if="item.icon === 'House'" />
-          <LucideCode v-else-if="item.icon === 'Code'" />
-          <LucideInfo v-else-if="item.icon === 'Info'" />
-          <LucideMap v-else-if="item.icon === 'Map'" />
-          <LucideUser v-else-if="item.icon === 'User'" />
-          {{ $t(item.label) }}
+          <LucideHouse v-if="linkItem.icon === 'House'" />
+          <LucideCode v-else-if="linkItem.icon === 'Code'" />
+          <LucideInfo v-else-if="linkItem.icon === 'Info'" />
+          <LucideMap v-else-if="linkItem.icon === 'Map'" />
+          <LucideUser v-else-if="linkItem.icon === 'User'" />
+          {{ $t(linkItem.label) }}
         </button>
       </div>
+      <div
+        class="overlays fixed top-16 left-0 w-screen border-b border-white lg:hidden"
+      ></div>
+
+      <div
+        class="overlays fixed right-12 bottom-0 h-screen border-l border-white lg:right-32 lg:hidden"
+      ></div>
     </div>
   </Transition>
 </template>
