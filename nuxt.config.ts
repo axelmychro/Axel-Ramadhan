@@ -39,12 +39,10 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    provider: "ipx",
     format: ["webp"],
     quality: 50,
     presets: {
       default: {
-        provider: "ipx",
         modifiers: {
           format: "webp",
           width: "100%",
