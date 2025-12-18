@@ -10,7 +10,7 @@ const linkItems = [
 const activeSectionIndex = useActiveSection();
 const isAnimating = useState<boolean>("isAnimating", () => false);
 
-function goTo(index: number) {
+function goToSection(index: number) {
   if (isAnimating.value) return;
   activeSectionIndex.value = index;
   closeLinks();
@@ -66,12 +66,11 @@ function closeLinks() {
       >
         <button
           v-for="linkItem in linkItems"
-          :key="linkItem.label"
           @click="
-            goTo(linkItem.index);
+            goToSection(linkItem.index);
             closeLinks();
           "
-          class="font-oswald flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"
+          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"
           :class="{ 'text-sky-300': activeSectionIndex === linkItem.index }"
         >
           <LucideHouse v-if="linkItem.icon === 'House'" />
@@ -92,3 +91,5 @@ function closeLinks() {
     </div>
   </Transition>
 </template>
+
+stl

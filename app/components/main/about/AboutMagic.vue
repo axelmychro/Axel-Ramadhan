@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted } from "vue";
-
 const props = defineProps<{
   button: { image: string } | null;
   mouse: { x: number; y: number };
@@ -35,9 +33,9 @@ watch(
 function startAnimation() {
   const animate = () => {
     previewPosition.value.x +=
-      (targetPosition.value.x - previewPosition.value.x) * 0.05;
+      (targetPosition.value.x - previewPosition.value.x) * 0.025;
     previewPosition.value.y +=
-      (targetPosition.value.y - previewPosition.value.y) * 0.05;
+      (targetPosition.value.y - previewPosition.value.y) * 0.025;
 
     animationFrame = requestAnimationFrame(animate);
   };
@@ -49,19 +47,15 @@ onUnmounted(() => cancelAnimationFrame(animationFrame));
 </script>
 
 <template>
-  <div
-    class="pointer-events-none fixed -z-10 -translate-x-1/2 -translate-y-1/2 transform transition-opacity select-none"
+  <NuxtImg
+    :src="currentImage"
+    alt="hey! i'm a preview~"
+    loading="eager"
+    class="pointer-events-none absolute min-h-64 min-w-64 -translate-x-1/2 -translate-y-1/2 transform object-contain transition-opacity select-none"
     :class="previewVisible ? 'opacity-100' : 'opacity-0'"
     :style="{
       left: `${previewPosition.x}px`,
       top: `${previewPosition.y}px`,
     }"
-  >
-    <NuxtImg
-      :src="currentImage"
-      loading="eager"
-      alt="hey! i'm a preview~"
-      class="min-h-64 min-w-64 object-cover"
-    />
-  </div>
+  />
 </template>

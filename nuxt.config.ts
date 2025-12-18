@@ -38,6 +38,23 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
   ],
 
+  image: {
+    provider: "ipx",
+    format: ["webp"],
+    quality: 50,
+    presets: {
+      default: {
+        provider: "ipx",
+        modifiers: {
+          format: "webp",
+          width: "100%",
+          height: "100%",
+          quality: 50,
+        },
+      },
+    },
+  },
+
   i18n: {
     defaultLocale: "en",
     locales: [

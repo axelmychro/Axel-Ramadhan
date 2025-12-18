@@ -1,41 +1,41 @@
 {
   "nav": {
-    "home": "index",
+    "home": "beranda",
     "projects": "projects",
-    "about": "about",
-    "timeline": "timeline",
-    "contact": "contact"
+    "about": "tentang",
+    "timeline": "garis waktu",
+    "contact": "hubungi"
   },
 
   "section": {
     "home": {
-      "txt": "welcome to my world~",
+      "txt": "selamat datang~",
       "card": {
-        "greeting": "hey there, my name is...",
-        "bio": "First-year computer science student at Universitas Sumatera Utara. Junior frontend developer"
+        "greeting": "hei di sana, namaku...",
+        "bio": "mahasiswa ilmu komputer, programmer autodidak, penikmat Vue / Nuxt"
       }
     },
     "projects": {
-      "txt": "what have i done?"
+      "txt": "yang sudah kubuat sejauh ini"
     },
     "about": {
-      "txt": "curiosity is a dangerous thing, y'know..",
+      "txt": "rasa ingin tahu itu berbahaya, mungkin..",
       "me": {
-        "title": "Me",
+        "title": "Aku",
         "subtitle": "Axel Ramadhan",
-        "description": "First-year computer science student, self-taught programmer, and junior frontend developer. I build websites with Vue and/or Nuxt. Also codes with MCR playing in the background."
+        "description": "Mahasiswa tahun pertama ilmu komputer, programmer autodidak, dan junior frontend developer. Aku buat website pakai Vue / Nuxt. Seringkali ngoding sambil dengerin MCR."
       },
       "philosophy": {
-        "title": "Philosophy",
-        "subtitle": "Sharp & clear",
-        "description": "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Rounded edges? Not today, thank you. Sharp, clear, and self-explanatory features for the win. I love Vue and Nuxt.",
-        "reason": "I believe in component reusability. Smaller, focused workspaces make debugging far more efficient than monolithic structures."
+        "title": "Filosofi",
+        "subtitle": "Tajam & jelas",
+        "description": "Warna kontras, font gampang dibaca, elemen secukupnya supaya kamu bisa fokus ke layar. Corner dikasih rounded-full? Gak dulu deh, makasih. Tajam, jelas, dan fitur yang jelas pasti menang. Filosofi ini sangat pas dengan model komponen di Vue.",
+        "reason": "Aku suka komponen yang terpisah. Workspace yang lebih kecil dan terfokus membuat proses debugging jauh lebih efisien daripada struktur yang gede."
       },
 
       "style": {
         "title": "Style",
-        "subtitle": "Reference",
-        "description": "Here are some materials and references that I used throughout the website.",
+        "subtitle": "Referensi Visual",
+        "description": "Berikut material dan referensi yang aku pake di sini.",
         "colours": {
           "primary": "A",
           "secondary": "B",
@@ -43,27 +43,27 @@
           "sub_background": "BG2"
         },
         "fonts": {
-          "title": "title",
+          "title": "judul",
           "section": "section",
-          "paragraph": "paragraph",
-          "code": "code",
+          "paragraph": "paragraf",
+          "code": "kode",
           "jp": "カタカナ"
         }
       }
     },
     "timeline": {
-      "txt": "tempus fugit...",
+      "txt": "waktu berlalu tanpa bisa dihindari,",
       "august": {
-        "name": "August",
-        "description": "Started studying at Universitas Sumatera Utara"
+        "name": "Agustus",
+        "description": "Mulai kuliah di Universitas Sumatera Utara"
       },
       "october": {
-        "name": "October",
-        "description": "Selected by GDGoC USU as a member of Web Development Pathway"
+        "name": "Oktober",
+        "description": "Terpilih oleh GDGoC USU sebagai member Web Development Pathway"
       }
     },
     "contact": {
-      "txt": "wow, you made it here!"
+      "txt": "wah, kamu sampe sini!"
     }
   }
 }

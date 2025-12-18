@@ -10,28 +10,28 @@ var section = {
 		txt: "welcome to my world~",
 		card: {
 			greeting: "hey there, my name is...",
-			bio: "First-year computer science student at Universitas Sumatera Utara. Junior frontend developer"
+			bio: "computer science student, self-taught programmer, Vue / Nuxt enthusiast"
 		}
 	},
 	projects: {
-		txt: "what have i done?"
+		txt: "things i've built so far"
 	},
 	about: {
 		txt: "curiosity is a dangerous thing, y'know..",
 		me: {
 			title: "Me",
 			subtitle: "Axel Ramadhan",
-			description: "First-year computer science student, self-taught programmer, and junior frontend developer. I build websites with Vue and/or Nuxt. Also codes with MCR playing in the background."
+			description: "First-year computer science student, self-taught programmer, and junior frontend developer. I build websites with Vue / Nuxt. Often codes with MCR playing in the background."
 		},
 		philosophy: {
 			title: "Philosophy",
 			subtitle: "Sharp & clear",
-			description: "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Rounded edges? Not today, thank you. Sharp, clear, and self-explanatory features for the win. I love Vue and Nuxt.",
+			description: "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Rounded edges? Not today, thank you. Sharp, clear, and self-explanatory features for the win. This philosophy translates well to Vue component model.",
 			reason: "I believe in component reusability. Smaller, focused workspaces make debugging far more efficient than monolithic structures."
 		},
 		style: {
 			title: "Style",
-			subtitle: "Reference",
+			subtitle: "Visual Reference",
 			description: "Here are some materials and references that I used throughout the website.",
 			colours: {
 				primary: "A",
@@ -49,14 +49,14 @@ var section = {
 		}
 	},
 	timeline: {
-		txt: "tempus fugit...",
+		txt: "fugit irreparabile tempus,",
 		august: {
 			name: "August",
 			description: "Started studying at Universitas Sumatera Utara"
 		},
 		october: {
 			name: "October",
-			description: "Selected by GDGoC USU as a member of Web Development Pathway"
+			description: "Selected by GDGoC USU as a member of the Web Development Pathway"
 		}
 	},
 	contact: {

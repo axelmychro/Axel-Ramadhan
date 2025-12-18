@@ -1044,7 +1044,7 @@ const localeLoaders = {
     {
       key: "locale_en_46json_65d8289e",
       load: () => import(
-        './en-_c-ZoojZ.mjs'
+        './en-CSrNtgNt.mjs'
         /* webpackChunkName: "locale_en_46json_65d8289e" */
       ),
       cache: true
@@ -1054,7 +1054,7 @@ const localeLoaders = {
     {
       key: "locale_id_46json_df36fd1d",
       load: () => import(
-        './id-_c-ZoojZ.mjs'
+        './id-CTn7GfP-.mjs'
         /* webpackChunkName: "locale_id_46json_df36fd1d" */
       ),
       cache: true
@@ -1335,7 +1335,7 @@ function createNuxtI18nContext(nuxt, vueI18n, defaultLocale) {
       return;
     }
     const headers = getLocaleConfig(locale)?.cacheable ? {} : { "Cache-Control": "no-cache" };
-    const messages = await $fetch(`${"/_i18n/6mVo0nMo"}/${locale}/messages.json`, { headers });
+    const messages = await $fetch(`${"/_i18n/0hvc9fC0"}/${locale}/messages.json`, { headers });
     for (const k of Object.keys(messages)) {
       i18n.mergeLocaleMessage(k, messages[k]);
     }
@@ -5558,7 +5558,7 @@ const i18n_R4L3_2QqpyuogZCeWTmjuUDycmco0uL5D25zhgUk5Lo = /* @__PURE__ */ defineN
     {
       localeConfigs.value = useRequestEvent().context.nuxtI18n?.localeConfigs || {};
     }
-    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/6mVo0nMo"}/${locale}/messages.json`));
+    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/0hvc9fC0"}/${locale}/messages.json`));
     const i18n = createI18n(optionsI18n);
     const detectors = useDetectors(useRequestEvent(nuxt), useI18nDetection(nuxt), nuxt);
     const ctx = createNuxtI18nContext(nuxt, i18n, optionsI18n.defaultLocale);
@@ -6003,7 +6003,17 @@ const imageOptions = {
       "xl": 1280,
       "2xl": 1536
     },
-    "presets": {},
+    "presets": {
+      "default": {
+        "provider": "ipx",
+        "modifiers": {
+          "format": "webp",
+          "width": "100%",
+          "height": "100%",
+          "quality": 50
+        }
+      }
+    },
     "provider": "ipx",
     "domains": [],
     "alias": {},
@@ -6012,8 +6022,10 @@ const imageOptions = {
       2
     ],
     "format": [
+      "webp",
       "webp"
-    ]
+    ],
+    "quality": 50
   },
   /** @type {"ipx"} */
   provider: "ipx",
@@ -6058,7 +6070,7 @@ const useImageProps = (props) => {
   });
   return { providerOptions, normalizedAttrs, imageModifiers };
 };
-const _sfc_main$j = {
+const _sfc_main$l = {
   __name: "NuxtImg",
   __ssrInlineRender: true,
   props: {
@@ -6161,13 +6173,13 @@ const _sfc_main$j = {
     };
   }
 };
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/@nuxt+image@2.0.0_db0@0.3.4_ioredis@5.8.2_magicast@0.5.1/node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const __nuxt_component_0 = Object.assign(_sfc_main$j, { __name: "NuxtImg" });
+const __nuxt_component_0 = Object.assign(_sfc_main$l, { __name: "NuxtImg" });
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -6175,31 +6187,29 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$i = {};
-function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
+const _sfc_main$k = {};
+function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
   const _component_NuxtImg = __nuxt_component_0;
   _push(`<a${ssrRenderAttrs(mergeProps({
     tabindex: "0",
     href: "/",
-    class: "logo-link group flex flex-row items-center gap-2 select-none"
+    class: "logo-link group flex flex-row items-center gap-2 backdrop-blur-xs select-none"
   }, _attrs))}>`);
   _push(ssrRenderComponent(_component_NuxtImg, {
     src: "/images/imathe.webp",
-    width: "48",
-    height: "48",
     loading: "eager",
     alt: "Logo",
-    class: "aspect-square rounded-full border-2 border-fuchsia-300 bg-[#0f0f0f] object-cover transition duration-500 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 sm:scale-0 sm:opacity-0"
+    class: "aspect-square size-12 rounded-full border-2 border-fuchsia-300 bg-[#0f0f0f] object-cover transition duration-500 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 sm:scale-0 sm:opacity-0"
   }, null, _parent));
   _push(`<span class="font-dela-gothic-one hidden -translate-x-14 text-4xl text-sky-300 transition duration-500 group-hover:translate-x-0 group-focus:translate-x-0 sm:inline"> mychro! </span></a>`);
 }
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/header/Logo.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const Logo = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$i, [["ssrRender", _sfc_ssrRender$3]]), { __name: "HeaderLogo" });
+const Logo = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$k, [["ssrRender", _sfc_ssrRender$4]]), { __name: "HeaderLogo" });
 const toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 const toCamelCase = (string) => string.replace(
   /^([A-Z])|[\s-_]+(\w)/g,
@@ -6422,7 +6432,7 @@ const X = createLucideIcon("x", [
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ]);
 const useActiveSection = () => useState("activeSection", () => 0);
-const _sfc_main$h = /* @__PURE__ */ defineComponent({
+const _sfc_main$j = /* @__PURE__ */ defineComponent({
   __name: "Links",
   __ssrInlineRender: true,
   setup(__props) {
@@ -6435,7 +6445,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
     ];
     const activeSectionIndex = useActiveSection();
     useState("isAnimating", () => false);
-    const showLinks = useState("showLinks");
+    const showLinks = useState("showLinks", () => false);
     const isLargeScreen = useState(
       "isLargeScreen",
       () => false
@@ -6446,47 +6456,48 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       const _component_LucideInfo = Info;
       const _component_LucideMap = Map$1;
       const _component_LucideUser = User;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "absolute inset-0 z-50 flex h-screen w-full flex-1 bg-black/50 pt-16 pr-14 pl-2 lg:static lg:h-fit lg:bg-transparent lg:p-0" }, _attrs, {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "absolute inset-0 flex h-screen w-screen bg-black/90 pt-16 pr-12 lg:static lg:h-fit lg:w-full lg:bg-transparent lg:p-0" }, _attrs, {
         style: unref(showLinks) || unref(isLargeScreen) ? null : { display: "none" }
-      }))}><div class="flex h-screen w-full flex-col justify-start lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2"><!--[-->`);
-      ssrRenderList(linkItems, (item) => {
-        _push(`<button class="${ssrRenderClass([{ "text-sky-300": unref(activeSectionIndex) === item.index }, "font-oswald flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"])}">`);
-        if (item.icon === "House") {
+      }))}><div class="flex size-full flex-col justify-start p-4 lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2 lg:p-0"><!--[-->`);
+      ssrRenderList(linkItems, (linkItem) => {
+        _push(`<button class="${ssrRenderClass([{ "text-sky-300": unref(activeSectionIndex) === linkItem.index }, "font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"])}">`);
+        if (linkItem.icon === "House") {
           _push(ssrRenderComponent(_component_LucideHouse, null, null, _parent));
-        } else if (item.icon === "Code") {
+        } else if (linkItem.icon === "Code") {
           _push(ssrRenderComponent(_component_LucideCode, null, null, _parent));
-        } else if (item.icon === "Info") {
+        } else if (linkItem.icon === "Info") {
           _push(ssrRenderComponent(_component_LucideInfo, null, null, _parent));
-        } else if (item.icon === "Map") {
+        } else if (linkItem.icon === "Map") {
           _push(ssrRenderComponent(_component_LucideMap, null, null, _parent));
-        } else if (item.icon === "User") {
+        } else if (linkItem.icon === "User") {
           _push(ssrRenderComponent(_component_LucideUser, null, null, _parent));
         } else {
           _push(`<!---->`);
         }
-        _push(` ${ssrInterpolate(_ctx.$t(item.label))}</button>`);
+        _push(` ${ssrInterpolate(_ctx.$t(linkItem.label))}</button>`);
       });
-      _push(`<!--]--></div></div>`);
+      _push(`<!--]--></div><div class="overlays fixed top-16 left-0 w-screen border-b border-white lg:hidden"></div><div class="overlays fixed right-12 bottom-0 h-screen border-l border-white lg:right-32 lg:hidden"></div></div>`);
     };
   }
 });
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/header/Links.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const Links = Object.assign(_sfc_main$h, { __name: "HeaderLinks" });
+const Links = Object.assign(_sfc_main$j, { __name: "HeaderLinks" });
 const useColorMode = () => {
   return useState("color-mode").value;
 };
-const _sfc_main$g = /* @__PURE__ */ defineComponent({
+const _sfc_main$i = /* @__PURE__ */ defineComponent({
   __name: "Controls",
   __ssrInlineRender: true,
   setup(__props) {
     const { locale, setLocale } = useI18n();
     const colorMode = useColorMode();
     const sound = ref(false);
+    const showLinks = useState("showLinks", () => false);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_lucide_languages = Languages;
       const _component_lucide_moon = Moon;
@@ -6496,78 +6507,88 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       const _component_lucide_headphones = Headphones;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-1 flex-row items-center justify-end gap-2 px-4 lg:flex-none lg:p-0" }, _attrs))}><button type="button" class="relative cursor-pointer transition-all duration-300 active:scale-90">`);
       _push(ssrRenderComponent(_component_lucide_languages, {
-        class: ["size-8", unref(locale)]
+        class: ["size-8 transition-colors duration-300", unref(showLinks) ? "text-gray-100" : "text-inherit"]
       }, null, _parent));
-      _push(`<span class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50">${ssrInterpolate(unref(locale))}</span></button><button type="button" class="cursor-pointer transition-all duration-300 active:scale-90">`);
+      _push(`<span class="${ssrRenderClass([unref(showLinks) ? "text-gray-100" : "text-inherit", "font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50 transition-colors duration-300"])}">${ssrInterpolate(unref(locale))}</span></button><button type="button" class="cursor-pointer transition-all duration-300 active:scale-90">`);
       if (unref(colorMode).value === "dark") {
-        _push(ssrRenderComponent(_component_lucide_moon, { class: "size-8" }, null, _parent));
+        _push(ssrRenderComponent(_component_lucide_moon, {
+          class: ["size-8 transition-colors duration-300", unref(showLinks) ? "text-gray-100" : "text-inherit"]
+        }, null, _parent));
       } else if (unref(colorMode).value === "light") {
-        _push(ssrRenderComponent(_component_lucide_sun, { class: "size-8" }, null, _parent));
+        _push(ssrRenderComponent(_component_lucide_sun, {
+          class: ["size-8 transition-colors duration-300", unref(showLinks) ? "text-gray-100" : "text-inherit"]
+        }, null, _parent));
       } else {
-        _push(ssrRenderComponent(_component_lucide_orbit, { class: "size-8" }, null, _parent));
+        _push(ssrRenderComponent(_component_lucide_orbit, {
+          class: ["size-8 transition-colors duration-300", unref(showLinks) ? "text-gray-100" : "text-inherit"]
+        }, null, _parent));
       }
       _push(`</button><button type="button" class="${ssrRenderClass([sound.value ? "opacity-100" : "opacity-50", "cursor-pointer transition-all duration-300 active:scale-90"])}">`);
       if (sound.value === false) {
-        _push(ssrRenderComponent(_component_lucide_headphone_off, { class: "size-8" }, null, _parent));
+        _push(ssrRenderComponent(_component_lucide_headphone_off, {
+          class: ["size-8 transition-colors duration-300", unref(showLinks) ? "text-gray-100" : "text-inherit"]
+        }, null, _parent));
       } else {
-        _push(ssrRenderComponent(_component_lucide_headphones, { class: "size-8" }, null, _parent));
+        _push(ssrRenderComponent(_component_lucide_headphones, {
+          class: ["size-8 transition-colors duration-300", unref(showLinks) ? "text-gray-100" : "text-inherit"]
+        }, null, _parent));
       }
       _push(`</button></div>`);
     };
   }
 });
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/header/Controls.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
-const Controls = Object.assign(_sfc_main$g, { __name: "HeaderControls" });
-const _sfc_main$f = /* @__PURE__ */ defineComponent({
+const Controls = Object.assign(_sfc_main$i, { __name: "HeaderControls" });
+const _sfc_main$h = /* @__PURE__ */ defineComponent({
   __name: "Menu",
   __ssrInlineRender: true,
   setup(__props) {
-    useState("showLinks", () => false);
+    const showLinks = useState("showLinks", () => false);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_lucide_menu = Menu$1;
       _push(`<button${ssrRenderAttrs(mergeProps({
         type: "button",
-        class: "lg:hidden flex items-center justify-center cursor-pointer"
+        class: ["flex cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden", unref(showLinks) ? "text-gray-100" : "text-inherit"]
       }, _attrs))}>`);
       _push(ssrRenderComponent(_component_lucide_menu, { class: "size-8" }, null, _parent));
       _push(`</button>`);
     };
   }
 });
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/header/Menu.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const Menu = Object.assign(_sfc_main$f, { __name: "HeaderMenu" });
-const _sfc_main$e = /* @__PURE__ */ defineComponent({
+const Menu = Object.assign(_sfc_main$h, { __name: "HeaderMenu" });
+const _sfc_main$g = /* @__PURE__ */ defineComponent({
   __name: "Header",
   __ssrInlineRender: true,
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "fixed top-0 left-0 z-10 h-16 w-full backdrop-blur-[1px]" }, _attrs))}><nav class="flex flex-row items-center justify-stretch p-2">`);
-      _push(ssrRenderComponent(Logo, null, null, _parent));
-      _push(ssrRenderComponent(Links, null, null, _parent));
-      _push(ssrRenderComponent(Controls, null, null, _parent));
-      _push(ssrRenderComponent(Menu, null, null, _parent));
+      _push(`<header${ssrRenderAttrs(mergeProps({ class: "fixed top-0 left-0 h-16 w-full" }, _attrs))}><nav class="flex flex-row items-center justify-stretch p-2">`);
+      _push(ssrRenderComponent(Logo, { class: "z-50" }, null, _parent));
+      _push(ssrRenderComponent(Links, { class: "z-40" }, null, _parent));
+      _push(ssrRenderComponent(Controls, { class: "z-50" }, null, _parent));
+      _push(ssrRenderComponent(Menu, { class: "z-50" }, null, _parent));
       _push(`</nav></header>`);
     };
   }
 });
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/header/Header.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
-const Header = Object.assign(_sfc_main$e, { __name: "Header" });
-const _sfc_main$d = /* @__PURE__ */ defineComponent({
+const Header = Object.assign(_sfc_main$g, { __name: "Header" });
+const _sfc_main$f = /* @__PURE__ */ defineComponent({
   __name: "Section",
   __ssrInlineRender: true,
   props: {
@@ -6584,41 +6605,43 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Section.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const Section = Object.assign(_sfc_main$d, { __name: "Section" });
-const _sfc_main$c = {};
-function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
+const Section = Object.assign(_sfc_main$f, { __name: "Section" });
+const _sfc_main$e = {};
+function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
   const _component_NuxtImg = __nuxt_component_0;
   const _component_lucide_mail = Mail;
   const _component_lucide_linkedin = Linkedin;
   const _component_lucide_github = Github;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-800 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" }, _attrs))}><div class="flex flex-col md:flex-row"><div class="flex max-h-32 place-items-center rounded-t-md bg-neutral-950 p-2 md:max-h-full md:max-w-full md:rounded-tr-none">`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-800 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" }, _attrs))}><div class="flex flex-col md:flex-row"><div class="flex max-h-32 items-center justify-center rounded-t-md bg-neutral-950 p-2 md:max-h-full md:max-w-full md:rounded-tr-none">`);
   _push(ssrRenderComponent(_component_NuxtImg, {
     src: "/images/imathe.webp",
     alt: "imathe",
-    class: "pointer-events-none size-full object-scale-down select-none"
+    placeholder: "true",
+    loading: "eager",
+    class: "pointer-events-none object-contain select-none"
   }, null, _parent));
-  _push(`</div><div class="flex flex-1 flex-col bg-purple-800 p-4 md:rounded-tr-md"><h1 class="text-center text-xl text-neutral-300 sm:text-2xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.greeting"))} <span class="block text-3xl text-neutral-100 sm:text-4xl"> Axel Ramadhan! </span></h1><h2 class="font-fira-code text-md text-center text-purple-300 sm:text-lg md:text-start"> Junior Frontend Developer </h2><hr class="my-2 border-white"><div class="[&amp;&gt;a]: flex flex-row items-center justify-center gap-4 md:justify-end [&amp;&gt;a]:rounded-sm [&amp;&gt;a]:p-2 [&amp;&gt;a&gt;*]:size-8"><a href="mailto:axelmychro@gmail.com" class="bg-black text-white">`);
+  _push(`</div><div class="flex flex-1 flex-col bg-purple-800 p-4 md:rounded-tr-md"><h1 class="text-center text-xl text-neutral-300 sm:text-2xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.greeting"))} <span class="block text-3xl text-neutral-100 sm:text-4xl"> Axel Ramadhan! </span></h1><h2 class="font-fira-code text-center text-purple-300 sm:text-lg md:text-start"> Junior Frontend Developer </h2><hr class="my-2 border-white"><div class="[&amp;&gt;a]: flex flex-row items-center justify-center gap-4 md:justify-end [&amp;&gt;a]:rounded-sm [&amp;&gt;a]:p-2 [&amp;&gt;a&gt;*]:size-8"><a href="mailto:axelmychro@gmail.com" class="bg-black text-white">`);
   _push(ssrRenderComponent(_component_lucide_mail, null, null, _parent));
   _push(`</a><a href="https://linkedin.com/in/axelramadhan" target="_blank" class="bg-[#0077B5] text-white">`);
   _push(ssrRenderComponent(_component_lucide_linkedin, null, null, _parent));
   _push(`</a><a href="https://github.com/axelmychro" class="bg-black text-white">`);
   _push(ssrRenderComponent(_component_lucide_github, null, null, _parent));
-  _push(`</a></div></div></div><div class="flex flex-col lg:flex-row"><div class="flex w-full items-center justify-center bg-neutral-800 p-4 lg:rounded-bl-md"><p class="sm:text-md text-center text-neutral-100 md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.bio"))}</p></div><div class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-3 lg:justify-center lg:rounded-bl-none [&amp;&gt;i]:leading-none [&amp;&gt;i]:grayscale-75 [&amp;&gt;i]:transition [&amp;&gt;i]:duration-300 [&amp;&gt;i]:hover:grayscale-0 [&amp;&gt;i]:sm:text-xl"><i class="devicon-nodejs-plain colored"></i><i class="devicon-vuejs-plain colored"></i><i class="devicon-nuxt-original colored"></i><i class="devicon-javascript-plain colored"></i><i class="devicon-git-plain colored"></i><i class="devicon-figma-plain colored"></i><i class="devicon-typescript-plain colored"></i><i class="devicon-tailwindcss-original colored"></i><i class="devicon-vite-plain colored"></i></div></div></div>`);
+  _push(`</a></div></div></div><div class="flex flex-col lg:flex-row"><div class="flex flex-1 items-center justify-center bg-neutral-800 p-4 lg:rounded-bl-md"><p class="text-center text-lg text-neutral-100 sm:text-xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.bio"))}</p></div><div class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-3 lg:justify-center lg:rounded-bl-none [&amp;&gt;i]:leading-none [&amp;&gt;i]:grayscale-75 [&amp;&gt;i]:transition [&amp;&gt;i]:duration-300 [&amp;&gt;i]:hover:grayscale-0 [&amp;&gt;i]:sm:text-xl"><i class="devicon-nodejs-plain colored"></i><i class="devicon-vuejs-plain colored"></i><i class="devicon-nuxt-original colored"></i><i class="devicon-javascript-plain colored"></i><i class="devicon-git-plain colored"></i><i class="devicon-figma-plain colored"></i><i class="devicon-typescript-plain colored"></i><i class="devicon-tailwindcss-original colored"></i><i class="devicon-vite-plain colored"></i></div></div></div>`);
 }
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/hero/HeroCard.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const HeroCard = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$c, [["ssrRender", _sfc_ssrRender$2]]), { __name: "MainHeroCard" });
-const _sfc_main$b = {
+const HeroCard = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender$3]]), { __name: "MainHeroCard" });
+const _sfc_main$d = {
   __name: "MainHero",
   __ssrInlineRender: true,
   setup(__props) {
@@ -6645,15 +6668,15 @@ const _sfc_main$b = {
     };
   }
 };
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/hero/Hero.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const Hero = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-9ce59891"]]);
+const Hero = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-9ce59891"]]);
 const myGH = "https://github.com/axelmychro/";
-const _sfc_main$a = /* @__PURE__ */ defineComponent({
+const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "Projects",
   __ssrInlineRender: true,
   setup(__props) {
@@ -6687,13 +6710,13 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex size-full flex-col" data-v-a63c3142${_scopeId}><div class="flex size-full flex-col items-stretch justify-stretch" data-v-a63c3142${_scopeId}><!--[-->`);
+            _push2(`<div class="flex size-full flex-col" data-v-f9050ca3${_scopeId}><div class="flex size-full flex-col items-stretch justify-stretch" data-v-f9050ca3${_scopeId}><!--[-->`);
             ssrRenderList(projects, (project) => {
-              _push2(`<a${ssrRenderAttr("href", project.url)} target="_blank" class="group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4" data-v-a63c3142${_scopeId}><div class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition duration-300 group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100" data-v-a63c3142${_scopeId}></div><h2 class="flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100" data-v-a63c3142${_scopeId}>${ssrInterpolate(project.title)}</h2><time${ssrRenderAttr("datetime", project.date)} class="text-2xl text-fuchsia-500 transition-colors" data-v-a63c3142${_scopeId}>${ssrInterpolate(project.year)}</time>`);
+              _push2(`<a${ssrRenderAttr("href", project.url)} target="_blank" class="group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4" data-v-f9050ca3${_scopeId}><div class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition duration-300 group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100" data-v-f9050ca3${_scopeId}></div><h2 class="flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900" data-v-f9050ca3${_scopeId}>${ssrInterpolate(project.title)}</h2><time${ssrRenderAttr("datetime", project.date)} class="text-2xl text-fuchsia-500 transition-colors" data-v-f9050ca3${_scopeId}>${ssrInterpolate(project.year)}</time>`);
               _push2(ssrRenderComponent(_component_LucideArrowUpRight, { class: "size-8 text-sky-500" }, null, _parent2, _scopeId));
               _push2(`</a>`);
             });
-            _push2(`<!--]--><div class="flex h-full w-full items-center justify-center select-none" data-v-a63c3142${_scopeId}><a href="https://github.com/axelmychro" target="_blank" class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 transition-colors duration-300 dark:bg-gray-100 dark:text-gray-900" data-v-a63c3142${_scopeId}>`);
+            _push2(`<!--]--><div class="flex h-full w-full items-center justify-center select-none" data-v-f9050ca3${_scopeId}><a href="https://github.com/axelmychro" target="_blank" class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 transition-colors duration-300 dark:bg-gray-100 dark:text-gray-900" data-v-f9050ca3${_scopeId}>`);
             _push2(ssrRenderComponent(_component_LucideGithub, { class: "size-16" }, null, _parent2, _scopeId));
             _push2(`visit my GitHub!</a></div></div></div>`);
           } else {
@@ -6708,7 +6731,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
                       class: "group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4"
                     }, [
                       createVNode("div", { class: "absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition duration-300 group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100" }),
-                      createVNode("h2", { class: "flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100" }, toDisplayString$1(project.title), 1),
+                      createVNode("h2", { class: "flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900" }, toDisplayString$1(project.title), 1),
                       createVNode("time", {
                         datetime: project.date,
                         class: "text-2xl text-fuchsia-500 transition-colors"
@@ -6736,18 +6759,18 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/projects/Projects.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const Projects = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$a, [["__scopeId", "data-v-a63c3142"]]), { __name: "MainProjects" });
+const Projects = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$c, [["__scopeId", "data-v-f9050ca3"]]), { __name: "MainProjects" });
 const _imports_0$1 = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3e%3cpath%20fill='none'%20d='M0%200h16v16H0z'/%3e%3cpath%20fill='%23F29900'%20d='M13.5%202H8L1%2013h5.5z'/%3e%3cpath%20fill='%231A73E8'%20d='M8%202h5v11H8z'/%3e%3ccircle%20fill='%23EA4335'%20cx='3.25'%20cy='4.25'%20r='2.25'/%3e%3cpath%20fill='%230D652D'%20d='M13.33%2010L13%2013c-1.66%200-3-1.34-3-3s1.34-3%203-3l.33%203z'/%3e%3cpath%20fill='%23174EA6'%20d='M10.5%204.5A2.5%202.5%200%200113%202l.45%202.5L13%207a2.5%202.5%200%2001-2.5-2.5z'/%3e%3cpath%20fill='%231A73E8'%20d='M13%202a2.5%202.5%200%20010%205'/%3e%3cpath%20fill='%2334A853'%20d='M13%207c1.66%200%203%201.34%203%203s-1.34%203-3%203'/%3e%3c/svg%3e";
 const l7dColours = `section.about.style.colours.`;
 const l7dFonts = `section.about.style.fonts.`;
 const fontsSpecimen = "https://fonts.google.com/specimen/";
-const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "AboutCard",
   __ssrInlineRender: true,
   props: {
@@ -6816,7 +6839,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       {
         name: fonts.section,
         url: `${fontsSpecimen}Oswald`,
-        class: "font-oswald uppercase text-lg"
+        class: "font-oswald uppercase text-lg text-neutral-900 dark:text-neutral-100"
       },
       {
         name: fonts.paragraph,
@@ -6869,14 +6892,14 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/about/AboutCard.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const AboutCard = Object.assign(_sfc_main$9, { __name: "MainAboutCard" });
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+const AboutCard = Object.assign(_sfc_main$b, { __name: "MainAboutCard" });
+const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __name: "AboutMagic",
   __ssrInlineRender: true,
   props: {
@@ -6908,38 +6931,56 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     );
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtImg = __nuxt_component_0;
-      _push(`<div${ssrRenderAttrs(mergeProps({
-        class: ["pointer-events-none fixed -z-10 -translate-x-1/2 -translate-y-1/2 transform transition-opacity select-none", previewVisible.value ? "opacity-100" : "opacity-0"],
-        style: {
-          left: `${previewPosition.value.x}px`,
-          top: `${previewPosition.value.y}px`
-        }
-      }, _attrs))}>`);
-      _push(ssrRenderComponent(_component_NuxtImg, {
-        src: currentImage.value,
-        loading: "eager",
+      _push(ssrRenderComponent(_component_NuxtImg, mergeProps({
+        src: unref(currentImage),
         alt: "hey! i'm a preview~",
-        class: "min-h-64 min-w-64 object-cover"
-      }, null, _parent));
-      _push(`</div>`);
+        loading: "eager",
+        class: ["pointer-events-none absolute min-h-64 min-w-64 -translate-x-1/2 -translate-y-1/2 transform object-contain transition-opacity select-none", unref(previewVisible) ? "opacity-100" : "opacity-0"],
+        style: {
+          left: `${unref(previewPosition).x}px`,
+          top: `${unref(previewPosition).y}px`
+        }
+      }, _attrs), null, _parent));
     };
   }
 });
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/about/AboutMagic.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const AboutMagic = Object.assign(_sfc_main$8, { __name: "MainAboutMagic" });
+const AboutMagic = Object.assign(_sfc_main$a, { __name: "MainAboutMagic" });
 const meImage = publicAssetsURL("/images/ID_Info_Update_Card.webp");
 const philosophyImage = publicAssetsURL("/images/Curio_Written_in_Water.webp");
 const styleImage = publicAssetsURL("/images/Curio_Punklorde_Mentality.webp");
-const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "About",
   __ssrInlineRender: true,
   setup(__props) {
     const { t } = useI18n();
+    useHead({
+      link: [
+        {
+          rel: "preload",
+          as: "image",
+          href: meImage,
+          type: "image/webp"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: philosophyImage,
+          type: "image/webp"
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: styleImage,
+          type: "image/webp"
+        }
+      ]
+    });
     const aboutButtons = [
       {
         id: "me",
@@ -6998,48 +7039,49 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="${ssrRenderClass([showButtons.value ? "flex-row gap-8 lg:p-8" : "flex-row gap-0 p-0", "flex size-full transition-all duration-1000"])}"${_scopeId}><div class="${ssrRenderClass([
-              showButtons.value ? "max-w-xs translate-x-0 p-2 opacity-100 blur-none lg:p-0" : "max-w-0 -translate-x-full p-0 opacity-0 blur-3xl",
+            _push2(`<div class="${ssrRenderClass([unref(showButtons) ? "flex-row gap-8 lg:p-8" : "flex-row gap-0 p-0", "flex size-full transition-all duration-1000"])}"${_scopeId}><div class="${ssrRenderClass([
+              unref(showButtons) ? "max-w-xs translate-x-0 p-2 opacity-100 blur-none lg:p-0" : "max-w-0 -translate-x-full p-0 opacity-0 blur-3xl",
               "flex size-full shrink-0 flex-col justify-evenly transition-all duration-1000"
             ])}"${_scopeId}><!--[-->`);
             ssrRenderList(unref(buttons), (button) => {
-              _push2(`<button type="button" class="group relative flex h-fit w-full max-w-xs cursor-pointer items-end justify-between border-b-2"${_scopeId}><h2 class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-100 transition-all duration-300 text-shadow-neutral-100 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-900"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.title`))} <span class="font-ibm-plex-sans-jp -z-10 text-sm"${_scopeId}>${ssrInterpolate(button.katakana)}</span></h2><p class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity duration-500 text-shadow-[-2px_0_8px] text-shadow-neutral-100 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-900"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.subtitle`))}</p></button>`);
+              _push2(`<button type="button" class="group relative flex h-fit w-full max-w-xs cursor-pointer items-end justify-between border-b-2"${_scopeId}><h2 class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-100 transition-all duration-300 text-shadow-neutral-900 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-100"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.title`))} <span class="font-ibm-plex-sans-jp -z-10 text-sm"${_scopeId}>${ssrInterpolate(button.katakana)}</span></h2><p class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity duration-500 text-shadow-[-2px_0_8px] text-shadow-neutral-900 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-100"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.subtitle`))}</p></button>`);
             });
             _push2(`<!--]--></div><div class="${ssrRenderClass([
-              showButtons.value ? "rounded-xs bg-neutral-800/40 text-neutral-100 opacity-0 lg:opacity-100 dark:bg-neutral-200/40 dark:text-neutral-900" : "rounded-none bg-neutral-800/10 opacity-100 dark:bg-neutral-200/10",
+              unref(showButtons) ? "rounded-xs bg-neutral-800/40 text-neutral-100 opacity-0 lg:opacity-100 dark:bg-neutral-200/40 dark:text-neutral-900" : "rounded-none bg-neutral-800/10 opacity-100 dark:bg-neutral-200/10",
               "relative flex size-full min-w-full flex-col gap-8 p-2 backdrop-blur-xs transition duration-1000 lg:min-w-auto lg:p-8"
             ])}"${_scopeId}>`);
-            if (!activeButton.value) {
+            if (!unref(activeButton)) {
               _push2(`<p class="pointer-events-none m-auto text-9xl leading-0 select-none"${_scopeId}> ... </p>`);
             } else {
               _push2(`<!---->`);
             }
-            if (processedButton.value) {
-              _push2(ssrRenderComponent(AboutCard, { button: processedButton.value }, null, _parent2, _scopeId));
+            if (unref(processedButton)) {
+              _push2(ssrRenderComponent(AboutCard, { button: unref(processedButton) }, null, _parent2, _scopeId));
             } else {
               _push2(`<!---->`);
             }
-            _push2(`<button type="button" class="${ssrRenderClass([showButtons.value ? "scale-0 rounded-xs" : "scale-100 rounded-none", "absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform duration-500 lg:top-8 lg:right-8 dark:bg-neutral-100"])}"${_scopeId}>`);
+            _push2(`<button type="button" class="${ssrRenderClass([unref(showButtons) ? "scale-0 rounded-xs" : "scale-100 rounded-none", "absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform duration-500 lg:top-8 lg:right-8 dark:bg-neutral-100"])}"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_LucideChevronLeft, { class: "size-8 text-neutral-100 dark:text-neutral-900" }, null, _parent2, _scopeId));
-            _push2(`</button><div class="${ssrRenderClass([showButtons.value ? "*:scale-100" : "*:scale-0", "pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 select-none *:size-8 *:text-black *:opacity-20 *:transition *:duration-500 dark:*:text-white"])}"${_scopeId}>`);
+            _push2(`</button><div class="${ssrRenderClass([unref(showButtons) ? "*:scale-100" : "*:scale-0", "pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 select-none *:size-8 *:text-black *:opacity-20 *:transition *:duration-500 dark:*:text-white"])}"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_LucidePlus, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LucideSquare, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LucideX, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_LucideCircle, null, null, _parent2, _scopeId));
             _push2(`</div></div></div>`);
             _push2(ssrRenderComponent(AboutMagic, {
-              button: hoveredButton.value,
-              mouse: mouse.value
+              button: unref(hoveredButton),
+              mouse: unref(mouse),
+              class: "-z-10"
             }, null, _parent2, _scopeId));
           } else {
             return [
               createVNode("div", {
-                class: ["flex size-full transition-all duration-1000", showButtons.value ? "flex-row gap-8 lg:p-8" : "flex-row gap-0 p-0"]
+                class: ["flex size-full transition-all duration-1000", unref(showButtons) ? "flex-row gap-8 lg:p-8" : "flex-row gap-0 p-0"]
               }, [
                 createVNode("div", {
                   class: [
                     "flex size-full shrink-0 flex-col justify-evenly transition-all duration-1000",
-                    showButtons.value ? "max-w-xs translate-x-0 p-2 opacity-100 blur-none lg:p-0" : "max-w-0 -translate-x-full p-0 opacity-0 blur-3xl"
+                    unref(showButtons) ? "max-w-xs translate-x-0 p-2 opacity-100 blur-none lg:p-0" : "max-w-0 -translate-x-full p-0 opacity-0 blur-3xl"
                   ]
                 }, [
                   (openBlock(true), createBlock(Fragment, null, renderList(unref(buttons), (button) => {
@@ -7055,31 +7097,31 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
                         selectedButton.value = button;
                       }
                     }, [
-                      createVNode("h2", { class: "font-oswald z-10 text-center text-2xl font-bold uppercase opacity-100 transition-all duration-300 text-shadow-neutral-100 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-900" }, [
+                      createVNode("h2", { class: "font-oswald z-10 text-center text-2xl font-bold uppercase opacity-100 transition-all duration-300 text-shadow-neutral-900 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-100" }, [
                         createTextVNode(toDisplayString$1(unref(t)(`section.about.${button.id}.title`)) + " ", 1),
                         createVNode("span", { class: "font-ibm-plex-sans-jp -z-10 text-sm" }, toDisplayString$1(button.katakana), 1)
                       ]),
-                      createVNode("p", { class: "font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity duration-500 text-shadow-[-2px_0_8px] text-shadow-neutral-100 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-900" }, toDisplayString$1(unref(t)(`section.about.${button.id}.subtitle`)), 1)
+                      createVNode("p", { class: "font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity duration-500 text-shadow-[-2px_0_8px] text-shadow-neutral-900 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-100" }, toDisplayString$1(unref(t)(`section.about.${button.id}.subtitle`)), 1)
                     ], 40, ["onMouseenter", "onMouseleave", "onFocus", "onClick"]);
                   }), 128))
                 ], 2),
                 createVNode("div", {
                   class: [
                     "relative flex size-full min-w-full flex-col gap-8 p-2 backdrop-blur-xs transition duration-1000 lg:min-w-auto lg:p-8",
-                    showButtons.value ? "rounded-xs bg-neutral-800/40 text-neutral-100 opacity-0 lg:opacity-100 dark:bg-neutral-200/40 dark:text-neutral-900" : "rounded-none bg-neutral-800/10 opacity-100 dark:bg-neutral-200/10"
+                    unref(showButtons) ? "rounded-xs bg-neutral-800/40 text-neutral-100 opacity-0 lg:opacity-100 dark:bg-neutral-200/40 dark:text-neutral-900" : "rounded-none bg-neutral-800/10 opacity-100 dark:bg-neutral-200/10"
                   ]
                 }, [
-                  !activeButton.value ? (openBlock(), createBlock("p", {
+                  !unref(activeButton) ? (openBlock(), createBlock("p", {
                     key: 0,
                     class: "pointer-events-none m-auto text-9xl leading-0 select-none"
                   }, " ... ")) : createCommentVNode("", true),
-                  processedButton.value ? (openBlock(), createBlock(AboutCard, {
+                  unref(processedButton) ? (openBlock(), createBlock(AboutCard, {
                     key: 1,
-                    button: processedButton.value
+                    button: unref(processedButton)
                   }, null, 8, ["button"])) : createCommentVNode("", true),
                   createVNode("button", {
                     type: "button",
-                    class: ["absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform duration-500 lg:top-8 lg:right-8 dark:bg-neutral-100", showButtons.value ? "scale-0 rounded-xs" : "scale-100 rounded-none"],
+                    class: ["absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform duration-500 lg:top-8 lg:right-8 dark:bg-neutral-100", unref(showButtons) ? "scale-0 rounded-xs" : "scale-100 rounded-none"],
                     onClick: ($event) => {
                       showButtons.value = true;
                       selectedButton.value = null;
@@ -7088,7 +7130,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
                     createVNode(_component_LucideChevronLeft, { class: "size-8 text-neutral-100 dark:text-neutral-900" })
                   ], 10, ["onClick"]),
                   createVNode("div", {
-                    class: ["pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 select-none *:size-8 *:text-black *:opacity-20 *:transition *:duration-500 dark:*:text-white", showButtons.value ? "*:scale-100" : "*:scale-0"]
+                    class: ["pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 select-none *:size-8 *:text-black *:opacity-20 *:transition *:duration-500 dark:*:text-white", unref(showButtons) ? "*:scale-100" : "*:scale-0"]
                   }, [
                     createVNode(_component_LucidePlus),
                     createVNode(_component_LucideSquare),
@@ -7098,8 +7140,9 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
                 ], 2)
               ], 2),
               createVNode(AboutMagic, {
-                button: hoveredButton.value,
-                mouse: mouse.value
+                button: unref(hoveredButton),
+                mouse: unref(mouse),
+                class: "-z-10"
               }, null, 8, ["button", "mouse"])
             ];
           }
@@ -7109,17 +7152,17 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/about/About.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const About = Object.assign(_sfc_main$7, { __name: "MainAbout" });
+const About = Object.assign(_sfc_main$9, { __name: "MainAbout" });
 const _imports_0 = "" + __buildAssetsURL("USU.CwfqgfE3.webp");
 const _imports_1 = "data:image/webp;base64,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";
-const _sfc_main$6 = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+const _sfc_main$8 = {};
+function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_Section = Section;
   _push(ssrRenderComponent(_component_Section, mergeProps({
     id: "timeline",
@@ -7169,14 +7212,14 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
     _: 1
   }, _parent));
 }
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/timeline/Timeline.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const Timeline = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$1]]), { __name: "MainTimeline" });
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const Timeline = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$8, [["ssrRender", _sfc_ssrRender$2]]), { __name: "MainTimeline" });
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "Contact",
   __ssrInlineRender: true,
   setup(__props) {
@@ -7190,9 +7233,9 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex size-full flex-row items-center justify-center p-2"${_scopeId}><div class="flex flex-col gap-2 sm:gap-8 [&amp;&gt;div&gt;div&gt;time]:text-xs"${_scopeId}><div class="flex flex-col gap-2"${_scopeId}><div class="flex items-end gap-2"${_scopeId}><div class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"${_scopeId}><p${_scopeId}>AR</p></div><p class="text-xl"${_scopeId}>Axel</p><time${_scopeId}>4:02</time></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}> since you&#39;ve reached this part, why not reach me as well? let&#39;s talk. </p></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}><a class="text-sky-800 underline" href="mailto:axelmychro@gmail.com"${_scopeId}>`);
+            _push2(`<div class="flex size-full flex-row items-center justify-center p-2"${_scopeId}><div class="flex flex-col gap-2 sm:gap-8 [&amp;&gt;div&gt;div&gt;time]:text-xs"${_scopeId}><div class="flex flex-col gap-2"${_scopeId}><div class="flex items-end gap-2"${_scopeId}><div class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"${_scopeId}><p class="leading-0 text-neutral-200"${_scopeId}>AR</p></div><p class="text-xl"${_scopeId}>Axel</p><time${_scopeId}>4:02</time></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}> since you&#39;ve reached this part, why not reach me as well? let&#39;s talk. </p></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}><a class="text-sky-800 underline" href="mailto:axelmychro@gmail.com"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_LucideMail, { class: "m-px inline size-4" }, null, _parent2, _scopeId));
-            _push2(` axelmychro@gmail.com </a></p></div></div><div class="flex flex-col gap-2"${_scopeId}><div class="flex items-end gap-2 self-end"${_scopeId}><div class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"${_scopeId}><p${_scopeId}>U</p></div><p class="text-xl"${_scopeId}>You</p><time${_scopeId}>4:11</time></div><p class="max-w-[90%] self-end rounded-xl rounded-br-none bg-sky-300 p-2 text-neutral-800"${_scopeId}> that&#39;s cool, but are you okay with casual talks? </p></div><div class="flex flex-col gap-2"${_scopeId}><div class="flex items-end gap-2"${_scopeId}><div class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"${_scopeId}><p${_scopeId}>AR</p></div><p class="text-xl"${_scopeId}>Axel</p><time${_scopeId}>4:17</time></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}> of course! you wanna just talk about games, it&#39;s fine </p></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}><a class="text-fuchsia-800" target="_blank" href="https://instagram.com/axelmychro"${_scopeId}>`);
+            _push2(` axelmychro@gmail.com </a></p></div></div><div class="flex flex-col gap-2"${_scopeId}><div class="flex items-end gap-2 self-end"${_scopeId}><div class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"${_scopeId}><p class="leading-0 text-neutral-200"${_scopeId}>U</p></div><p class="text-xl"${_scopeId}>You</p><time${_scopeId}>4:11</time></div><p class="max-w-[90%] self-end rounded-xl rounded-br-none bg-sky-300 p-2 text-neutral-800"${_scopeId}> that&#39;s cool, but are you okay with casual talks? </p></div><div class="flex flex-col gap-2"${_scopeId}><div class="flex items-end gap-2"${_scopeId}><div class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"${_scopeId}><p class="leading-0 text-neutral-200"${_scopeId}>AR</p></div><p class="text-xl"${_scopeId}>Axel</p><time${_scopeId}>4:17</time></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}> of course! you wanna just talk about games, it&#39;s fine </p></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}><a class="text-fuchsia-800" target="_blank" href="https://instagram.com/axelmychro"${_scopeId}>`);
             _push2(ssrRenderComponent(_component_LucideInstagram, { class: "m-px inline size-4" }, null, _parent2, _scopeId));
             _push2(`@axelmychro </a></p></div><div class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"${_scopeId}><p class="text-neutral-800"${_scopeId}>thanks for visiting my portfolio!</p></div></div></div></div>`);
           } else {
@@ -7201,8 +7244,8 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
                 createVNode("div", { class: "flex flex-col gap-2 sm:gap-8 [&>div>div>time]:text-xs" }, [
                   createVNode("div", { class: "flex flex-col gap-2" }, [
                     createVNode("div", { class: "flex items-end gap-2" }, [
-                      createVNode("div", { class: "flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500" }, [
-                        createVNode("p", null, "AR")
+                      createVNode("div", { class: "flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800" }, [
+                        createVNode("p", { class: "leading-0 text-neutral-200" }, "AR")
                       ]),
                       createVNode("p", { class: "text-xl" }, "Axel"),
                       createVNode("time", null, "4:02")
@@ -7224,8 +7267,8 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
                   ]),
                   createVNode("div", { class: "flex flex-col gap-2" }, [
                     createVNode("div", { class: "flex items-end gap-2 self-end" }, [
-                      createVNode("div", { class: "flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500" }, [
-                        createVNode("p", null, "U")
+                      createVNode("div", { class: "flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800" }, [
+                        createVNode("p", { class: "leading-0 text-neutral-200" }, "U")
                       ]),
                       createVNode("p", { class: "text-xl" }, "You"),
                       createVNode("time", null, "4:11")
@@ -7234,8 +7277,8 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
                   ]),
                   createVNode("div", { class: "flex flex-col gap-2" }, [
                     createVNode("div", { class: "flex items-end gap-2" }, [
-                      createVNode("div", { class: "flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500" }, [
-                        createVNode("p", null, "AR")
+                      createVNode("div", { class: "flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800" }, [
+                        createVNode("p", { class: "leading-0 text-neutral-200" }, "AR")
                       ]),
                       createVNode("p", { class: "text-xl" }, "Axel"),
                       createVNode("time", null, "4:17")
@@ -7269,14 +7312,14 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/contact/Contact.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const Contact = Object.assign(_sfc_main$5, { __name: "MainContact" });
-const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+const Contact = Object.assign(_sfc_main$7, { __name: "MainContact" });
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "Main",
   __ssrInlineRender: true,
   setup(__props) {
@@ -7284,7 +7327,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     const sectionComponents = [Hero, Projects, About, Timeline, Contact];
     ref(false);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-h-full max-w-full overflow-hidden" }, _attrs))} data-v-ed3c00d4><div class="stage flex size-full flex-row" style="${ssrRenderStyle({ transform: `translateX(-${unref(activeSectionIndex) * 100}vw)` })}" data-v-ed3c00d4><!--[-->`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "overflow-hidden" }, _attrs))} data-v-e2c9253d><div class="stage flex size-full flex-row" style="${ssrRenderStyle({ transform: `translateX(-${unref(activeSectionIndex) * 100}vw)` })}" data-v-e2c9253d><!--[-->`);
       ssrRenderList(sectionComponents, (sectionComponent, index) => {
         ssrRenderVNode(_push, createVNode(resolveDynamicComponent(sectionComponent), { key: index }, null), _parent);
       });
@@ -7292,33 +7335,87 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/Main.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const Main = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["__scopeId", "data-v-e2c9253d"]]), { __name: "Main" });
+const _sfc_main$5 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "fixed right-0 bottom-0 flex h-16 w-full flex-row items-center justify-between gap-8 p-2" }, _attrs))}><small class="text-sm backdrop-blur-xs">© <span class="text-fuchsia-300">2025</span> Axel</small></footer>`);
+}
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/footer/Footer.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+};
+const Footer = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$1]]), { __name: "Footer" });
+const _sfc_main$4 = {};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "pointer-events-none fixed right-0 bottom-16 flex h-24 w-12 items-center justify-center select-none lg:bottom-1/2 lg:w-32" }, _attrs))}><div class="relative flex h-full w-full flex-col justify-center lg:h-fit lg:w-fit lg:items-end"><div class="flex flex-row justify-start"><div class="absolute bottom-0 h-fit w-fit overflow-hidden lg:static lg:bottom-2"><div class="relative -bottom-4"><p class="font-oswald text-5xl text-fuchsia-300">00</p></div></div><div class="mt-5 flex flex-col items-end justify-center"><p class="font-fira-code absolute bottom-5 left-5 -rotate-90 text-sm leading-none text-gray-300 lg:static lg:rotate-none"><span class="text-transparent lg:text-gray-300">00</span>/05 </p><p class="font-dela-gothic-one absolute top-5 right-5 rotate-90 text-xs leading-none lg:static lg:rotate-none"> mychro </p></div></div><p class="font-oswald text-md absolute bottom-12 -left-2 rotate-90 leading-none uppercase lg:static lg:bottom-6 lg:rotate-none"> homepage </p></div></div>`);
+}
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/Main.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/layout/Counter.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const Main = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["__scopeId", "data-v-ed3c00d4"]]), { __name: "Main" });
-const _sfc_main$3 = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "pointer-events-none fixed right-0 bottom-0 z-10 flex h-16 w-full flex-row items-center justify-between gap-8 p-2 backdrop-blur-[1px] select-none" }, _attrs))}><small class="text-sm">© <span class="text-fuchsia-300">2025</span> Axel</small></footer>`);
-}
+const Counter = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender]]), { __name: "LayoutCounter" });
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+  __name: "Overlay",
+  __ssrInlineRender: true,
+  props: {
+    section: {}
+  },
+  setup(__props) {
+    const props = __props;
+    const showTop = computed(() => ![1, 4].includes(props.section));
+    const showRight = computed(() => ![4].includes(props.section));
+    const showBottom = computed(() => ![3, 4].includes(props.section));
+    const overlayBorder = (visible) => {
+      if (!visible) return "border-transparent";
+      return "border-black/50 dark:border-white/50 ";
+    };
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<!--[--><div class="${ssrRenderClass([[
+        unref(showTop) ? "translate-y-0" : "-translate-y-16",
+        overlayBorder(unref(showTop))
+      ], "overlays fixed top-16 left-0 w-screen border-b"])}" data-v-4ba64bad></div><div class="${ssrRenderClass([[
+        unref(showRight) ? "translate-x-0" : "translate-x-12 lg:translate-x-32",
+        overlayBorder(unref(showRight))
+      ], "overlays fixed right-12 bottom-0 h-screen border-l lg:right-32"])}" data-v-4ba64bad></div><div class="${ssrRenderClass([[
+        unref(showBottom) ? "translate-y-0" : "translate-y-16",
+        overlayBorder(unref(showBottom))
+      ], "overlays fixed right-0 bottom-16 w-screen border-t"])}" data-v-4ba64bad></div>`);
+      _push(ssrRenderComponent(Counter, null, null, _parent));
+      _push(`<!--]-->`);
+    };
+  }
+});
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/footer/Footer.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/layout/Overlay.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const Footer = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender]]), { __name: "Footer" });
+const Overlay = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-4ba64bad"]]), { __name: "LayoutOverlay" });
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
   setup(__props) {
+    const activeSectionIndex = useActiveSection();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
-      _push(ssrRenderComponent(Header, null, null, _parent));
+      _push(ssrRenderComponent(Header, { class: "z-50" }, null, _parent));
       _push(ssrRenderComponent(Main, null, null, _parent));
-      _push(ssrRenderComponent(Footer, null, null, _parent));
+      _push(ssrRenderComponent(Footer, { class: "z-10" }, null, _parent));
+      _push(ssrRenderComponent(Overlay, {
+        section: unref(activeSectionIndex),
+        class: "z-20"
+      }, null, _parent));
       _push(`<!--]-->`);
     };
   }

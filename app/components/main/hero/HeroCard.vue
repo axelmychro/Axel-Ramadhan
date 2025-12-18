@@ -9,7 +9,9 @@
         <NuxtImg
           src="/images/imathe.webp"
           alt="imathe"
-          class="pointer-events-none size-fit object-contain select-none"
+          placeholder="true"
+          loading="eager"
+          class="pointer-events-none object-contain select-none"
         />
       </div>
 
@@ -23,7 +25,7 @@
           </span>
         </h1>
         <h2
-          class="font-fira-code text-md text-center text-purple-300 sm:text-lg md:text-start"
+          class="font-fira-code text-center text-purple-300 sm:text-lg md:text-start"
         >
           Junior Frontend Developer
         </h2>
@@ -49,9 +51,11 @@
 
     <div class="flex flex-col lg:flex-row">
       <div
-        class="flex w-full items-center justify-center bg-neutral-800 p-4 lg:rounded-bl-md"
+        class="flex flex-1 items-center justify-center bg-neutral-800 p-4 lg:rounded-bl-md"
       >
-        <p class="sm:text-md text-center text-neutral-100 md:text-start">
+        <p
+          class="text-center text-lg text-neutral-100 sm:text-xl md:text-start"
+        >
           {{ $t("section.home.card.bio") }}
         </p>
       </div>

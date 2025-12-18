@@ -3,14 +3,34 @@ import Section from "~/components/Section.vue";
 import AboutCard from "./AboutCard.vue";
 import AboutMagic from "./AboutMagic.vue";
 
-import { ref, computed } from "vue";
-import { useI18n } from "vue-i18n";
-
 const { t } = useI18n();
 
 import meImage from "/images/ID_Info_Update_Card.webp";
 import philosophyImage from "/images/Curio_Written_in_Water.webp";
 import styleImage from "/images/Curio_Punklorde_Mentality.webp";
+
+useHead({
+  link: [
+    {
+      rel: "preload",
+      as: "image",
+      href: meImage,
+      type: "image/webp",
+    },
+    {
+      rel: "preload",
+      as: "image",
+      href: philosophyImage,
+      type: "image/webp",
+    },
+    {
+      rel: "preload",
+      as: "image",
+      href: styleImage,
+      type: "image/webp",
+    },
+  ],
+});
 
 const aboutButtons = [
   {
@@ -99,7 +119,7 @@ function hidePreview() {
           "
         >
           <h2
-            class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-100 transition-all duration-300 text-shadow-neutral-100 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-900"
+            class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-100 transition-all duration-300 text-shadow-neutral-900 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-100"
           >
             {{ t(`section.about.${button.id}.title`) }}
             <span class="font-ibm-plex-sans-jp -z-10 text-sm">{{
@@ -107,7 +127,7 @@ function hidePreview() {
             }}</span>
           </h2>
           <p
-            class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity duration-500 text-shadow-[-2px_0_8px] text-shadow-neutral-100 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-900"
+            class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity duration-500 text-shadow-[-2px_0_8px] text-shadow-neutral-900 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-100"
           >
             {{ t(`section.about.${button.id}.subtitle`) }}
           </p>
@@ -154,6 +174,6 @@ function hidePreview() {
       </div>
     </div>
 
-    <AboutMagic :button="hoveredButton" :mouse="mouse" />
+    <AboutMagic :button="hoveredButton" :mouse="mouse" class="-z-10" />
   </Section>
 </template>

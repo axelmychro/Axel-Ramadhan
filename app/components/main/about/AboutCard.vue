@@ -90,7 +90,8 @@ const fontLinks = [
   {
     name: fonts.section,
     url: `${fontsSpecimen}Oswald`,
-    class: "font-oswald uppercase text-lg",
+    class:
+      "font-oswald uppercase text-lg text-neutral-900 dark:text-neutral-100",
   },
   {
     name: fonts.paragraph,

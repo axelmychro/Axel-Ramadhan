@@ -9,9 +9,9 @@ import Section from "~/components/Section.vue";
         <div class="flex flex-col gap-2">
           <div class="flex items-end gap-2">
             <div
-              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"
+              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
             >
-              <p>AR</p>
+              <p class="leading-0 text-neutral-200">AR</p>
             </div>
             <p class="text-xl">Axel</p>
             <time>4:02</time>
@@ -44,9 +44,9 @@ import Section from "~/components/Section.vue";
         <div class="flex flex-col gap-2">
           <div class="flex items-end gap-2 self-end">
             <div
-              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"
+              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
             >
-              <p>U</p>
+              <p class="leading-0 text-neutral-200">U</p>
             </div>
             <p class="text-xl">You</p>
             <time>4:11</time>
@@ -62,9 +62,9 @@ import Section from "~/components/Section.vue";
         <div class="flex flex-col gap-2">
           <div class="flex items-end gap-2">
             <div
-              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-500"
+              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
             >
-              <p>AR</p>
+              <p class="leading-0 text-neutral-200">AR</p>
             </div>
             <p class="text-xl">Axel</p>
             <time>4:17</time>
