@@ -12,6 +12,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "mychro",
+      meta: [
+        {
+          name: "description",
+          content:
+            "computer science student, self-taught programmer, Vue / Nuxt enthusiast",
+        },
+      ],
       htmlAttrs: {
         lang: "en",
       },

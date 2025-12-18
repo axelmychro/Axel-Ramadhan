@@ -153,6 +153,7 @@ function hidePreview() {
 
         <button
           type="button"
+          aria-label="close current subsection"
           class="absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform duration-500 lg:top-8 lg:right-8 dark:bg-neutral-100"
           :class="showButtons ? 'scale-0 rounded-xs' : 'scale-100 rounded-none'"
           @click="

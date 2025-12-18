@@ -65,7 +65,7 @@ const navigateToSection = (targetSectionIndex: number) => {
 </script>
 
 <template>
-  <div class="overflow-hidden">
+  <main class="overflow-hidden">
     <div
       class="stage flex size-full flex-row"
       @touchstart.passive="handleTouchStart"
@@ -79,7 +79,7 @@ const navigateToSection = (targetSectionIndex: number) => {
         :is="sectionComponent"
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped>
