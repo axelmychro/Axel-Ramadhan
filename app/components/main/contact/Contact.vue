@@ -33,8 +33,9 @@ import Section from "~/components/Section.vue";
               <a
                 class="text-sky-800 underline"
                 href="mailto:axelmychro@gmail.com"
+                aria-label="send email to axelmychro@gmail.com"
               >
-                <LucideMail class="m-px inline size-4" />
+                <LucideMail class="m-px inline size-4" aria-hidden="true" />
                 axelmychro@gmail.com
               </a>
             </p>
@@ -86,8 +87,12 @@ import Section from "~/components/Section.vue";
                 class="text-fuchsia-800"
                 target="_blank"
                 href="https://instagram.com/axelmychro"
+                aria-label="visit Instagram profile @axelmychro"
               >
-                <LucideInstagram class="m-px inline size-4" />@axelmychro
+                <LucideInstagram
+                  class="m-px inline size-4"
+                  aria-hidden="true"
+                />@axelmychro
               </a>
             </p>
           </div>

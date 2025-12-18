@@ -1,13 +1,14 @@
 <template>
   <a
     tabindex="0"
-    href="/"
+    href="#"
+    aria-label="home link"
     class="logo-link group flex flex-row items-center gap-2 backdrop-blur-xs select-none"
   >
     <NuxtImg
       src="/images/imathe.webp"
       loading="eager"
-      alt="Logo"
+      alt="logo"
       class="aspect-square size-12 rounded-full border-2 border-fuchsia-300 bg-[#0f0f0f] object-cover transition duration-500 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 sm:scale-0 sm:opacity-0"
     />
 

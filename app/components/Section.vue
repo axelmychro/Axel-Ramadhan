@@ -11,6 +11,7 @@ defineProps<{
   >
     <h2
       class="font-oswald pointer-events-none absolute top-0 left-0 -z-10 text-8xl leading-none font-bold whitespace-nowrap uppercase opacity-10 select-none [writing-mode:vertical-lr]"
+      aria-hidden="true"
     >
       ~/{{ id }}
     </h2>

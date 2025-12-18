@@ -139,13 +139,14 @@ const fontLinks = [
             colorButton.borderClass,
             colorButton.textClass,
           ]"
+          :aria-label="`copy ${colorButton.name} color code ${colorButton.hexColor}`"
           @click="copyToClipboard(colorButton.hexColor, colorButton.id)"
         >
           <template v-if="copiedColorId !== colorButton.id">
             {{ colorButton.name }}
           </template>
           <template v-else>
-            <LucideClipboardCheck class="size-full" />
+            <LucideClipboardCheck class="size-full" aria-hidden="true" />
           </template>
         </button>
       </div>
@@ -157,7 +158,7 @@ const fontLinks = [
           <img
             src="~/assets/icons/google_fonts.svg"
             loading="lazy"
-            alt="Google Fonts"
+            aria-hidden="true"
             class="inline size-3.5"
           />Google Fonts</span
         >

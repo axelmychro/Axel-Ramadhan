@@ -33,6 +33,7 @@ const projects = [
           :key="project.title"
           :href="project.url"
           target="_blank"
+          :aria-label="`view project ${project.title}`"
           class="group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4"
         >
           <div
@@ -48,14 +49,16 @@ const projects = [
             class="text-2xl text-fuchsia-500 transition-colors"
             >{{ project.year }}</time
           >
-          <LucideArrowUpRight class="size-8 text-sky-500" />
+          <LucideArrowUpRight class="size-8 text-sky-500" aria-hidden="true" />
         </a>
         <div class="flex h-full w-full items-center justify-center select-none">
           <a
             href="https://github.com/axelmychro"
             target="_blank"
+            aria-label="visit my GitHub profile"
             class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 transition-colors duration-300 dark:bg-gray-100 dark:text-gray-900"
-            ><LucideGithub class="size-16" />visit my GitHub!</a
+            ><LucideGithub class="size-16" aria-hidden="true" />visit my
+            GitHub!</a
           >
         </div>
       </div>

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const linkItems = [
-  { label: "nav.home", icon: "House", index: 0 },
-  { label: "nav.projects", icon: "Code", index: 1 },
-  { label: "nav.about", icon: "Info", index: 2 },
-  { label: "nav.timeline", icon: "Map", index: 3 },
-  { label: "nav.contact", icon: "User", index: 4 },
+  { label: "home", icon: "House", index: 0 },
+  { label: "projects", icon: "Code", index: 1 },
+  { label: "about", icon: "Info", index: 2 },
+  { label: "timeline", icon: "Map", index: 3 },
+  { label: "contact", icon: "User", index: 4 },
 ];
 
 const activeSectionIndex = useActiveSection();
@@ -70,15 +70,19 @@ function closeLinks() {
             goToSection(linkItem.index);
             closeLinks();
           "
-          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 text-gray-100 uppercase transition-colors duration-300 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent lg:text-inherit"
-          :class="{ 'text-sky-300': activeSectionIndex === linkItem.index }"
+          :aria-label="`go to ${linkItem.label} section`"
+          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors duration-300 not-lg:text-gray-100 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent"
+          :class="{
+            'border-sky-300 text-sky-300':
+              activeSectionIndex === linkItem.index,
+          }"
         >
           <LucideHouse v-if="linkItem.icon === 'House'" />
           <LucideCode v-else-if="linkItem.icon === 'Code'" />
           <LucideInfo v-else-if="linkItem.icon === 'Info'" />
           <LucideMap v-else-if="linkItem.icon === 'Map'" />
           <LucideUser v-else-if="linkItem.icon === 'User'" />
-          {{ $t(linkItem.label) }}
+          {{ $t(`nav.${linkItem.label}`) }}
         </button>
       </div>
       <div
@@ -91,5 +95,3 @@ function closeLinks() {
     </div>
   </Transition>
 </template>
-
-stl

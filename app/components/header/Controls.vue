@@ -27,6 +27,7 @@ function toggleSound() {
     <button
       @click="toggleLocale"
       type="button"
+      :aria-label="`toggle language to ${locale === 'en' ? 'Indonesian' : 'English'}`"
       class="relative cursor-pointer transition-all duration-300 active:scale-90"
     >
       <lucide-languages
@@ -42,6 +43,7 @@ function toggleSound() {
     <button
       @click="toggleTheme"
       type="button"
+      :aria-label="`toggle theme to ${colorMode.value === 'dark' ? 'light' : 'dark'}`"
       class="cursor-pointer transition-all duration-300 active:scale-90"
     >
       <lucide-moon
@@ -64,6 +66,7 @@ function toggleSound() {
     <button
       @click="toggleSound"
       type="button"
+      :aria-label="`toggle sound ${sound ? 'off' : 'on'}`"
       class="cursor-pointer transition-all duration-300 active:scale-90"
       :class="sound ? 'opacity-100' : 'opacity-50'"
     >

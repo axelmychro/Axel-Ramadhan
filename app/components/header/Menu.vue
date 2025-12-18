@@ -9,9 +9,11 @@ function toggleLinks() {
   <button
     @click="toggleLinks"
     type="button"
+    :aria-label="showLinks ? 'close menu' : 'open menu'"
+    :aria-expanded="showLinks"
     class="flex cursor-pointer items-center justify-center transition-colors duration-300 lg:hidden"
     :class="showLinks ? 'text-gray-100' : 'text-inherit'"
   >
-    <lucide-menu class="size-8" />
+    <lucide-menu class="size-8" aria-hidden="true" />
   </button>
 </template>
