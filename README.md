@@ -1,75 +1,28 @@
-# Nuxt Minimal Starter
+## Contingency Contract
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3aedf34f-8dbc-48bf-b2a0-0b2ba09b4e01/deploy-status)](https://app.netlify.com/projects/axelmychro/deploys)
 
-## Setup
+Built to showcase my projects and approach to frontend development. It's designed to be clean, fast, and expressive without clutter.
 
-Make sure to install dependencies:
+### Philosophy
 
-```bash
-# npm
-npm install
+Clear layouts, readable typography, and intentional motion.  
+This site focuses on visual contrast and smooth transitions, so the content stays readable while still feeling alive.
 
-# pnpm
-pnpm install
+I value component-based architecture and small, focused pieces over large monolithic structures, both in design and in code.
 
-# yarn
-yarn install
+### Features
 
-# bun
-bun install
-```
+- **Responsive layout**: works comfortably across desktop and mobile
+- **Dark mode support**: follows your preference
+- **Internationalization**: English and Indonesian, one click in between
+- **Smooth transitions**: animated section-based navigation
+- **Performance-aware**: optimized assets and fast builds
+- **SEO-friendly**: structured metadata and semantic markup
 
-## Development Server
+### Tech Stack
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- **Nuxt** — the progressive web framework
+- **Vue** — component-based UI
+- **TypeScript** — type-safe development
+- **Tailwind CSS** — utility-first styling
