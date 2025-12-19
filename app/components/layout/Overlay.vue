@@ -7,11 +7,11 @@ const props = defineProps<{
 
 const showTop = computed(() => ![1, 4].includes(props.section));
 const showRight = computed(() => ![4].includes(props.section));
-const showBottom = computed(() => ![3, 4].includes(props.section));
+const showBottom = computed(() => ![1, 3, 4].includes(props.section));
 
 const overlayBorder = (visible: boolean) => {
   if (!visible) return "border-transparent";
-  return "border-black/50 dark:border-white/50 ";
+  return "border-black/50 dark:border-white/50";
 };
 </script>
 
@@ -25,7 +25,7 @@ const overlayBorder = (visible: boolean) => {
   ></div>
 
   <div
-    class="overlays fixed right-12 bottom-0 h-screen border-l lg:right-32"
+    class="overlays fixed top-0 right-12 h-screen border-l lg:right-32"
     :class="[
       showRight ? 'translate-x-0' : 'translate-x-12 lg:translate-x-32',
       overlayBorder(showRight),

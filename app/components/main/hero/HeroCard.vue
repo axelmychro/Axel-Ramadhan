@@ -9,7 +9,6 @@
         <NuxtImg
           src="/images/imathe.webp"
           alt="imathe"
-          placeholder="true"
           loading="eager"
           class="pointer-events-none object-contain select-none"
         />
@@ -68,7 +67,7 @@
       </div>
 
       <div
-        class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-3 lg:justify-center lg:rounded-bl-none [&>i]:leading-none [&>i]:grayscale-75 [&>i]:transition [&>i]:duration-300 [&>i]:hover:grayscale-0 [&>i]:sm:text-xl"
+        class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-3 lg:justify-center lg:rounded-bl-none [&>i]:leading-none [&>i]:grayscale-75 [&>i]:transition [&>i]:hover:grayscale-0 [&>i]:sm:text-xl"
         aria-description="technologies: Node.js, Vue, Nuxt, JavaScript, Git, Figma, TypeScript, Tailwind CSS, Vite"
       >
         <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>

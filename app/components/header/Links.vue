@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-const linkItems = [
-  { label: "home", icon: "House", index: 0 },
-  { label: "projects", icon: "Code", index: 1 },
-  { label: "about", icon: "Info", index: 2 },
-  { label: "timeline", icon: "Map", index: 3 },
-  { label: "contact", icon: "User", index: 4 },
-];
+const { linkItems } = useNavLinks();
 
 const activeSectionIndex = useActiveSection();
 const isAnimating = useState<boolean>("isAnimating", () => false);
@@ -49,10 +43,10 @@ function closeLinks() {
 
 <template>
   <Transition
-    enter-active-class="transition-opacity duration-300"
+    enter-active-class="transition-opacity duration-500"
     enter-from-class="opacity-0"
     enter-to-class="opacity-100"
-    leave-active-class="transition-opacity duration-300"
+    leave-active-class="transition-opacity duration-500"
     leave-from-class="opacity-100"
     leave-to-class="opacity-0"
   >
@@ -71,7 +65,7 @@ function closeLinks() {
             closeLinks();
           "
           :aria-label="`go to ${linkItem.label} section`"
-          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors duration-300 not-lg:text-gray-100 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent"
+          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent"
           :class="{
             'border-sky-300 text-sky-300':
               activeSectionIndex === linkItem.index,

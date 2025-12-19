@@ -4,9 +4,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  @apply size-full max-h-screen max-w-screen bg-white transition-colors duration-300 dark:bg-black;
+  @apply size-full max-h-screen max-w-screen bg-white transition-colors duration-500 dark:bg-black;
 }
 
 body {
-  @apply font-zain relative size-full min-h-screen min-w-screen overflow-hidden text-gray-900 dark:text-gray-100;
+  @apply font-zain relative size-full min-h-screen min-w-screen overflow-hidden text-gray-900 transition-colors duration-500 dark:text-gray-100;
 }

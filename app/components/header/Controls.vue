@@ -28,13 +28,13 @@ function toggleSound() {
       @click="toggleLocale"
       type="button"
       :aria-label="`toggle language to ${locale === 'en' ? 'Indonesian' : 'English'}`"
-      class="relative cursor-pointer transition-all duration-300 active:scale-90"
+      class="relative cursor-pointer transition-transform active:scale-90"
     >
       <lucide-languages
-        class="size-8 transition-colors duration-300"
+        class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       /><span
-        class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50 transition-colors duration-300"
+        class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
         >{{ locale }}</span
       >
@@ -44,21 +44,21 @@ function toggleSound() {
       @click="toggleTheme"
       type="button"
       :aria-label="`toggle theme to ${colorMode.value === 'dark' ? 'light' : 'dark'}`"
-      class="cursor-pointer transition-all duration-300 active:scale-90"
+      class="cursor-pointer transition-transform active:scale-90"
     >
       <lucide-moon
         v-if="colorMode.value === 'dark'"
-        class="size-8 transition-colors duration-300"
+        class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />
       <lucide-sun
         v-else-if="colorMode.value === 'light'"
-        class="size-8 transition-colors duration-300"
+        class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />
       <lucide-orbit
         v-else
-        class="size-8 transition-colors duration-300"
+        class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />
     </button>
@@ -67,17 +67,17 @@ function toggleSound() {
       @click="toggleSound"
       type="button"
       :aria-label="`toggle sound ${sound ? 'off' : 'on'}`"
-      class="cursor-pointer transition-all duration-300 active:scale-90"
+      class="cursor-pointer transition-transform active:scale-90"
       :class="sound ? 'opacity-100' : 'opacity-50'"
     >
       <lucide-headphone-off
         v-if="sound === false"
-        class="size-8 transition-colors duration-300"
+        class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />
       <lucide-headphones
         v-else="sound === true"
-        class="size-8 transition-colors duration-300"
+        class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />
     </button>

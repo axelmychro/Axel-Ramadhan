@@ -9,11 +9,11 @@
       src="/images/imathe.webp"
       loading="eager"
       alt="logo"
-      class="aspect-square size-12 rounded-full border-2 border-fuchsia-300 bg-[#0f0f0f] object-cover transition duration-500 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100 sm:scale-0 sm:opacity-0"
+      class="aspect-square size-12 rounded-full border-2 border-fuchsia-300 bg-[#0f0f0f] object-cover transition-transform group-hover:scale-100 group-focus:scale-100 sm:scale-0"
     />
 
     <span
-      class="font-dela-gothic-one hidden -translate-x-14 text-4xl text-sky-300 transition duration-500 group-hover:translate-x-0 group-focus:translate-x-0 sm:inline"
+      class="font-dela-gothic-one hidden -translate-x-14 text-4xl text-sky-300 transition group-hover:translate-x-0 group-focus:translate-x-0 sm:inline"
     >
       mychro!
     </span>

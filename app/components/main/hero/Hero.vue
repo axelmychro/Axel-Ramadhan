@@ -8,9 +8,7 @@ import HeroCard from "./HeroCard.vue";
     class="bg-linear-to-br from-purple-50/60 via-slate-100 to-gray-100 dark:from-purple-950/60 dark:via-slate-900 dark:to-gray-900"
   >
     <div class="flex h-full w-full items-center justify-center">
-      <HeroCard
-        class="animate-float shadow-md transition-transform duration-300 ease-out"
-      />
+      <HeroCard class="animate-float shadow-md transition-transform" />
     </div>
   </Section>
 </template>

@@ -37,10 +37,10 @@ const projects = [
           class="group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4"
         >
           <div
-            class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition duration-300 group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100"
+            class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition-transform group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100"
           ></div>
           <h2
-            class="flex-1 text-2xl transition-colors duration-300 group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900"
+            class="flex-1 text-2xl group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900"
           >
             {{ project.title }}
           </h2>
@@ -56,7 +56,7 @@ const projects = [
             href="https://github.com/axelmychro"
             target="_blank"
             aria-label="visit my GitHub profile"
-            class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 transition-colors duration-300 dark:bg-gray-100 dark:text-gray-900"
+            class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 dark:bg-gray-100 dark:text-gray-900"
             ><LucideGithub class="size-16" aria-hidden="true" />visit my
             GitHub!</a
           >
