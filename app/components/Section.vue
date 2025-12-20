@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 defineProps<{
   id: string;
 }>();
@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <section
     :id="id"
-    class="relative z-0 min-h-screen min-w-screen overflow-hidden pt-16 pr-12 pb-16  lg:pr-32"
+    class="relative z-0 min-h-screen min-w-screen overflow-hidden pt-16 pr-12 pb-16 lg:pr-32"
   >
     <h2
       class="font-oswald pointer-events-none absolute top-0 left-0 -z-10 text-8xl leading-none font-bold whitespace-nowrap uppercase opacity-10 select-none [writing-mode:vertical-lr]"

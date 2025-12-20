@@ -24,11 +24,16 @@ const currentSectionMax = computed(() => linkItems.length - 1);
       <div
         class="absolute inset-0 flex flex-row items-end justify-center lg:flex-col-reverse lg:justify-start"
       >
-        <h6
-          class="leading-none font-bold uppercase not-lg:text-xs not-lg:[writing-mode:vertical-lr]"
-        >
-          {{ $t(`nav.${currentSectionLabel}`) }}
-        </h6>
+        <div class="flex flex-row justify-end lg:w-full lg:gap-2">
+          <div
+            class="not-lg:border-r-2 lg:h-fit lg:w-full lg:self-center lg:border-t-2"
+          />
+          <h6
+            class="leading-none font-bold uppercase not-lg:text-xs not-lg:[writing-mode:vertical-lr]"
+          >
+            {{ $t(`nav.${currentSectionLabel}`) }}
+          </h6>
+        </div>
         <p class="text-xs leading-none not-lg:[writing-mode:vertical-lr]">
           0{{ currentSection }}/0{{ currentSectionMax }}
         </p>

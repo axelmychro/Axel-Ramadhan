@@ -27,7 +27,7 @@ const resource = {
       "philosophy": {
         "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Filosofi" } },
         "subtitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Tajam & jelas" } },
-        "description": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Warna kontras, font gampang dibaca, elemen secukupnya supaya kamu bisa fokus ke layar. Corner dikasih rounded-full? Gak dulu deh, makasih. Tajam, jelas, dan fitur yang jelas pasti menang. Filosofi ini sangat pas dengan model komponen di Vue." } },
+        "description": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Warna kontras, font gampang dibaca, elemen secukupnya supaya kamu bisa fokus ke layar. Buat fitur yang jelas-jelas aja. Filosofi ini sangat pas dengan model komponen di Vue." } },
         "reason": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Aku suka komponen yang terpisah. Workspace yang lebih kecil dan terfokus membuat proses debugging jauh lebih efisien daripada struktur yang gede." } }
       },
       "style": {
@@ -67,4 +67,4 @@ const resource = {
 };
 
 export { resource as default };
-//# sourceMappingURL=id-CTn7GfP-.mjs.map
+//# sourceMappingURL=id-BMwhsFPN.mjs.map

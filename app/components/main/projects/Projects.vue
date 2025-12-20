@@ -25,7 +25,10 @@ const projects = [
 </script>
 
 <template>
-  <Section id="projects" txt="what have i done?" class="">
+  <Section
+    id="projects"
+    class="bg-linear-to-bl from-blue-300/50 via-slate-300 to-gray-300 dark:from-blue-900/50 dark:via-slate-900 dark:to-gray-900"
+  >
     <div class="flex size-full flex-col">
       <div class="flex size-full flex-col items-stretch justify-stretch">
         <a

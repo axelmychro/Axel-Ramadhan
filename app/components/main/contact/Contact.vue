@@ -3,7 +3,10 @@ import Section from "~/components/Section.vue";
 </script>
 
 <template>
-  <Section id="contact" txt="wow, you stayed?" class="">
+  <Section
+    id="contact"
+    class="bg-linear-to-tr from-emerald-300/50 via-stone-300 to-zinc-300 dark:from-emerald-900/50 dark:via-stone-900 dark:to-zinc-900"
+  >
     <div class="flex size-full flex-row items-center justify-center p-2">
       <div class="flex flex-col gap-2 sm:gap-8 [&>div>div>time]:text-xs">
         <div class="flex flex-col gap-2">

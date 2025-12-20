@@ -27,7 +27,7 @@ const resource = {
       "philosophy": {
         "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Philosophy" } },
         "subtitle": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sharp & clear" } },
-        "description": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Rounded edges? Not today, thank you. Sharp, clear, and self-explanatory features for the win. This philosophy translates well to Vue component model." } },
+        "description": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Self-explanatory features for the win. This philosophy translates well to Vue component model." } },
         "reason": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "I believe in component reusability. Smaller, focused workspaces make debugging far more efficient than monolithic structures." } }
       },
       "style": {
@@ -67,4 +67,4 @@ const resource = {
 };
 
 export { resource as default };
-//# sourceMappingURL=en-CSrNtgNt.mjs.map
+//# sourceMappingURL=en-C7KUfHOk.mjs.map

@@ -4315,7 +4315,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "1a875f4f-0de0-4994-b8a9-3b3785190920",
+    "buildId": "32df16be-3561-4857-87b8-1ca9259d3f21",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -5171,7 +5171,7 @@ function findBrowserLocale(locales, browserLocales) {
   return matchedLocales.sort(compareBrowserLocale).at(0)?.code ?? "";
 }
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"icon","href":"/favicon.ico","type":"image/x-icon"}],"style":[],"script":[],"noscript":[],"title":"mychro","htmlAttrs":{"lang":"en"}};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"computer science student, self-taught programmer, Vue / Nuxt enthusiast"}],"link":[{"rel":"icon","href":"/favicon.ico","type":"image/x-icon"}],"style":[],"script":[],"noscript":[],"title":"mychro","htmlAttrs":{"lang":"en"}};
 
 const appRootTag = "div";
 
@@ -5373,7 +5373,7 @@ const _Jb1YSM1fa7OyvgX2ytbrq_XLxptmNmilhobPgsx474M = defineNitroPlugin(async (ni
     const localeSegment = detector.route(event.path);
     const pathLocale = isSupportedLocale(localeSegment) && localeSegment || void 0;
     const path = (pathLocale && url.pathname.slice(pathLocale.length + 1)) ?? url.pathname;
-    if (!url.pathname.includes("/_i18n/0hvc9fC0") && !isExistingNuxtRoute(path)) {
+    if (!url.pathname.includes("/_i18n/z3No98tP") && !isExistingNuxtRoute(path)) {
       return;
     }
     const resolved = resolveRedirectPath(event, path, pathLocale, ctx.vueI18nOptions.defaultLocale, detector);

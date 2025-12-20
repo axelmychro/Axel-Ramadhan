@@ -26,7 +26,7 @@ var section = {
 		philosophy: {
 			title: "Philosophy",
 			subtitle: "Sharp & clear",
-			description: "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Rounded edges? Not today, thank you. Sharp, clear, and self-explanatory features for the win. This philosophy translates well to Vue component model.",
+			description: "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Self-explanatory features for the win. This philosophy translates well to Vue component model.",
 			reason: "I believe in component reusability. Smaller, focused workspaces make debugging far more efficient than monolithic structures."
 		},
 		style: {

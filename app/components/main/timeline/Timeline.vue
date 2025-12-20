@@ -1,7 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Section id="timeline" txt="tempus fugit..." class="flex justify-center">
+  <Section
+    id="timeline"
+    class="flex justify-center bg-linear-to-l from-zinc-300 via-neutral-300 to-stone-200 text-neutral-800 dark:from-zinc-900 dark:via-neutral-900 dark:to-stone-800 dark:text-neutral-200"
+  >
     <div class="size-full max-w-lg items-center p-2">
       <h3 class="text-6xl text-sky-300 text-shadow-xs">2025</h3>
 

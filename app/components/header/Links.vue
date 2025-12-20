@@ -65,9 +65,9 @@ function closeLinks() {
             closeLinks();
           "
           :aria-label="`go to ${linkItem.label} section`"
-          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent"
+          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-sky-500 hover:text-sky-500 focus:border-sky-500 focus:text-sky-500 lg:gap-2 lg:border-transparent"
           :class="{
-            'border-sky-300 text-sky-300':
+            'border-sky-500 text-sky-500':
               activeSectionIndex === linkItem.index,
           }"
         >
