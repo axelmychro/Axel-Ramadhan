@@ -1,87 +1,86 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    preset: "netlify",
+    preset: 'netlify'
   },
 
   app: {
     head: {
-      title: "mychro",
+      title: 'mychro',
       meta: [
         {
-          name: "description",
+          name: 'description',
           content:
-            "computer science student, self-taught programmer, Vue / Nuxt enthusiast",
-        },
+            'computer science student, self-taught programmer, Vue / Nuxt enthusiast'
+        }
       ],
       htmlAttrs: {
-        lang: "en",
+        lang: 'en'
       },
       link: [
         {
-          rel: "icon",
-          href: "/favicon.ico",
-          type: "image/x-icon",
-        },
-      ],
-    },
+          rel: 'icon',
+          href: '/favicon.ico',
+          type: 'image/x-icon'
+        }
+      ]
+    }
   },
 
-  css: ["~/assets/styles/main.css", "devicon/devicon.min.css"],
-
   modules: [
-    "@nuxt/eslint",
-    "@nuxt/fonts",
-    "@nuxt/hints",
-    "@nuxt/image",
-    "@nuxt/scripts",
-    "@nuxtjs/i18n",
-    "nuxt-lucide-icons",
-    "@nuxtjs/color-mode",
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/hints',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxtjs/i18n',
+    'nuxt-lucide-icons',
+    '@nuxtjs/color-mode'
   ],
+  devtools: { enabled: true },
+  compatibilityDate: '2025-07-15',
+
+  css: ['~/assets/styles/main.css', 'devicon/devicon.min.css'],
 
   image: {
-    format: ["webp"],
+    format: ['webp'],
     quality: 50,
     presets: {
       default: {
         modifiers: {
-          format: "webp",
-          quality: 50,
-        },
-      },
-    },
+          format: 'webp',
+          quality: 50
+        }
+      }
+    }
   },
 
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: 'en',
     locales: [
       {
-        code: "en",
-        file: "en.json",
+        code: 'en',
+        file: 'en.json'
       },
       {
-        code: "id",
-        file: "id.json",
-      },
+        code: 'id',
+        file: 'id.json'
+      }
     ],
-    langDir: "locales/",
+    langDir: 'locales/'
   },
 
   colorMode: {
-    classSuffix: "",
-    preference: "light",
+    classSuffix: '',
+    preference: 'light'
   },
 
   vite: {
-    plugins: [tailwindcss()],
-  },
-
-  compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
-});
+    plugins: [tailwindcss()]
+  }
+})

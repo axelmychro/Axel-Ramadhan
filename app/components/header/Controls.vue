@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import { ref } from "vue";
-const { locale, setLocale } = useI18n();
+  import { ref } from 'vue'
+  const { locale, setLocale } = useI18n()
 
-const colorMode = useColorMode();
-const sound = ref(false);
+  const colorMode = useColorMode()
+  const sound = ref(false)
 
-const showLinks = useState<boolean>("showLinks", () => false);
+  const showLinks = useState('showLinks', () => false)
 
-function toggleLocale() {
-  setLocale(locale.value === "en" ? "id" : "en");
-}
+  function toggleLocale() {
+    setLocale(locale.value === 'en' ? 'id' : 'en')
+  }
 
-function toggleTheme() {
-  colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
-}
+  function toggleTheme() {
+    colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light'
+  }
 
-function toggleSound() {
-  sound.value = !sound.value;
-}
+  function toggleSound() {
+    sound.value = !sound.value
+  }
 </script>
 
 <template>
@@ -25,26 +25,28 @@ function toggleSound() {
     class="flex flex-1 flex-row items-center justify-end gap-2 px-4 lg:flex-none lg:p-0"
   >
     <button
-      @click="toggleLocale"
       type="button"
       :aria-label="`toggle language to ${locale === 'en' ? 'Indonesian' : 'English'}`"
       class="relative cursor-pointer transition-transform active:scale-90"
+      @click="toggleLocale"
     >
       <lucide-languages
         class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
-      /><span
+      />
+      <span
         class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
-        >{{ locale }}</span
       >
+        {{ locale }}
+      </span>
     </button>
 
     <button
-      @click="toggleTheme"
       type="button"
       :aria-label="`toggle theme to ${colorMode.value === 'dark' ? 'light' : 'dark'}`"
       class="cursor-pointer transition-transform active:scale-90"
+      @click="toggleTheme"
     >
       <lucide-moon
         v-if="colorMode.value === 'dark'"
@@ -64,11 +66,11 @@ function toggleSound() {
     </button>
 
     <button
-      @click="toggleSound"
       type="button"
       :aria-label="`toggle sound ${sound ? 'off' : 'on'}`"
       class="cursor-pointer transition-transform active:scale-90"
       :class="sound ? 'opacity-100' : 'opacity-50'"
+      @click="toggleSound"
     >
       <lucide-headphone-off
         v-if="sound === false"
@@ -76,7 +78,7 @@ function toggleSound() {
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />
       <lucide-headphones
-        v-else="sound === true"
+        v-else-if="sound === true"
         class="size-8"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
       />

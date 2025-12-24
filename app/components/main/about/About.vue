@@ -1,90 +1,90 @@
 <script lang="ts" setup>
-import Section from "~/components/Section.vue";
-import AboutCard from "./AboutCard.vue";
-import AboutMagic from "./AboutMagic.vue";
+  import Section from '~/components/Section.vue'
+  import AboutCard from './AboutCard.vue'
+  import AboutMagic from './AboutMagic.vue'
 
-const { t } = useI18n();
+  import meImage from '/images/ID_Info_Update_Card.webp'
+  import philosophyImage from '/images/Curio_Written_in_Water.webp'
+  import styleImage from '/images/Curio_Punklorde_Mentality.webp'
 
-import meImage from "/images/ID_Info_Update_Card.webp";
-import philosophyImage from "/images/Curio_Written_in_Water.webp";
-import styleImage from "/images/Curio_Punklorde_Mentality.webp";
+  const { t } = useI18n()
 
-useHead({
-  link: [
+  useHead({
+    link: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: meImage,
+        type: 'image/webp'
+      },
+      {
+        rel: 'preload',
+        as: 'image',
+        href: philosophyImage,
+        type: 'image/webp'
+      },
+      {
+        rel: 'preload',
+        as: 'image',
+        href: styleImage,
+        type: 'image/webp'
+      }
+    ]
+  })
+
+  const aboutButtons = [
     {
-      rel: "preload",
-      as: "image",
-      href: meImage,
-      type: "image/webp",
+      id: 'me',
+      katakana: 'わたし',
+      image: meImage
     },
     {
-      rel: "preload",
-      as: "image",
-      href: philosophyImage,
-      type: "image/webp",
+      id: 'philosophy',
+      katakana: '哲学',
+      image: philosophyImage
     },
     {
-      rel: "preload",
-      as: "image",
-      href: styleImage,
-      type: "image/webp",
-    },
-  ],
-});
+      id: 'style',
+      katakana: 'スタイル',
+      image: styleImage
+    }
+  ]
 
-const aboutButtons = [
-  {
-    id: "me",
-    katakana: "わたし",
-    image: meImage,
-  },
-  {
-    id: "philosophy",
-    katakana: "哲学",
-    image: philosophyImage,
-  },
-  {
-    id: "style",
-    katakana: "スタイル",
-    image: styleImage,
-  },
-];
+  const showButtons = ref(true)
+  const buttons = aboutButtons
 
-const showButtons = ref(true);
-const buttons = aboutButtons;
+  const hoveredButton = ref<(typeof aboutButtons)[0] | null>(null)
+  const selectedButton = ref<(typeof aboutButtons)[0] | null>(null)
 
-const hoveredButton = ref<(typeof aboutButtons)[0] | null>(null);
-const selectedButton = ref<(typeof aboutButtons)[0] | null>(null);
+  const processedButton = computed(() => {
+    const button = selectedButton.value || hoveredButton.value
+    if (!button) return null
 
-const processedButton = computed(() => {
-  const button = selectedButton.value || hoveredButton.value;
-  if (!button) return null;
+    return {
+      ...button,
+      description: t(`section.about.${button.id}.description`)
+    }
+  })
 
-  return {
-    ...button,
-    description: t(`section.about.${button.id}.description`),
-  };
-});
+  const activeButton = computed(
+    () => selectedButton.value || hoveredButton.value
+  )
 
-const activeButton = computed(
-  () => selectedButton.value || hoveredButton.value,
-);
+  const mouse = ref({ x: 0, y: 0 })
+  function handleMouseMove(event: MouseEvent) {
+    mouse.value = {
+      x: event.clientX,
+      y: event.clientY
+    }
+  }
 
-const mouse = ref({ x: 0, y: 0 });
-function handleMouseMove(event: MouseEvent) {
-  mouse.value = {
-    x: event.clientX,
-    y: event.clientY,
-  };
-}
+  function showPreview(button: (typeof buttons)[0]) {
+    hoveredButton.value = button
+  }
 
-function showPreview(button: (typeof buttons)[0]) {
-  hoveredButton.value = button;
-}
-
-function hidePreview() {
-  hoveredButton.value = null;
-}
+  function hidePreview() {
+    hoveredButton.value = null
+  }
 </script>
 
 <template>
@@ -114,17 +114,17 @@ function hidePreview() {
           @mouseleave="hidePreview()"
           @focus="selectedButton = button"
           @click="
-            showButtons = false;
-            selectedButton = button;
+            showButtons = false
+            selectedButton = button
           "
         >
           <h2
             class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-black/50 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_2px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px]"
           >
             {{ t(`section.about.${button.id}.title`) }}
-            <span class="font-ibm-plex-sans-jp -z-10 text-sm">{{
-              button.katakana
-            }}</span>
+            <span class="font-ibm-plex-sans-jp -z-10 text-sm">
+              {{ button.katakana }}
+            </span>
           </h2>
           <p
             class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity text-shadow-[2px_0_4px] text-shadow-black/80 group-hover:opacity-100 group-focus:opacity-100"
@@ -157,8 +157,8 @@ function hidePreview() {
           class="absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform lg:top-8 lg:right-8 dark:bg-neutral-100"
           :class="showButtons ? 'scale-0 rounded-xs' : 'scale-100 rounded-none'"
           @click="
-            showButtons = true;
-            selectedButton = null;
+            showButtons = true
+            selectedButton = null
           "
         >
           <LucideChevronLeft
@@ -170,7 +170,10 @@ function hidePreview() {
           class="*: pointer-events-none absolute right-8 bottom-8 -z-10 flex flex-row gap-2 select-none *:size-8 *:text-black *:opacity-20 *:transition dark:*:text-white"
           :class="showButtons ? '*:scale-100' : '*:scale-0'"
         >
-          <LucidePlus /><LucideSquare /><LucideX /><LucideCircle />
+          <LucidePlus />
+          <LucideSquare />
+          <LucideX />
+          <LucideCircle />
         </div>
       </div>
     </div>
