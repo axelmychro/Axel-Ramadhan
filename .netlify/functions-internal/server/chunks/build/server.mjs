@@ -359,7 +359,7 @@ const createError = (error) => {
   });
   return nuxtError;
 };
-const unhead_OaWHpDuU86kXCFnEbeMv7tQ6RNe0qg85fExLsybXu94 = /* @__PURE__ */ defineNuxtPlugin({
+const unhead_U_K_7mHTEBCk_DnitVU_zUiz7ShEy_q9N4u5S0_sn3U = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:head",
   enforce: "pre",
   setup(nuxtApp) {
@@ -409,7 +409,7 @@ function getRouteFromPath(fullPath) {
     href: fullPath
   };
 }
-const router_RRrvypHWOOxnSBn15mJ6zH4alv21dd6nwdy5uvL2HZY = /* @__PURE__ */ defineNuxtPlugin({
+const router_z07eIcNcAkNvNE9ZEpjtwjfrchKKHs2d32VvX5bjz18 = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
   enforce: "pre",
   setup(nuxtApp) {
@@ -611,7 +611,7 @@ const reducers = [
   ["Ref", (data) => isRef(data) && data.value],
   ["Reactive", (data) => isReactive(data) && toRaw(data)]
 ];
-const revive_payload_server_rgucer4E5KBFfH_bBSdomZ1iE1vLDUJQPr1VDevPsN0 = /* @__PURE__ */ defineNuxtPlugin({
+const revive_payload_server_vPkouKybmu98psFHpvudDarEMsAMzV9HZ_R_xXIYGaI = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:revive-payload:server",
   setup() {
     for (const [reducer, fn] of reducers) {
@@ -1335,7 +1335,7 @@ function createNuxtI18nContext(nuxt, vueI18n, defaultLocale) {
       return;
     }
     const headers = getLocaleConfig(locale)?.cacheable ? {} : { "Cache-Control": "no-cache" };
-    const messages = await $fetch(`${"/_i18n/z3No98tP"}/${locale}/messages.json`, { headers });
+    const messages = await $fetch(`${"/_i18n/v6iOMDAs"}/${locale}/messages.json`, { headers });
     for (const k of Object.keys(messages)) {
       i18n.mergeLocaleMessage(k, messages[k]);
     }
@@ -5444,7 +5444,7 @@ const switchLocalePathLinkWrapperExpr = new RegExp(
   [`<!--${identifier}-\\[(\\w+)\\]-->`, `.+?`, `<!--/${identifier}-->`].join(""),
   "g"
 );
-const switch_locale_path_ssr_MWbFnA78TNGjw_LAV4tWBDdiADJ3EMcssXy6Pl5_Qak = /* @__PURE__ */ defineNuxtPlugin({
+const switch_locale_path_ssr_OPiXXvyJyoq7GgrjUEmuIGbGuee160kK2iZOJeP1LUc = /* @__PURE__ */ defineNuxtPlugin({
   name: "i18n:plugin:switch-locale-path-ssr",
   dependsOn: ["i18n:plugin"],
   setup(_nuxt) {
@@ -5467,7 +5467,7 @@ const switch_locale_path_ssr_MWbFnA78TNGjw_LAV4tWBDdiADJ3EMcssXy6Pl5_Qak = /* @_
     });
   }
 });
-const route_locale_detect_N08kNW8IGgX8uJlAxt7hjksQz_CHB9x6Hy33MENeqNk = /* @__PURE__ */ defineNuxtPlugin({
+const route_locale_detect_1Cv5trt94EBZWIIFrIhxn89J_DY0X9TrvTfDCBU1IAI = /* @__PURE__ */ defineNuxtPlugin({
   name: "i18n:plugin:route-locale-detect",
   dependsOn: ["i18n:plugin"],
   async setup(_nuxt) {
@@ -5486,7 +5486,7 @@ const route_locale_detect_N08kNW8IGgX8uJlAxt7hjksQz_CHB9x6Hy33MENeqNk = /* @__PU
     }
   }
 });
-const preload_PZCAyM_lFyhikTE5Iq0LQV5rzzn0ueZiUBlTZs0sZV8 = /* @__PURE__ */ defineNuxtPlugin({
+const preload_zniU5xsJf56KfhMJXj8hEy_a0xfr2vEzrtidYnGr4uM = /* @__PURE__ */ defineNuxtPlugin({
   name: "i18n:plugin:preload",
   dependsOn: ["i18n:plugin"],
   async setup(_nuxt) {
@@ -5543,7 +5543,7 @@ const setupVueI18nOptions = async (defaultLocale) => {
   }
   return options;
 };
-const i18n_R4L3_2QqpyuogZCeWTmjuUDycmco0uL5D25zhgUk5Lo = /* @__PURE__ */ defineNuxtPlugin({
+const i18n_m66eeaRUnloGhN4VcTNT1GAoNKnOmH5Lv7Yq4NvCVQs = /* @__PURE__ */ defineNuxtPlugin({
   name: "i18n:plugin",
   parallel: false,
   async setup(_nuxt) {
@@ -5558,7 +5558,7 @@ const i18n_R4L3_2QqpyuogZCeWTmjuUDycmco0uL5D25zhgUk5Lo = /* @__PURE__ */ defineN
     {
       localeConfigs.value = useRequestEvent().context.nuxtI18n?.localeConfigs || {};
     }
-    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/z3No98tP"}/${locale}/messages.json`));
+    prerenderRoutes(localeCodes.map((locale) => `${"/_i18n/v6iOMDAs"}/${locale}/messages.json`));
     const i18n = createI18n(optionsI18n);
     const detectors = useDetectors(useRequestEvent(nuxt), useI18nDetection(nuxt), nuxt);
     const ctx = createNuxtI18nContext(nuxt, i18n, optionsI18n.defaultLocale);
@@ -5625,7 +5625,7 @@ const i18n_R4L3_2QqpyuogZCeWTmjuUDycmco0uL5D25zhgUk5Lo = /* @__PURE__ */ defineN
     nuxt.provide("switchLocalePath", useSwitchLocalePath(nuxt));
   }
 });
-const ssg_detect_rywWGUBPuMs5pZOGFqrV8wb51h5EIjoffEs1DFg9vNc = /* @__PURE__ */ defineNuxtPlugin({
+const ssg_detect_F9LrngCpZs7NBRImj1xz70Jsk_AwLLoaay5X7yVKiTY = /* @__PURE__ */ defineNuxtPlugin({
   name: "i18n:plugin:ssg-detect",
   dependsOn: ["i18n:plugin", "i18n:plugin:route-locale-detect"],
   enforce: "post",
@@ -5636,16 +5636,16 @@ const ssg_detect_rywWGUBPuMs5pZOGFqrV8wb51h5EIjoffEs1DFg9vNc = /* @__PURE__ */ d
   }
 });
 const plugins = [
-  unhead_OaWHpDuU86kXCFnEbeMv7tQ6RNe0qg85fExLsybXu94,
-  router_RRrvypHWOOxnSBn15mJ6zH4alv21dd6nwdy5uvL2HZY,
-  revive_payload_server_rgucer4E5KBFfH_bBSdomZ1iE1vLDUJQPr1VDevPsN0,
+  unhead_U_K_7mHTEBCk_DnitVU_zUiz7ShEy_q9N4u5S0_sn3U,
+  router_z07eIcNcAkNvNE9ZEpjtwjfrchKKHs2d32VvX5bjz18,
+  revive_payload_server_vPkouKybmu98psFHpvudDarEMsAMzV9HZ_R_xXIYGaI,
   components_plugin_4kY4pyzJIYX99vmMAAIorFf3CnAaptHitJgf7JxiED8,
   plugin_server_LrNpWyhzguUxhfcR_3lKPjk1a_L1ru762oNUyLmVxK4,
-  switch_locale_path_ssr_MWbFnA78TNGjw_LAV4tWBDdiADJ3EMcssXy6Pl5_Qak,
-  route_locale_detect_N08kNW8IGgX8uJlAxt7hjksQz_CHB9x6Hy33MENeqNk,
-  preload_PZCAyM_lFyhikTE5Iq0LQV5rzzn0ueZiUBlTZs0sZV8,
-  i18n_R4L3_2QqpyuogZCeWTmjuUDycmco0uL5D25zhgUk5Lo,
-  ssg_detect_rywWGUBPuMs5pZOGFqrV8wb51h5EIjoffEs1DFg9vNc
+  switch_locale_path_ssr_OPiXXvyJyoq7GgrjUEmuIGbGuee160kK2iZOJeP1LUc,
+  route_locale_detect_1Cv5trt94EBZWIIFrIhxn89J_DY0X9TrvTfDCBU1IAI,
+  preload_zniU5xsJf56KfhMJXj8hEy_a0xfr2vEzrtidYnGr4uM,
+  i18n_m66eeaRUnloGhN4VcTNT1GAoNKnOmH5Lv7Yq4NvCVQs,
+  ssg_detect_F9LrngCpZs7NBRImj1xz70Jsk_AwLLoaay5X7yVKiTY
 ];
 async function imageMeta(_ctx, url) {
   const meta = await _imageMeta(url).catch((err) => {
@@ -6463,8 +6463,8 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
       }))}><div class="flex size-full flex-col justify-start p-4 lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2 lg:p-0"><!--[-->`);
       ssrRenderList(unref(linkItems), (linkItem) => {
         _push(`<button${ssrRenderAttr("aria-label", `go to ${linkItem.label} section`)} class="${ssrRenderClass([{
-          "border-sky-300 text-sky-300": unref(activeSectionIndex) === linkItem.index
-        }, "font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-sky-300 hover:text-sky-300 focus:border-sky-300 focus:text-sky-300 lg:gap-2 lg:border-transparent"])}">`);
+          "border-sky-500 text-sky-500": unref(activeSectionIndex) === linkItem.index
+        }, "font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-sky-500 hover:text-sky-500 focus:border-sky-500 focus:text-sky-500 lg:gap-2 lg:border-transparent"])}">`);
         if (linkItem.icon === "House") {
           _push(ssrRenderComponent(_component_LucideHouse, null, null, _parent));
         } else if (linkItem.icon === "Code") {
@@ -6532,10 +6532,12 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
         _push(ssrRenderComponent(_component_lucide_headphone_off, {
           class: ["size-8", unref(showLinks) ? "text-gray-100" : "text-inherit"]
         }, null, _parent));
-      } else {
+      } else if (sound.value === true) {
         _push(ssrRenderComponent(_component_lucide_headphones, {
           class: ["size-8", unref(showLinks) ? "text-gray-100" : "text-inherit"]
         }, null, _parent));
+      } else {
+        _push(`<!---->`);
       }
       _push(`</button></div>`);
     };
@@ -6627,20 +6629,20 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_lucide_mail = Mail;
   const _component_lucide_linkedin = Linkedin;
   const _component_lucide_github = Github;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-800 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" }, _attrs))}><div class="flex flex-col md:flex-row"><div class="flex max-h-32 min-h-32 min-w-32 items-center justify-center rounded-t-md bg-neutral-950 md:max-h-full md:max-w-full md:rounded-tr-none">`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-950 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" }, _attrs))}><div class="flex flex-col md:flex-row"><div class="flex max-h-32 min-h-32 min-w-32 items-center justify-center rounded-t-md bg-neutral-950 md:max-h-full md:max-w-full md:rounded-tr-none">`);
   _push(ssrRenderComponent(_component_NuxtImg, {
     src: "/images/imathe.webp",
     alt: "imathe",
     loading: "eager",
     class: "pointer-events-none size-32 object-contain p-2 select-none"
   }, null, _parent));
-  _push(`</div><div class="flex flex-1 flex-col bg-purple-800 p-4 md:rounded-tr-md"><h1 class="text-center text-xl leading-relaxed text-neutral-300 sm:text-2xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.greeting"))} <span class="inline-block text-3xl text-neutral-100 sm:text-4xl"> Axel Ramadhan! </span></h1><h2 class="font-fira-code text-center leading-none text-purple-300 sm:text-lg md:text-start"> Junior Frontend Developer </h2><hr class="my-2 border-white"><div class="[&amp;&gt;a]: flex flex-row items-center justify-center gap-4 md:justify-end [&amp;&gt;a]:rounded-sm [&amp;&gt;a]:p-2 [&amp;&gt;a&gt;*]:size-8"><a href="mailto:axelmychro@gmail.com" class="bg-black text-white" aria-label="send email to axelmychro@gmail.com">`);
+  _push(`</div><div class="flex flex-1 flex-col bg-linear-to-tr from-purple-900 via-purple-700 to-purple-800 p-4 md:rounded-tr-md"><h1 class="text-center text-xl leading-relaxed text-neutral-300 sm:text-2xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.greeting"))} <span class="inline-block text-3xl text-neutral-100 sm:text-4xl"> Axel Ramadhan! </span></h1><h2 class="font-fira-code text-center leading-none text-purple-300 sm:text-lg md:text-start"> Junior Frontend Developer </h2><hr class="my-2 border-white"><div class="[&amp;&gt;a]: flex flex-row items-center justify-center gap-4 md:justify-end [&amp;&gt;a]:rounded-sm [&amp;&gt;a]:p-2 [&amp;&gt;a&gt;*]:size-8"><a href="mailto:axelmychro@gmail.com" class="bg-black text-white" aria-label="send email to axelmychro@gmail.com">`);
   _push(ssrRenderComponent(_component_lucide_mail, { "aria-hidden": "true" }, null, _parent));
   _push(`</a><a href="https://linkedin.com/in/axelramadhan" target="_blank" class="bg-[#0077B5] text-white" aria-label="visit LinkedIn profile">`);
   _push(ssrRenderComponent(_component_lucide_linkedin, { "aria-hidden": "true" }, null, _parent));
   _push(`</a><a href="https://github.com/axelmychro" class="bg-black text-white" aria-label="visit GitHub profile">`);
   _push(ssrRenderComponent(_component_lucide_github, { "aria-hidden": "true" }, null, _parent));
-  _push(`</a></div></div></div><div class="flex flex-col lg:flex-row"><div class="flex flex-1 items-center justify-center bg-neutral-800 p-4 lg:rounded-bl-md"><p class="text-center text-lg leading-relaxed text-neutral-100 sm:text-xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.bio"))}</p></div><div class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-3 lg:justify-center lg:rounded-bl-none [&amp;&gt;i]:leading-none [&amp;&gt;i]:grayscale-75 [&amp;&gt;i]:transition [&amp;&gt;i]:hover:grayscale-0 [&amp;&gt;i]:sm:text-xl" aria-description="technologies: Node.js, Vue, Nuxt, JavaScript, Git, Figma, TypeScript, Tailwind CSS, Vite"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i><i class="devicon-vuejs-plain colored" aria-hidden="true"></i><i class="devicon-nuxt-original colored" aria-hidden="true"></i><i class="devicon-javascript-plain colored" aria-hidden="true"></i><i class="devicon-git-plain colored" aria-hidden="true"></i><i class="devicon-figma-plain colored" aria-hidden="true"></i><i class="devicon-typescript-plain colored" aria-hidden="true"></i><i class="devicon-tailwindcss-original colored" aria-hidden="true"></i><i class="devicon-vite-plain colored" aria-hidden="true"></i></div></div></div>`);
+  _push(`</a></div></div></div><div class="flex flex-col lg:flex-row"><div class="flex flex-1 items-center justify-center bg-linear-to-tl from-neutral-700 via-neutral-800 to-neutral-900 p-4 lg:rounded-bl-md"><p class="text-center text-lg leading-relaxed text-neutral-200 sm:text-xl md:text-start">${ssrInterpolate(_ctx.$t("section.home.card.bio"))}</p></div><div class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-linear-to-tr from-neutral-800 to-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-3 lg:justify-center lg:rounded-bl-none [&amp;&gt;i]:leading-none [&amp;&gt;i]:grayscale-75 [&amp;&gt;i]:transition [&amp;&gt;i]:hover:grayscale-0 [&amp;&gt;i]:sm:text-xl" aria-description="technologies: Node.js, Vue, Nuxt, JavaScript, Git, Figma, TypeScript, Tailwind CSS, Vite"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i><i class="devicon-vuejs-plain colored" aria-hidden="true"></i><i class="devicon-nuxt-original colored" aria-hidden="true"></i><i class="devicon-javascript-plain colored" aria-hidden="true"></i><i class="devicon-git-plain colored" aria-hidden="true"></i><i class="devicon-figma-plain colored" aria-hidden="true"></i><i class="devicon-typescript-plain colored" aria-hidden="true"></i><i class="devicon-tailwindcss-original colored" aria-hidden="true"></i><i class="devicon-vite-plain colored" aria-hidden="true"></i></div></div></div>`);
 }
 const _sfc_setup$e = _sfc_main$e.setup;
 _sfc_main$e.setup = (props, ctx) => {
@@ -6656,11 +6658,11 @@ const _sfc_main$d = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(Section, mergeProps({
         id: "home",
-        class: "bg-linear-to-br from-purple-50/60 via-slate-100 to-gray-100 dark:from-purple-950/60 dark:via-slate-900 dark:to-gray-900"
+        class: "bg-linear-to-br from-purple-300/50 via-slate-300 to-gray-300 dark:from-purple-900/50 dark:via-slate-900 dark:to-gray-900"
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex h-full w-full items-center justify-center" data-v-350efc6f${_scopeId}>`);
+            _push2(`<div class="flex h-full w-full items-center justify-center" data-v-ce1d5a86${_scopeId}>`);
             _push2(ssrRenderComponent(HeroCard, { class: "animate-float shadow-md transition-transform" }, null, _parent2, _scopeId));
             _push2(`</div>`);
           } else {
@@ -6682,7 +6684,7 @@ _sfc_main$d.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/hero/Hero.vue");
   return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const Hero = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-350efc6f"]]);
+const Hero = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-ce1d5a86"]]);
 const myGH = "https://github.com/axelmychro/";
 const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "Projects",
@@ -6713,21 +6715,20 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
       const _component_LucideGithub = Github;
       _push(ssrRenderComponent(Section, mergeProps({
         id: "projects",
-        txt: "what have i done?",
-        class: ""
+        class: "bg-linear-to-bl from-blue-300/50 via-slate-300 to-gray-300 dark:from-blue-900/50 dark:via-slate-900 dark:to-gray-900"
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex size-full flex-col" data-v-f765c843${_scopeId}><div class="flex size-full flex-col items-stretch justify-stretch" data-v-f765c843${_scopeId}><!--[-->`);
+            _push2(`<div class="flex size-full flex-col" data-v-590f3aa1${_scopeId}><div class="flex size-full flex-col items-stretch justify-stretch" data-v-590f3aa1${_scopeId}><!--[-->`);
             ssrRenderList(projects, (project) => {
-              _push2(`<a${ssrRenderAttr("href", project.url)} target="_blank"${ssrRenderAttr("aria-label", `view project ${project.title}`)} class="group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4" data-v-f765c843${_scopeId}><div class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition-transform group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100" data-v-f765c843${_scopeId}></div><h2 class="flex-1 text-2xl group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900" data-v-f765c843${_scopeId}>${ssrInterpolate(project.title)}</h2><time${ssrRenderAttr("datetime", project.date)} class="text-2xl text-fuchsia-500 transition-colors" data-v-f765c843${_scopeId}>${ssrInterpolate(project.year)}</time>`);
+              _push2(`<a${ssrRenderAttr("href", project.url)} target="_blank"${ssrRenderAttr("aria-label", `view project ${project.title}`)} class="group relative flex flex-row items-center justify-stretch overflow-hidden border-b-2 p-4" data-v-590f3aa1${_scopeId}><div class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition-transform group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100" data-v-590f3aa1${_scopeId}></div><h2 class="flex-1 text-2xl group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900" data-v-590f3aa1${_scopeId}>${ssrInterpolate(project.title)}</h2><time${ssrRenderAttr("datetime", project.date)} class="text-2xl text-fuchsia-500 transition-colors" data-v-590f3aa1${_scopeId}>${ssrInterpolate(project.year)}</time>`);
               _push2(ssrRenderComponent(_component_LucideArrowUpRight, {
                 class: "size-8 text-sky-500",
                 "aria-hidden": "true"
               }, null, _parent2, _scopeId));
               _push2(`</a>`);
             });
-            _push2(`<!--]--><div class="flex h-full w-full items-center justify-center select-none" data-v-f765c843${_scopeId}><a href="https://github.com/axelmychro" target="_blank" aria-label="visit my GitHub profile" class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 dark:bg-gray-100 dark:text-gray-900" data-v-f765c843${_scopeId}>`);
+            _push2(`<!--]--><div class="flex h-full w-full items-center justify-center select-none" data-v-590f3aa1${_scopeId}><a href="https://github.com/axelmychro" target="_blank" aria-label="visit my GitHub profile" class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 dark:bg-gray-100 dark:text-gray-900" data-v-590f3aa1${_scopeId}>`);
             _push2(ssrRenderComponent(_component_LucideGithub, {
               class: "size-16",
               "aria-hidden": "true"
@@ -6787,7 +6788,7 @@ _sfc_main$c.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/projects/Projects.vue");
   return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const Projects = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$c, [["__scopeId", "data-v-f765c843"]]), { __name: "MainProjects" });
+const Projects = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$c, [["__scopeId", "data-v-590f3aa1"]]), { __name: "MainProjects" });
 const _imports_0$1 = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3e%3cpath%20fill='none'%20d='M0%200h16v16H0z'/%3e%3cpath%20fill='%23F29900'%20d='M13.5%202H8L1%2013h5.5z'/%3e%3cpath%20fill='%231A73E8'%20d='M8%202h5v11H8z'/%3e%3ccircle%20fill='%23EA4335'%20cx='3.25'%20cy='4.25'%20r='2.25'/%3e%3cpath%20fill='%230D652D'%20d='M13.33%2010L13%2013c-1.66%200-3-1.34-3-3s1.34-3%203-3l.33%203z'/%3e%3cpath%20fill='%23174EA6'%20d='M10.5%204.5A2.5%202.5%200%200113%202l.45%202.5L13%207a2.5%202.5%200%2001-2.5-2.5z'/%3e%3cpath%20fill='%231A73E8'%20d='M13%202a2.5%202.5%200%20010%205'/%3e%3cpath%20fill='%2334A853'%20d='M13%207c1.66%200%203%201.34%203%203s-1.34%203-3%203'/%3e%3c/svg%3e";
 const l7dColours = `section.about.style.colours.`;
 const l7dFonts = `section.about.style.fonts.`;
@@ -6888,7 +6889,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
         _push(`<!---->`);
       }
       if (props.button.id === "style") {
-        _push(`<!--[--><h3 class="text-2xl"> Colours <span class="text-sm text-sky-300">from <i class="devicon-tailwindcss-original"></i>tailwindcss </span></h3><div class="flex flex-row flex-wrap gap-2"><!--[-->`);
+        _push(`<!--[--><h3 class="text-2xl"> Colours <span class="text-sm text-sky-300"> from <i class="devicon-tailwindcss-original"></i> tailwindcss </span></h3><div class="flex flex-row flex-wrap gap-2"><!--[-->`);
         ssrRenderList(colorButtons.value, (colorButton) => {
           _push(`<button type="button" class="${ssrRenderClass([[
             colorButton.bgClass,
@@ -6905,7 +6906,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
           }
           _push(`</button>`);
         });
-        _push(`<!--]--></div><h3 class="text-2xl"> Fonts <span class="text-sm text-amber-300">from <img${ssrRenderAttr("src", _imports_0$1)} loading="lazy" aria-hidden="true" class="inline size-3.5">Google Fonts</span></h3><div class="flex flex-row flex-wrap items-center gap-2"><!--[-->`);
+        _push(`<!--]--></div><h3 class="text-2xl"> Fonts <span class="text-sm text-amber-300"> from <img${ssrRenderAttr("src", _imports_0$1)} loading="lazy" aria-hidden="true" class="inline size-3.5"> Google Fonts </span></h3><div class="flex flex-row flex-wrap items-center gap-2"><!--[-->`);
         ssrRenderList(fontLinks, (fontLink) => {
           _push(`<a${ssrRenderAttr("href", fontLink.url)} target="_blank" class="${ssrRenderClass([fontLink.class, "flex size-fit rounded-xs border-2 p-2 leading-none"])}">${ssrInterpolate(fontLink.name)}</a>`);
         });
@@ -7059,7 +7060,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       const _component_LucideCircle = Circle;
       _push(ssrRenderComponent(Section, mergeProps({
         id: "about",
-        class: "bg-linear-to-r from-zinc-50 via-neutral-50 to-stone-50 text-neutral-900 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-950 dark:text-neutral-100",
+        class: "bg-linear-to-r from-zinc-100 via-neutral-300 to-stone-200 text-neutral-800 dark:from-zinc-700 dark:via-neutral-900 dark:to-stone-800 dark:text-neutral-200",
         onMousemove: handleMouseMove
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -7069,7 +7070,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
               "flex size-full shrink-0 flex-col justify-evenly transition-all duration-1000"
             ])}"${_scopeId}><!--[-->`);
             ssrRenderList(unref(buttons), (button) => {
-              _push2(`<button type="button" class="group relative flex h-fit w-full max-w-xs cursor-pointer items-end justify-between border-b-2"${_scopeId}><h2 class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-neutral-900 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-100"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.title`))} <span class="font-ibm-plex-sans-jp -z-10 text-sm"${_scopeId}>${ssrInterpolate(button.katakana)}</span></h2><p class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity text-shadow-[-2px_0_8px] text-shadow-neutral-900 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-100"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.subtitle`))}</p></button>`);
+              _push2(`<button type="button" class="group relative flex h-fit w-full max-w-xs cursor-pointer items-end justify-between border-b-2"${_scopeId}><h2 class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-black/50 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_2px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px]"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.title`))} <span class="font-ibm-plex-sans-jp -z-10 text-sm"${_scopeId}>${ssrInterpolate(button.katakana)}</span></h2><p class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity text-shadow-[2px_0_4px] text-shadow-black/80 group-hover:opacity-100 group-focus:opacity-100"${_scopeId}>${ssrInterpolate(unref(t)(`section.about.${button.id}.subtitle`))}</p></button>`);
             });
             _push2(`<!--]--></div><div class="${ssrRenderClass([
               unref(showButtons) ? "rounded-xs bg-neutral-800/40 text-neutral-100 opacity-0 lg:opacity-100 dark:bg-neutral-200/40 dark:text-neutral-900" : "rounded-none bg-neutral-800/10 opacity-100 dark:bg-neutral-200/10",
@@ -7117,16 +7118,13 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
                       onMouseenter: ($event) => showPreview(button),
                       onMouseleave: ($event) => hidePreview(),
                       onFocus: ($event) => selectedButton.value = button,
-                      onClick: ($event) => {
-                        showButtons.value = false;
-                        selectedButton.value = button;
-                      }
+                      onClick: ($event) => (showButtons.value = false, selectedButton.value = button)
                     }, [
-                      createVNode("h2", { class: "font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-neutral-900 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px] dark:text-shadow-neutral-100" }, [
+                      createVNode("h2", { class: "font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-black/50 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_2px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px]" }, [
                         createTextVNode(toDisplayString$1(unref(t)(`section.about.${button.id}.title`)) + " ", 1),
                         createVNode("span", { class: "font-ibm-plex-sans-jp -z-10 text-sm" }, toDisplayString$1(button.katakana), 1)
                       ]),
-                      createVNode("p", { class: "font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity text-shadow-[-2px_0_8px] text-shadow-neutral-900 group-hover:opacity-100 group-focus:opacity-100 dark:text-shadow-neutral-100" }, toDisplayString$1(unref(t)(`section.about.${button.id}.subtitle`)), 1)
+                      createVNode("p", { class: "font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity text-shadow-[2px_0_4px] text-shadow-black/80 group-hover:opacity-100 group-focus:opacity-100" }, toDisplayString$1(unref(t)(`section.about.${button.id}.subtitle`)), 1)
                     ], 40, ["onMouseenter", "onMouseleave", "onFocus", "onClick"]);
                   }), 128))
                 ], 2),
@@ -7148,10 +7146,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
                     type: "button",
                     "aria-label": "close current subsection",
                     class: ["absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform lg:top-8 lg:right-8 dark:bg-neutral-100", unref(showButtons) ? "scale-0 rounded-xs" : "scale-100 rounded-none"],
-                    onClick: ($event) => {
-                      showButtons.value = true;
-                      selectedButton.value = null;
-                    }
+                    onClick: ($event) => (showButtons.value = true, selectedButton.value = null)
                   }, [
                     createVNode(_component_LucideChevronLeft, { class: "size-8 text-neutral-100 dark:text-neutral-900" })
                   ], 10, ["onClick"]),
@@ -7192,8 +7187,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_Section = Section;
   _push(ssrRenderComponent(_component_Section, mergeProps({
     id: "timeline",
-    txt: "tempus fugit...",
-    class: "flex justify-center"
+    class: "flex justify-center bg-linear-to-l from-zinc-300 via-neutral-300 to-stone-200 text-neutral-800 dark:from-zinc-900 dark:via-neutral-900 dark:to-stone-800 dark:text-neutral-200"
   }, _attrs), {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
@@ -7254,8 +7248,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
       const _component_LucideInstagram = Instagram;
       _push(ssrRenderComponent(Section, mergeProps({
         id: "contact",
-        txt: "wow, you stayed?",
-        class: ""
+        class: "bg-linear-to-tr from-emerald-300/50 via-stone-300 to-zinc-300 dark:from-emerald-900/50 dark:via-stone-900 dark:to-zinc-900"
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -7367,7 +7360,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     const sectionComponents = [Hero, Projects, About, Timeline, Contact];
     ref(false);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<main${ssrRenderAttrs(mergeProps({ class: "overflow-hidden" }, _attrs))} data-v-301247d6><div class="stage flex size-full flex-row" style="${ssrRenderStyle({ transform: `translateX(-${unref(activeSectionIndex) * 100}vw)` })}" data-v-301247d6><!--[-->`);
+      _push(`<main${ssrRenderAttrs(mergeProps({ class: "overflow-hidden" }, _attrs))} data-v-e68bdfd2><div class="stage flex size-full flex-row" style="${ssrRenderStyle({ transform: `translateX(-${unref(activeSectionIndex) * 100}vw)` })}" data-v-e68bdfd2><!--[-->`);
       ssrRenderList(sectionComponents, (sectionComponent, index) => {
         ssrRenderVNode(_push, createVNode(resolveDynamicComponent(sectionComponent), { key: index }, null), _parent);
       });
@@ -7381,10 +7374,10 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/main/Main.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const Main = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["__scopeId", "data-v-301247d6"]]), { __name: "Main" });
+const Main = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["__scopeId", "data-v-e68bdfd2"]]), { __name: "Main" });
 const _sfc_main$5 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "fixed right-0 bottom-0 flex h-16 w-full flex-row items-center justify-between gap-8 p-2" }, _attrs))}><small class="text-sm backdrop-blur-xs">© <span class="text-fuchsia-300">2025</span> Axel</small></footer>`);
+  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "fixed right-0 bottom-0 flex h-16 w-full flex-row items-center justify-between gap-8 p-2" }, _attrs))}><small class="text-sm leading-none backdrop-blur-xs text-shadow-xs"> © <time datetime="2025" class="text-fuchsia-200">${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())}</time> Axel </small></footer>`);
 }
 const _sfc_setup$5 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
@@ -7407,7 +7400,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       _push(`<div${ssrRenderAttrs(mergeProps({
         "aria-hidden": "true",
         class: "pointer-events-none fixed right-0 bottom-16 flex min-h-16 min-w-12 items-center justify-center select-none lg:bottom-1/2 lg:min-w-32"
-      }, _attrs))}><div class="relative flex min-h-16 min-w-12 items-end justify-center not-lg:mb-2 lg:min-w-24 lg:justify-start"><p class="font-oswald mb-2 flex-col-reverse overflow-hidden pt-2 text-center text-4xl leading-[0.5] text-fuchsia-300 lg:mb-4 lg:text-6xl"> 0${ssrInterpolate(unref(currentSection))}</p><div class="absolute inset-0 flex flex-row items-end justify-center lg:flex-col-reverse lg:justify-start"><h6 class="leading-none font-bold uppercase not-lg:text-xs not-lg:[writing-mode:vertical-lr]">${ssrInterpolate(_ctx.$t(`nav.${unref(currentSectionLabel)}`))}</h6><p class="text-xs leading-none not-lg:[writing-mode:vertical-lr]"> 0${ssrInterpolate(unref(currentSection))}/0${ssrInterpolate(unref(currentSectionMax))}</p></div></div></div>`);
+      }, _attrs))}><div class="relative flex min-h-16 min-w-12 items-end justify-center not-lg:mb-2 lg:min-w-24 lg:justify-start"><p class="font-oswald mb-2 flex-col-reverse overflow-hidden pt-2 text-center text-4xl leading-[0.5] text-fuchsia-300 lg:mb-4 lg:text-6xl"> 0${ssrInterpolate(unref(currentSection))}</p><div class="absolute inset-0 flex flex-row items-end justify-center lg:flex-col-reverse lg:justify-start"><div class="flex flex-row justify-end lg:w-full lg:gap-2"><div class="not-lg:border-r-2 lg:h-fit lg:w-full lg:self-center lg:border-t-2"></div><h6 class="leading-none font-bold uppercase not-lg:text-xs not-lg:[writing-mode:vertical-lr]">${ssrInterpolate(_ctx.$t(`nav.${unref(currentSectionLabel)}`))}</h6></div><p class="text-xs leading-none not-lg:[writing-mode:vertical-lr]"> 0${ssrInterpolate(unref(currentSection))}/0${ssrInterpolate(unref(currentSectionMax))}</p></div></div></div>`);
     };
   }
 });
@@ -7437,13 +7430,13 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       _push(`<!--[--><div class="${ssrRenderClass([[
         unref(showTop) ? "translate-y-0" : "-translate-y-16",
         overlayBorder(unref(showTop))
-      ], "overlays fixed top-16 left-0 w-screen border-b"])}" data-v-23f875c2></div><div class="${ssrRenderClass([[
+      ], "overlays fixed top-16 left-0 w-screen border-b"])}" data-v-e865f0e0></div><div class="${ssrRenderClass([[
         unref(showRight) ? "translate-x-0" : "translate-x-12 lg:translate-x-32",
         overlayBorder(unref(showRight))
-      ], "overlays fixed top-0 right-12 h-screen border-l lg:right-32"])}" data-v-23f875c2></div><div class="${ssrRenderClass([[
+      ], "overlays fixed top-0 right-12 h-screen border-l lg:right-32"])}" data-v-e865f0e0></div><div class="${ssrRenderClass([[
         unref(showBottom) ? "translate-y-0" : "translate-y-16",
         overlayBorder(unref(showBottom))
-      ], "overlays fixed right-0 bottom-16 w-screen border-t"])}" data-v-23f875c2></div>`);
+      ], "overlays fixed right-0 bottom-16 w-screen border-t"])}" data-v-e865f0e0></div>`);
       _push(ssrRenderComponent(Counter, null, null, _parent));
       _push(`<!--]-->`);
     };
@@ -7455,7 +7448,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/layout/Overlay.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const Overlay = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-23f875c2"]]), { __name: "LayoutOverlay" });
+const Overlay = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-e865f0e0"]]), { __name: "LayoutOverlay" });
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
@@ -7501,8 +7494,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-BPQKnZoe.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-MF-W7gWQ.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CFpA5DQB.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-d-kSaKSs.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -7512,7 +7505,7 @@ const _sfc_main$1 = {
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/nuxt@4.2.1_@parcel+watcher@_da24896f0d772a0d4fd3a775a0f9041c/node_modules/nuxt/dist/app/components/nuxt-error-page.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/nuxt@4.2.1_@parcel+watcher@_ada763685410e9ad879e7721ad8a35a3/node_modules/nuxt/dist/app/components/nuxt-error-page.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const _sfc_main = {
@@ -7560,7 +7553,7 @@ const _sfc_main = {
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/nuxt@4.2.1_@parcel+watcher@_da24896f0d772a0d4fd3a775a0f9041c/node_modules/nuxt/dist/app/components/nuxt-root.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/nuxt@4.2.1_@parcel+watcher@_ada763685410e9ad879e7721ad8a35a3/node_modules/nuxt/dist/app/components/nuxt-root.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 let entry;

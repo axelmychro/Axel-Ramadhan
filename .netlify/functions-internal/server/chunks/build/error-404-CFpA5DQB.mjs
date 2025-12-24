@@ -339,7 +339,7 @@ const _sfc_main = {
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "antialiased bg-white dark:bg-[#020420] dark:text-white font-sans grid min-h-screen overflow-hidden place-content-center text-[#020420] tracking-wide" }, _attrs))} data-v-a9f90b71><div class="max-w-520px text-center" data-v-a9f90b71><h1 class="font-semibold leading-none mb-4 sm:text-[110px] tabular-nums text-[80px]" data-v-a9f90b71>${ssrInterpolate(__props.statusCode)}</h1><h2 class="font-semibold mb-2 sm:text-3xl text-2xl" data-v-a9f90b71>${ssrInterpolate(__props.statusMessage)}</h2><p class="mb-4 px-2 text-[#64748B] text-md" data-v-a9f90b71>${ssrInterpolate(__props.description)}</p><div class="flex items-center justify-center w-full" data-v-a9f90b71>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "antialiased bg-white dark:bg-[#020420] dark:text-white font-sans grid min-h-screen overflow-hidden place-content-center text-[#020420] tracking-wide" }, _attrs))} data-v-e25807dc><div class="max-w-520px text-center" data-v-e25807dc><h1 class="font-semibold leading-none mb-4 sm:text-[110px] tabular-nums text-[80px]" data-v-e25807dc>${ssrInterpolate(__props.statusCode)}</h1><h2 class="font-semibold mb-2 sm:text-3xl text-2xl" data-v-e25807dc>${ssrInterpolate(__props.statusMessage)}</h2><p class="mb-4 px-2 text-[#64748B] text-md" data-v-e25807dc>${ssrInterpolate(__props.description)}</p><div class="flex items-center justify-center w-full" data-v-e25807dc>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "font-medium hover:text-[#00DC82] text-sm underline underline-offset-3"
@@ -362,10 +362,10 @@ const _sfc_main = {
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/nuxt@4.2.1_@parcel+watcher@_da24896f0d772a0d4fd3a775a0f9041c/node_modules/nuxt/dist/app/components/error-404.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../node_modules/.pnpm/nuxt@4.2.1_@parcel+watcher@_ada763685410e9ad879e7721ad8a35a3/node_modules/nuxt/dist/app/components/error-404.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const error404 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-a9f90b71"]]);
+const error404 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-e25807dc"]]);
 
 export { error404 as default };
-//# sourceMappingURL=error-404-BPQKnZoe.mjs.map
+//# sourceMappingURL=error-404-CFpA5DQB.mjs.map

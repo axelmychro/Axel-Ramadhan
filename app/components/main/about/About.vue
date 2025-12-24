@@ -113,10 +113,7 @@
           @mouseenter="showPreview(button)"
           @mouseleave="hidePreview()"
           @focus="selectedButton = button"
-          @click="
-            showButtons = false
-            selectedButton = button
-          "
+          @click="((showButtons = false), (selectedButton = button))"
         >
           <h2
             class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-black/50 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_2px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px]"
@@ -156,10 +153,7 @@
           aria-label="close current subsection"
           class="absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform lg:top-8 lg:right-8 dark:bg-neutral-100"
           :class="showButtons ? 'scale-0 rounded-xs' : 'scale-100 rounded-none'"
-          @click="
-            showButtons = true
-            selectedButton = null
-          "
+          @click="((showButtons = true), (selectedButton = null))"
         >
           <LucideChevronLeft
             class="size-8 text-neutral-100 dark:text-neutral-900"

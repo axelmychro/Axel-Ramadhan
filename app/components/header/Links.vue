@@ -66,10 +66,7 @@
           :class="{
             'border-sky-500 text-sky-500': activeSectionIndex === linkItem.index
           }"
-          @click="
-            goToSection(linkItem.index)
-            closeLinks()
-          "
+          @click="(goToSection(linkItem.index), closeLinks())"
         >
           <LucideHouse v-if="linkItem.icon === 'House'" />
           <LucideCode v-else-if="linkItem.icon === 'Code'" />

@@ -4315,7 +4315,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "32df16be-3561-4857-87b8-1ca9259d3f21",
+    "buildId": "c7381c14-438c-4d31-bf50-f9fab1fc5009",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -5292,7 +5292,7 @@ function* detect(detectors, detection, path) {
   }
   yield { locale: detection.fallbackLocale, source: "fallback" };
 }
-const _Jb1YSM1fa7OyvgX2ytbrq_XLxptmNmilhobPgsx474M = defineNitroPlugin(async (nitro) => {
+const _ujYZv1nrhFd9GI0hlmwpJ39qEC6ufeqNRSz4MjIcVj8 = defineNitroPlugin(async (nitro) => {
   const runtimeI18n = useRuntimeI18n();
   const rootRedirect = resolveRootRedirect(runtimeI18n.rootRedirect);
   runtimeI18n.defaultLocale || "";
@@ -5373,7 +5373,7 @@ const _Jb1YSM1fa7OyvgX2ytbrq_XLxptmNmilhobPgsx474M = defineNitroPlugin(async (ni
     const localeSegment = detector.route(event.path);
     const pathLocale = isSupportedLocale(localeSegment) && localeSegment || void 0;
     const path = (pathLocale && url.pathname.slice(pathLocale.length + 1)) ?? url.pathname;
-    if (!url.pathname.includes("/_i18n/z3No98tP") && !isExistingNuxtRoute(path)) {
+    if (!url.pathname.includes("/_i18n/v6iOMDAs") && !isExistingNuxtRoute(path)) {
       return;
     }
     const resolved = resolveRedirectPath(event, path, pathLocale, ctx.vueI18nOptions.defaultLocale, detector);
@@ -5402,7 +5402,7 @@ const _pj8sanKovZuHPzZz7VLZpmRBeaA4n1erasK8voLcPTU = (function(nitro) {
 });
 
 const plugins = [
-  _Jb1YSM1fa7OyvgX2ytbrq_XLxptmNmilhobPgsx474M,
+  _ujYZv1nrhFd9GI0hlmwpJ39qEC6ufeqNRSz4MjIcVj8,
 _pj8sanKovZuHPzZz7VLZpmRBeaA4n1erasK8voLcPTU
 ];
 
@@ -5523,7 +5523,7 @@ const _messagesHandlerCached = defineCachedEventHandler(_cachedMessageLoader, {
   swr: false,
   getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-")
 });
-const _tMSRpx = _messagesHandlerCached;
+const _hZCUh6 = _messagesHandlerCached;
 
 const _IS_ABSOLUTE_RE = /^[/\\](?![/\\])|^[/\\]{2}(?!\.)|^[A-Za-z]:[/\\]/;
 const isAbsolute = function(p) {
@@ -5548,14 +5548,14 @@ const _1tzEoc = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
-const _lazy_YDEAIJ = () => import('../routes/renderer.mjs').then(function (n) { return n.r; });
+const _lazy_EVK8p8 = () => import('../routes/renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_YDEAIJ, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_EVK8p8, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/_i18n/:hash/:locale/messages.json', handler: _tMSRpx, lazy: false, middleware: false, method: undefined },
+  { route: '/_i18n/:hash/:locale/messages.json', handler: _hZCUh6, lazy: false, middleware: false, method: undefined },
   { route: '/_ipx/**', handler: _1tzEoc, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_YDEAIJ, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_EVK8p8, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
