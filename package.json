@@ -5,8 +5,9 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "build:vercel": "nuxt build && echo 'Ready to deploy with: vercel deploy --prebuilt'",
+    "test:vercel": "vercel dev",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
     "lint": "eslint ."

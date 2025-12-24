@@ -1424,17 +1424,6 @@ const setHeaders = setResponseHeaders;
 function setResponseHeader(event, name, value) {
   event.node.res.setHeader(name, value);
 }
-function appendResponseHeader(event, name, value) {
-  let current = event.node.res.getHeader(name);
-  if (!current) {
-    event.node.res.setHeader(name, value);
-    return;
-  }
-  if (!Array.isArray(current)) {
-    current = [current.toString()];
-  }
-  event.node.res.setHeader(name, [...current, value]);
-}
 function isStream(data) {
   if (!data || typeof data !== "object") {
     return false;
@@ -4315,7 +4304,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "476f0667-c7e9-4041-a2fb-437685592777",
+    "buildId": "2f7dea0a-0882-42f3-afdc-4cb642fecd39",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4673,64 +4662,9 @@ function normalizeCookieHeaders(headers) {
   return outgoingHeaders;
 }
 
-function isJsonRequest(event) {
-  if (hasReqHeader(event, "accept", "text/html")) {
-    return false;
-  }
-  return hasReqHeader(event, "accept", "application/json") || hasReqHeader(event, "user-agent", "curl/") || hasReqHeader(event, "user-agent", "httpie/") || hasReqHeader(event, "sec-fetch-mode", "cors") || event.path.startsWith("/api/") || event.path.endsWith(".json");
-}
-function hasReqHeader(event, name, includes) {
-  const value = getRequestHeader(event, name);
-  return value && typeof value === "string" && value.toLowerCase().includes(includes);
-}
-
-const errorHandler$0 = (async function errorhandler(error, event, { defaultHandler }) {
-  if (event.handled || isJsonRequest(event)) {
-    return;
-  }
-  const defaultRes = await defaultHandler(error, event, { json: true });
-  const statusCode = error.statusCode || 500;
-  if (statusCode === 404 && defaultRes.status === 302) {
-    setResponseHeaders(event, defaultRes.headers);
-    setResponseStatus(event, defaultRes.status, defaultRes.statusText);
-    return send(event, JSON.stringify(defaultRes.body, null, 2));
-  }
-  const errorObject = defaultRes.body;
-  const url = new URL(errorObject.url);
-  errorObject.url = withoutBase(url.pathname, useRuntimeConfig(event).app.baseURL) + url.search + url.hash;
-  errorObject.message ||= "Server Error";
-  errorObject.data ||= error.data;
-  errorObject.statusMessage ||= error.statusMessage;
-  delete defaultRes.headers["content-type"];
-  delete defaultRes.headers["content-security-policy"];
-  setResponseHeaders(event, defaultRes.headers);
-  const reqHeaders = getRequestHeaders(event);
-  const isRenderingError = event.path.startsWith("/__nuxt_error") || !!reqHeaders["x-nuxt-error"];
-  const res = isRenderingError ? null : await useNitroApp().localFetch(
-    withQuery(joinURL(useRuntimeConfig(event).app.baseURL, "/__nuxt_error"), errorObject),
-    {
-      headers: { ...reqHeaders, "x-nuxt-error": "true" },
-      redirect: "manual"
-    }
-  ).catch(() => null);
-  if (event.handled) {
-    return;
-  }
-  if (!res) {
-    const { template } = await import('./error-500.mjs');
-    setResponseHeader(event, "Content-Type", "text/html;charset=UTF-8");
-    return send(event, template(errorObject));
-  }
-  const html = await res.text();
-  for (const [header, value] of res.headers.entries()) {
-    if (header === "set-cookie") {
-      appendResponseHeader(event, header, value);
-      continue;
-    }
-    setResponseHeader(event, header, value);
-  }
-  setResponseStatus(event, res.status && res.status !== 200 ? res.status : defaultRes.status, res.statusText || defaultRes.statusText);
-  return send(event, html);
+const errorHandler$0 = defineEventHandler((event) => {
+  console.error("SSR Error:", event.node.req.url, event.node.req.error);
+  return { statusCode: 500, statusMessage: "Server Error" };
 });
 
 function defineNitroErrorHandler(handler) {
@@ -5374,7 +5308,7 @@ const _ujYZv1nrhFd9GI0hlmwpJ39qEC6ufeqNRSz4MjIcVj8 = defineNitroPlugin(async (ni
     const localeSegment = detector.route(event.path);
     const pathLocale = isSupportedLocale(localeSegment) && localeSegment || void 0;
     const path = (pathLocale && url.pathname.slice(pathLocale.length + 1)) ?? url.pathname;
-    if (!url.pathname.includes("/_i18n/uui59f9-") && !isExistingNuxtRoute(path)) {
+    if (!url.pathname.includes("/_i18n/aINdRUq3") && !isExistingNuxtRoute(path)) {
       return;
     }
     const resolved = resolveRedirectPath(event, path, pathLocale, ctx.vueI18nOptions.defaultLocale, detector);
@@ -5406,6 +5340,18 @@ const plugins = [
   _ujYZv1nrhFd9GI0hlmwpJ39qEC6ufeqNRSz4MjIcVj8,
 _pj8sanKovZuHPzZz7VLZpmRBeaA4n1erasK8voLcPTU
 ];
+
+const _s2nhSV = defineEventHandler((event) => {
+  if (event.node.res.statusCode >= 400) {
+    console.error(
+      `[SSR Error] ${event.node.req.method} ${event.node.req.url}`,
+      {
+        statusCode: event.node.res.statusCode,
+        timestamp: (/* @__PURE__ */ new Date()).toISOString()
+      }
+    );
+  }
+});
 
 const _SxA8c9 = defineEventHandler(() => {});
 
@@ -5552,6 +5498,7 @@ const _1tzEoc = lazyEventHandler(() => {
 const _lazy_EVK8p8 = () => import('../routes/renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
+  { route: '', handler: _s2nhSV, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_EVK8p8, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/_i18n/:hash/:locale/messages.json', handler: _hZCUh6, lazy: false, middleware: false, method: undefined },
