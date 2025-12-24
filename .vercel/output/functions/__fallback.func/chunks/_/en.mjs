@@ -1,0 +1,72 @@
+var nav = {
+	home: "index",
+	projects: "projects",
+	about: "about",
+	timeline: "timeline",
+	contact: "contact"
+};
+var section = {
+	home: {
+		txt: "welcome to my world~",
+		card: {
+			greeting: "hey there, my name is...",
+			bio: "computer science student, self-taught programmer, Vue / Nuxt enthusiast"
+		}
+	},
+	projects: {
+		txt: "things i've built so far"
+	},
+	about: {
+		txt: "curiosity is a dangerous thing, y'know..",
+		me: {
+			title: "Me",
+			subtitle: "Axel Ramadhan",
+			description: "First-year computer science student, self-taught programmer, and junior frontend developer. I build websites with Vue / Nuxt. Often codes with MCR playing in the background."
+		},
+		philosophy: {
+			title: "Philosophy",
+			subtitle: "Sharp & clear",
+			description: "Contrasting colours, readable fonts, minimal elements so that you may focus on the screen. Self-explanatory features for the win. This philosophy translates well to Vue component model.",
+			reason: "I believe in component reusability. Smaller, focused workspaces make debugging far more efficient than monolithic structures."
+		},
+		style: {
+			title: "Style",
+			subtitle: "Visual Reference",
+			description: "Here are some materials and references that I used throughout the website.",
+			colours: {
+				primary: "A",
+				secondary: "B",
+				main_background: "BG1",
+				sub_background: "BG2"
+			},
+			fonts: {
+				title: "title",
+				section: "section",
+				paragraph: "paragraph",
+				code: "code",
+				jp: "カタカナ"
+			}
+		}
+	},
+	timeline: {
+		txt: "fugit irreparabile tempus,",
+		august: {
+			name: "August",
+			description: "Started studying at Universitas Sumatera Utara"
+		},
+		october: {
+			name: "October",
+			description: "Selected by GDGoC USU as a member of the Web Development Pathway"
+		}
+	},
+	contact: {
+		txt: "wow, you made it here!"
+	}
+};
+const en = {
+	nav: nav,
+	section: section
+};
+
+export { en as default, nav, section };
+//# sourceMappingURL=en.mjs.map
