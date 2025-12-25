@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Section from "~/components/Section.vue";
+  import Section from '~/components/Section.vue'
 </script>
 
 <template>
@@ -95,7 +95,8 @@ import Section from "~/components/Section.vue";
                 <LucideInstagram
                   class="m-px inline size-4"
                   aria-hidden="true"
-                />@axelmychro
+                />
+                @axelmychro
               </a>
             </p>
           </div>

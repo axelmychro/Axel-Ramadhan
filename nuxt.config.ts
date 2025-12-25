@@ -6,8 +6,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    preset: 'vercel',
-    errorHandler: '~/server/error'
+    preset: 'vercel'
   },
 
   app: {
@@ -46,7 +45,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2025-07-15',
 
-  css: ['~/assets/styles/main.css', 'devicon/devicon.min.css'],
+  css: ['~/assets/css/main.css', 'devicon/devicon.min.css'],
 
   image: {
     format: ['webp'],

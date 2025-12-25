@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import Section from "~/components/Section.vue";
+  import Section from '~/components/Section.vue'
 
-const myGH = "https://github.com/axelmychro/";
-const projects = [
-  // {
-  //   title: "Ryoran",
-  //   year: "2025",
-  //   date: "2025-09-28",
-  //   url: `${myGH}ryoran`,
-  // },
-  {
-    title: "Priestess",
-    year: "2025",
-    date: "2025-09-28",
-    url: `${myGH}priestess`,
-  },
-  {
-    title: "Scraptab",
-    year: "2025",
-    date: "2025-11-9",
-    url: `${myGH}scraptab-web`,
-  },
-];
+  const myGH = 'https://github.com/axelmychro/'
+  const projects = [
+    // {
+    //   title: "Ryoran",
+    //   year: "2025",
+    //   date: "2025-09-28",
+    //   url: `${myGH}ryoran`,
+    // },
+    {
+      title: 'Priestess',
+      year: '2025',
+      date: '2025-09-28',
+      url: `${myGH}priestess`
+    },
+    {
+      title: 'Scraptab',
+      year: '2025',
+      date: '2025-11-9',
+      url: `${myGH}scraptab-web`
+    }
+  ]
 </script>
 
 <template>
@@ -50,8 +50,9 @@ const projects = [
           <time
             :datetime="project.date"
             class="text-2xl text-fuchsia-500 transition-colors"
-            >{{ project.year }}</time
           >
+            {{ project.year }}
+          </time>
           <LucideArrowUpRight class="size-8 text-sky-500" aria-hidden="true" />
         </a>
         <div class="flex h-full w-full items-center justify-center select-none">
@@ -60,9 +61,10 @@ const projects = [
             target="_blank"
             aria-label="visit my GitHub profile"
             class="animate-float font-fira-code flex aspect-3/4 w-32 rotate-3 flex-col items-center justify-center rounded-xs bg-gray-900 text-center text-xl text-gray-100 dark:bg-gray-100 dark:text-gray-900"
-            ><LucideGithub class="size-16" aria-hidden="true" />visit my
-            GitHub!</a
           >
+            <LucideGithub class="size-16" aria-hidden="true" />
+            visit my GitHub!
+          </a>
         </div>
       </div>
     </div>
@@ -70,19 +72,19 @@ const projects = [
 </template>
 
 <style scoped>
-@media (width >= 40rem) {
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(3px) rotate(6deg);
+  @media (width >= 40rem) {
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(3px) rotate(6deg);
+      }
+      50% {
+        transform: translateY(-3px) rotate(3deg);
+      }
     }
-    50% {
-      transform: translateY(-3px) rotate(3deg);
-    }
-  }
 
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
   }
-}
 </style>

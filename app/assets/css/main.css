@@ -1,0 +1,16 @@
+@import './fonts.css';
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Zain', sans-serif;
+}
+
+html {
+  @apply size-full max-h-screen max-w-screen bg-white transition-colors duration-500 dark:bg-black;
+}
+
+body {
+  @apply relative size-full min-h-screen min-w-screen overflow-hidden text-gray-700 transition-colors duration-500 dark:text-gray-300;
+}

@@ -1,13 +1,24 @@
 <script setup lang="ts">
-  import Hero from './hero/Hero.vue'
-  import Projects from './projects/Projects.vue'
-  import About from './about/About.vue'
-  import Timeline from './timeline/Timeline.vue'
-  import Contact from './contact/Contact.vue'
+  const Hero = defineAsyncComponent(() => import('./hero/Hero.vue'))
+  const Projects = defineAsyncComponent(() => import('./projects/Projects.vue'))
+  const About = defineAsyncComponent(() => import('./about/About.vue'))
+  const Timeline = defineAsyncComponent(() => import('./timeline/Timeline.vue'))
+  const Contact = defineAsyncComponent(() => import('./contact/Contact.vue'))
 
   const activeSectionIndex = useActiveSection()
 
-  const sectionComponents = [Hero, Projects, About, Timeline, Contact]
+  type SectionEntry = {
+    component: Component
+    eager?: boolean
+  }
+
+  const sectionComponents: SectionEntry[] = [
+    { component: Hero, eager: true },
+    { component: Projects },
+    { component: About },
+    { component: Timeline },
+    { component: Contact }
+  ]
 
   let touchStartYPosition = 0
   const isAnimating = ref(false)
@@ -73,11 +84,12 @@
       @touchend.passive="handleTouchEnd"
       @wheel.passive="handleWheel"
     >
-      <component
-        :is="sectionComponent"
-        v-for="(sectionComponent, index) in sectionComponents"
-        :key="index"
-      />
+      <template v-for="(section, index) in sectionComponents" :key="index">
+        <component
+          v-if="section.eager || index <= activeSectionIndex + 1"
+          :is="section.component"
+        />
+      </template>
     </div>
   </main>
 </template>

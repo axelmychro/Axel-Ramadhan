@@ -20,7 +20,7 @@
         <h1
           class="text-center text-xl leading-relaxed text-neutral-300 sm:text-2xl md:text-start"
         >
-          {{ $t("section.home.card.greeting") }}
+          {{ $t('section.home.card.greeting') }}
           <span class="inline-block text-3xl text-neutral-100 sm:text-4xl">
             Axel Ramadhan!
           </span>
@@ -38,21 +38,24 @@
             href="mailto:axelmychro@gmail.com"
             class="bg-black text-white"
             aria-label="send email to axelmychro@gmail.com"
-            ><lucide-mail aria-hidden="true"
-          /></a>
+          >
+            <lucide-mail aria-hidden="true" />
+          </a>
           <a
             href="https://linkedin.com/in/axelramadhan"
             target="_blank"
             class="bg-[#0077B5] text-white"
             aria-label="visit LinkedIn profile"
-            ><lucide-linkedin aria-hidden="true"
-          /></a>
+          >
+            <lucide-linkedin aria-hidden="true" />
+          </a>
           <a
             href="https://github.com/axelmychro"
             class="bg-black text-white"
             aria-label="visit GitHub profile"
-            ><lucide-github aria-hidden="true"
-          /></a>
+          >
+            <lucide-github aria-hidden="true" />
+          </a>
         </div>
       </div>
     </div>
@@ -64,7 +67,7 @@
         <p
           class="text-center text-lg leading-relaxed text-neutral-200 sm:text-xl md:text-start"
         >
-          {{ $t("section.home.card.bio") }}
+          {{ $t('section.home.card.bio') }}
         </p>
       </div>
 

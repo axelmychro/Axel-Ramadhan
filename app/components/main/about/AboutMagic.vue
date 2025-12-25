@@ -50,7 +50,7 @@
   <NuxtImg
     :src="currentImage"
     alt="hey! i'm a preview~"
-    loading="eager"
+    loading="lazy"
     class="pointer-events-none absolute min-h-64 min-w-64 -translate-x-1/2 -translate-y-1/2 transform object-contain transition-opacity select-none"
     :class="previewVisible ? 'opacity-100' : 'opacity-0'"
     :style="{

@@ -16,7 +16,7 @@
         <div class="space-y-2">
           <div class="flex">
             <img
-              src="~/assets/images/USU.webp"
+              src="~/assets/icons/USU.webp"
               loading="lazy"
               aria-hidden="true"
               class="border-r-none z-10 aspect-square size-16 rounded-l-xs border-y-2 border-l-2 border-neutral-900 object-cover p-2 backdrop-blur-xs dark:border-neutral-100"
@@ -25,15 +25,15 @@
               class="flex-1 rounded-r-xs border-2 border-neutral-900 p-2 backdrop-blur-xs dark:border-neutral-100"
             >
               <p>{{ $t(`section.timeline.august.description`) }}</p>
-              <time class="font-dela-gothic-one block text-sm">{{
-                $t(`section.timeline.october.name`)
-              }}</time>
+              <time class="font-dela-gothic-one block text-sm">
+                {{ $t(`section.timeline.october.name`) }}
+              </time>
             </div>
           </div>
 
           <div class="flex">
             <img
-              src="~/assets/images/GDGoC.webp"
+              src="~/assets/icons/GDGoC.webp"
               loading="lazy"
               aria-hidden="true"
               class="border-r-none z-10 aspect-square size-16 rounded-l-xs border-y-2 border-l-2 border-neutral-900 object-cover p-2 backdrop-blur-xs dark:border-neutral-100"
@@ -44,9 +44,9 @@
               <p>
                 {{ $t(`section.timeline.october.description`) }}
               </p>
-              <time class="font-dela-gothic-one block text-sm">{{
-                $t(`section.timeline.august.name`)
-              }}</time>
+              <time class="font-dela-gothic-one block text-sm">
+                {{ $t(`section.timeline.august.name`) }}
+              </time>
             </div>
           </div>
         </div>
