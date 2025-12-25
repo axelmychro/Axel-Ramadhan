@@ -7,6 +7,13 @@
 
   const activeSectionIndex = useActiveSection()
 
+  const visited = ref(new Set<number>())
+
+  watch(activeSectionIndex, (i) => {
+    visited.value.add(i)
+    visited.value.add(i + 1)
+  })
+
   type SectionEntry = {
     component: Component
     eager?: boolean
@@ -86,7 +93,7 @@
     >
       <template v-for="(section, index) in sectionComponents" :key="index">
         <component
-          v-if="section.eager || index <= activeSectionIndex + 1"
+          v-if="section.eager || visited.has(index)"
           :is="section.component"
         />
       </template>
