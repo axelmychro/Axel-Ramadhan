@@ -25,10 +25,7 @@
 </script>
 
 <template>
-  <Section
-    id="projects"
-    class="bg-linear-to-bl from-blue-300/50 via-slate-300 to-gray-300 dark:from-blue-900/50 dark:via-slate-900 dark:to-gray-900"
-  >
+  <Section id="projects">
     <div class="flex size-full flex-col">
       <div class="flex size-full flex-col items-stretch justify-stretch">
         <a
@@ -49,11 +46,11 @@
           </h2>
           <time
             :datetime="project.date"
-            class="text-2xl text-fuchsia-500 transition-colors"
+            class="text-2xl text-cyan-500 transition-colors"
           >
             {{ project.year }}
           </time>
-          <LucideArrowUpRight class="size-8 text-sky-500" aria-hidden="true" />
+          <LucideArrowUpRight class="size-8 text-cyan-500" aria-hidden="true" />
         </a>
         <div class="flex h-full w-full items-center justify-center select-none">
           <a
@@ -72,19 +69,17 @@
 </template>
 
 <style scoped>
-  @media (width >= 40rem) {
-    @keyframes float {
-      0%,
-      100% {
-        transform: translateY(3px) rotate(6deg);
-      }
-      50% {
-        transform: translateY(-3px) rotate(3deg);
-      }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(3px) rotate(6deg);
     }
+    50% {
+      transform: translateY(-3px) rotate(3deg);
+    }
+  }
 
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 </style>

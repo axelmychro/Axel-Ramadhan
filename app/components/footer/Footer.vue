@@ -6,7 +6,7 @@
   >
     <small class="text-sm leading-none backdrop-blur-xs text-shadow-xs">
       &copy;
-      <time datetime="2025" class="text-fuchsia-200">
+      <time datetime="2025">
         {{ new Date().getFullYear() }}
       </time>
       Axel

@@ -88,11 +88,7 @@
 </script>
 
 <template>
-  <Section
-    id="about"
-    class="bg-linear-to-r from-zinc-100 via-neutral-300 to-stone-200 text-neutral-800 dark:from-zinc-700 dark:via-neutral-900 dark:to-stone-800 dark:text-neutral-200"
-    @mousemove="handleMouseMove"
-  >
+  <Section id="about" @mousemove="handleMouseMove">
     <div
       class="flex size-full flex-row transition-[gap,padding] duration-1000"
       :class="showButtons ? 'gap-8 lg:p-8' : 'gap-0 p-0'"
@@ -116,7 +112,7 @@
           @click="((showButtons = false), (selectedButton = button))"
         >
           <h2
-            class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-black/50 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_2px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px]"
+            class="font-oswald z-10 text-center text-2xl font-bold uppercase opacity-800 transition duration-500 text-shadow-black/50 group-hover:translate-x-8 group-hover:opacity-100 group-hover:text-shadow-[-2px_0_8px] group-focus:translate-x-8 group-focus:opacity-100 group-focus:text-shadow-[-2px_0_8px]"
           >
             {{ t(`section.about.${button.id}.title`) }}
             <span class="font-ibm-plex-sans-jp -z-10 text-sm">
@@ -124,7 +120,7 @@
             </span>
           </h2>
           <p
-            class="font-oswald absolute right-0 bottom-0 text-4xl text-sky-500 uppercase opacity-0 transition-opacity text-shadow-[2px_0_4px] text-shadow-black/80 group-hover:opacity-100 group-focus:opacity-100"
+            class="font-oswald absolute right-0 bottom-0 text-4xl text-cyan-500 uppercase opacity-0 transition-opacity text-shadow-[2px_0_8px] text-shadow-black/80 group-hover:opacity-100 group-focus:opacity-100"
           >
             {{ t(`section.about.${button.id}.subtitle`) }}
           </p>

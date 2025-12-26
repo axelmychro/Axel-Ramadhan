@@ -5,6 +5,18 @@
 
 @theme {
   --font-sans: 'Zain', sans-serif;
+
+  --color-cyan-50: #daf4f9;
+  --color-cyan-100: #d6f3f8;
+  --color-cyan-200: #ade7f1;
+  --color-cyan-300: #84dceb;
+  --color-cyan-400: #5bd0e4;
+  --color-cyan-500: #32c4dd;
+  --color-cyan-600: #289db1;
+  --color-cyan-700: #1e7685;
+  --color-cyan-800: #144e58;
+  --color-cyan-900: #0a272c;
+  --color-cyan-950: #092328;
 }
 
 html {

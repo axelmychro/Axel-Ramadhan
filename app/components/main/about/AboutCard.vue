@@ -17,7 +17,6 @@
   const l7dColours = `section.about.style.colours.`
   const colours = {
     primary: t(`${l7dColours}primary`),
-    secondary: t(`${l7dColours}secondary`),
     mainBackground: t(`${l7dColours}main_background`),
     subBackground: t(`${l7dColours}sub_background`)
   }
@@ -26,18 +25,10 @@
     {
       id: 'primary',
       name: colours.primary,
-      bgClass: 'bg-sky-300',
-      borderClass: 'border-sky-400',
-      textClass: 'text-sky-950',
+      bgClass: 'bg-cyan-500',
+      borderClass: 'border-cyan-300',
+      textClass: 'text-cyan-950',
       hexColor: '#7dd3fc'
-    },
-    {
-      id: 'secondary',
-      name: colours.secondary,
-      bgClass: 'bg-fuchsia-300',
-      borderClass: 'border-fuchsia-400',
-      textClass: 'text-fuchsia-950',
-      hexColor: '#f0abfc'
     },
     {
       id: 'main_background',
@@ -96,7 +87,7 @@
     {
       name: fonts.paragraph,
       url: `${fontsSpecimen}Zain`,
-      class: 'font-zain bg-sky-500 text-2xl'
+      class: 'font-zain bg-cyan-500 text-2xl'
     },
     {
       name: fonts.code,
@@ -124,7 +115,7 @@
     <template v-if="props.button.id === 'style'">
       <h3 class="text-2xl">
         Colours
-        <span class="text-sm text-sky-300">
+        <span class="text-sm text-cyan-500">
           from
           <i class="devicon-tailwindcss-original"></i>
           tailwindcss

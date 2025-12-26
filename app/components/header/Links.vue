@@ -62,9 +62,9 @@
           v-for="linkItem in linkItems"
           :key="linkItem.index"
           :aria-label="`go to ${linkItem.label} section`"
-          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-sky-500 hover:text-sky-500 focus:border-sky-500 focus:text-sky-500 lg:gap-2 lg:border-transparent"
+          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-cyan-500 hover:text-cyan-500 focus:border-cyan-500 focus:text-cyan-500 lg:gap-2 lg:border-transparent"
           :class="{
-            'border-sky-500 text-sky-500': activeSectionIndex === linkItem.index
+            'border-cyan-500 text-cyan-500': activeSectionIndex === linkItem.index
           }"
           @click="(goToSection(linkItem.index), closeLinks())"
         >

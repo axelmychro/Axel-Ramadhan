@@ -3,10 +3,7 @@
   import HeroCard from './HeroCard.vue'
 </script>
 <template>
-  <Section
-    id="home"
-    class="bg-linear-to-br from-purple-300/50 via-slate-300 to-gray-300 dark:from-purple-900/50 dark:via-slate-900 dark:to-gray-900"
-  >
+  <Section id="home">
     <div class="flex h-full w-full items-center justify-center">
       <HeroCard class="animate-float shadow-md transition-transform" />
     </div>

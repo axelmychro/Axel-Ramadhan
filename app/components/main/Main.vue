@@ -93,8 +93,8 @@
     >
       <template v-for="(section, index) in sectionComponents" :key="index">
         <component
-          v-if="section.eager || visited.has(index)"
           :is="section.component"
+          v-if="section.eager || visited.has(index)"
         />
       </template>
     </div>

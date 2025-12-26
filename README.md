@@ -1,24 +1,19 @@
 ## Contingency Contract
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3aedf34f-8dbc-48bf-b2a0-0b2ba09b4e01/deploy-status)](https://app.netlify.com/projects/axelmychro/deploys)
-
-Built to showcase my projects and approach to frontend development. It's designed to be clean, fast, and expressive without clutter.
+Built to showcase my projects and how I think about frontend development. The design is inspired by [Arknights](https://www.arknights.global/) interfaces with strong contrast and UI that feels closer to a terminal than a marketing page.
 
 ### Philosophy
 
 Clear layouts, readable typography, and intentional motion.  
 This site focuses on visual contrast and smooth transitions, so the content stays readable while still feeling alive.
 
-I value component-based architecture and small, focused pieces over large monolithic structures, both in design and in code.
+Layouts are deliberately restructured, typography is chosen for clarity, and motion is used sparingly to guide attention rather than decorate to make content feel operational, not ornamental.
 
 ### Features
 
-- **Responsive layout**: works comfortably across desktop and mobile
-- **Dark mode support**: follows your preference
-- **Internationalization**: English and Indonesian, one click in between
-- **Smooth transitions**: animated section-based navigation
-- **Performance-aware**: optimized assets and fast builds
-- **SEO-friendly**: structured metadata and semantic markup
+- **Responsive layout**: works comfortably across mobile and desktop
+- **Dark mode support**: knows what your system says
+- **Internationalization**: English and Indonesian
 
 ### Tech Stack
 

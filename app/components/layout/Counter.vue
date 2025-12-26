@@ -17,7 +17,7 @@
       class="relative flex min-h-16 min-w-12 items-end justify-center not-lg:mb-2 lg:min-w-24 lg:justify-start"
     >
       <p
-        class="font-oswald mb-2 flex-col-reverse overflow-hidden pt-2 text-center text-4xl leading-[0.5] text-fuchsia-300 lg:mb-4 lg:text-6xl"
+        class="font-oswald mb-2 flex-col-reverse overflow-hidden pt-2 text-center text-4xl leading-[0.5] text-cyan-500 lg:mb-4 lg:text-6xl"
       >
         0{{ currentSection }}
       </p>
