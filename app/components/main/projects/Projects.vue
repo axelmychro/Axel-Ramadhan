@@ -3,12 +3,6 @@
 
   const myGH = 'https://github.com/axelmychro/'
   const projects = [
-    // {
-    //   title: "Ryoran",
-    //   year: "2025",
-    //   date: "2025-09-28",
-    //   url: `${myGH}ryoran`,
-    // },
     {
       title: 'Priestess',
       year: '2025',
@@ -20,6 +14,18 @@
       year: '2025',
       date: '2025-11-9',
       url: `${myGH}scraptab-web`
+    },
+    {
+      title: 'Wanderer',
+      year: '2025',
+      date: '2025-12-22',
+      url: `${myGH}Wanderer`
+    },
+    {
+      title: 'Template Vue Portfolio',
+      year: '2025',
+      date: '2025-12-27',
+      url: `${myGH}template-vue-portfolio`
     }
   ]
 </script>

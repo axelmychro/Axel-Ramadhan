@@ -3,14 +3,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
-    "lint": "eslint .",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --max-warnings=0",
     "typecheck": "nuxt typecheck",
-    "build": "nuxt build",
+    "scoldme": "pnpm lint && pnpm typecheck",
+    "build": "nuxt cleanup && nuxt build",
     "preview": "nuxt preview",
-    "build:vercel": "nuxt build && echo 'Ready to deploy with: vercel deploy --prebuilt'",
-    "test:vercel": "vercel dev"
+    "precommit": "pnpm install && pnpm scoldme && pnpm build && pnpm preview"
   },
   "dependencies": {
     "@nuxt/fonts": "0.12.1",
