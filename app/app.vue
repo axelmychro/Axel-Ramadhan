@@ -6,28 +6,37 @@
 
   const activeSectionIndex = useActiveSection()
 
+  const siteName = 'mychro'
+  const siteTitle = 'Axel Ramadhan'
+  const SiteDescription =
+    'computer science student, self-taught programmer, Vue enthusiast'
+  const siteImage = '/summary_large_image.png'
+
   useHead({
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
-    title: 'Axel Ramadan',
+    title: siteTitle,
     htmlAttrs: { lang: 'en' },
     link: [{ rel: 'icon', href: '/favicon.ico' }]
   })
 
   useSeoMeta({
-    ogUrl: 'https://www.axelmychro.my.id/',
-    ogTitle: 'mychro',
-    description:
-      'computer science student, self-taught programmer, Vue enthusiast',
-    ogDescription:
-      'computer science student, self-taught programmer, Vue enthusiast',
-    ogImage: '/summary_large_image.png',
-    twitterImage: '/summary_large_image.png',
+    title: siteTitle,
+    description: SiteDescription,
+
+    ogSiteName: siteName,
+    ogType: 'website',
+    ogUrl: 'https://www.axelmychro.my.id',
+    ogImage: siteImage,
+
+    ogTitle: siteTitle,
+    ogDescription: SiteDescription,
+
+    twitterImage: siteImage,
     twitterCard: 'summary_large_image',
-    twitterTitle: 'mychro',
-    twitterDescription:
-      'computer science student, self-taught programmer, Vue enthusiast'
+    twitterTitle: siteTitle,
+    twitterDescription: SiteDescription
   })
 </script>
 <template>
