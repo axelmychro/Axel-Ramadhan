@@ -3,38 +3,6 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  ssr: true,
-
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/']
-    }
-  },
-
-  app: {
-    head: {
-      title: 'mychro',
-      meta: [
-        {
-          name: 'description',
-          content:
-            'computer science student, self-taught programmer, Vue / Nuxt enthusiast'
-        }
-      ],
-      htmlAttrs: {
-        lang: 'en'
-      },
-      link: [
-        {
-          rel: 'icon',
-          href: '/favicon.ico',
-          type: 'image/x-icon'
-        }
-      ]
-    }
-  },
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -45,7 +13,18 @@ export default defineNuxtConfig({
     'nuxt-lucide-icons',
     '@nuxtjs/color-mode'
   ],
+
+  ssr: true,
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
+  },
+
   devtools: { enabled: true },
+
   compatibilityDate: '2025-07-15',
 
   css: ['~/assets/css/main.css', 'devicon/devicon.min.css'],

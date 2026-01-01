@@ -26,7 +26,7 @@
   >
     <button
       type="button"
-      :aria-label="`toggle language to ${locale === 'en' ? 'Indonesian' : 'English'}`"
+      :aria-label="`Toggle current language, ${locale === 'en' ? 'EN (English)' : 'ID (Bahasa Indonesia)'}, to ${locale === 'en' ? 'ID (Bahasa Indonesia)' : 'EN (English)'}`"
       class="relative cursor-pointer transition-transform active:scale-90"
       @click="toggleLocale"
     >
@@ -37,6 +37,7 @@
       <span
         class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50"
         :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        aria-hidden="true"
       >
         {{ locale }}
       </span>
