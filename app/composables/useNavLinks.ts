@@ -4,7 +4,7 @@ export const useNavLinks = () => {
     { label: 'projects', icon: 'Code', index: 1 },
     { label: 'about', icon: 'Info', index: 2 },
     { label: 'timeline', icon: 'Map', index: 3 },
-    { label: 'contact', icon: 'User', index: 4 }
+    { label: 'contact', icon: 'User', index: 4 },
   ]
 
   return { linkItems }

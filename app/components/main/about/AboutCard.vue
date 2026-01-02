@@ -1,105 +1,106 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'
-  import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { ref } from 'vue'
 
-  const { t } = useI18n()
+const { t } = useI18n()
 
-  const props = defineProps<{
-    button: {
-      id: string
-    }
-  }>()
-
-  const l7dTitle = t(`section.about.${props.button.id}.title`)
-  const l7dDescription = t(`section.about.${props.button.id}.description`)
-  const l7dReason = t(`section.about.${props.button.id}.reason`)
-
-  const l7dColours = `section.about.style.colours.`
-  const colours = {
-    primary: t(`${l7dColours}primary`),
-    mainBackground: t(`${l7dColours}main_background`),
-    subBackground: t(`${l7dColours}sub_background`)
+const props = defineProps<{
+  button: {
+    id: string
   }
+}>()
 
-  const colorButtons = ref([
-    {
-      id: 'primary',
-      name: colours.primary,
-      bgClass: 'bg-cyan-500',
-      borderClass: 'border-cyan-300',
-      textClass: 'text-cyan-950',
-      hexColor: '#7dd3fc'
-    },
-    {
-      id: 'main_background',
-      name: colours.mainBackground,
-      bgClass: 'bg-gray-800',
-      borderClass: 'border-gray-700',
-      textClass: 'text-gray-50',
-      hexColor: '#1f2937'
-    },
-    {
-      id: 'sub_background',
-      name: colours.subBackground,
-      bgClass: 'bg-neutral-800',
-      borderClass: 'border-neutral-700',
-      textClass: 'text-neutral-50',
-      hexColor: '#262626'
-    }
-  ])
+const l7dTitle = t(`section.about.${props.button.id}.title`)
+const l7dDescription = t(`section.about.${props.button.id}.description`)
+const l7dReason = t(`section.about.${props.button.id}.reason`)
 
-  const copiedColorId = ref<string | null>(null)
-  const copyToClipboard = async (color: string, id: string) => {
-    try {
-      await navigator.clipboard.writeText(color)
-      copiedColorId.value = id
+const l7dColours = `section.about.style.colours.`
+const colours = {
+  primary: t(`${l7dColours}primary`),
+  mainBackground: t(`${l7dColours}main_background`),
+  subBackground: t(`${l7dColours}sub_background`),
+}
 
-      setTimeout(() => {
-        copiedColorId.value = null
-      }, 3000)
-    } catch (err) {
-      console.error('failed to copy:', err)
-    }
+const colorButtons = ref([
+  {
+    id: 'primary',
+    name: colours.primary,
+    bgClass: 'bg-cyan-500',
+    borderClass: 'border-cyan-300',
+    textClass: 'text-cyan-950',
+    hexColor: '#7dd3fc',
+  },
+  {
+    id: 'main_background',
+    name: colours.mainBackground,
+    bgClass: 'bg-gray-800',
+    borderClass: 'border-gray-700',
+    textClass: 'text-gray-50',
+    hexColor: '#1f2937',
+  },
+  {
+    id: 'sub_background',
+    name: colours.subBackground,
+    bgClass: 'bg-neutral-800',
+    borderClass: 'border-neutral-700',
+    textClass: 'text-neutral-50',
+    hexColor: '#262626',
+  },
+])
+
+const copiedColorId = ref<string | null>(null)
+const copyToClipboard = async (color: string, id: string) => {
+  try {
+    await navigator.clipboard.writeText(color)
+    copiedColorId.value = id
+
+    setTimeout(() => {
+      copiedColorId.value = null
+    }, 3000)
   }
-
-  const l7dFonts = `section.about.style.fonts.`
-  const fonts = {
-    title: t(`${l7dFonts}title`),
-    paragraph: t(`${l7dFonts}paragraph`),
-    section: t(`${l7dFonts}section`),
-    code: t(`${l7dFonts}code`),
-    jp: t(`${l7dFonts}jp`)
+  catch (err) {
+    console.error('failed to copy:', err)
   }
+}
 
-  const fontsSpecimen = 'https://fonts.google.com/specimen/'
-  const fontLinks = [
-    {
-      name: fonts.title,
-      url: `${fontsSpecimen}Dela+Gothic+One`,
-      class: 'font-dela-gothic-one blur-[1px] text-xl'
-    },
-    {
-      name: fonts.section,
-      url: `${fontsSpecimen}Oswald`,
-      class:
-        'font-oswald uppercase text-lg text-neutral-900 dark:text-neutral-100'
-    },
-    {
-      name: fonts.paragraph,
-      url: `${fontsSpecimen}Zain`,
-      class: 'font-zain bg-cyan-500 text-2xl'
-    },
-    {
-      name: fonts.code,
-      url: `${fontsSpecimen}Fira+Code`,
-      class: 'font-fira-code text-red-600 dark:text-red-400'
-    },
-    {
-      name: fonts.jp,
-      url: `${fontsSpecimen}IBM+Plex+Sans+JP`,
-      class: 'font-ibm-plex-sans-jp text-shadow-[-2px_0_8px] text-sm'
-    }
-  ]
+const l7dFonts = `section.about.style.fonts.`
+const fonts = {
+  title: t(`${l7dFonts}title`),
+  paragraph: t(`${l7dFonts}paragraph`),
+  section: t(`${l7dFonts}section`),
+  code: t(`${l7dFonts}code`),
+  jp: t(`${l7dFonts}jp`),
+}
+
+const fontsSpecimen = 'https://fonts.google.com/specimen/'
+const fontLinks = [
+  {
+    name: fonts.title,
+    url: `${fontsSpecimen}Dela+Gothic+One`,
+    class: 'font-dela-gothic-one blur-[1px] text-xl',
+  },
+  {
+    name: fonts.section,
+    url: `${fontsSpecimen}Oswald`,
+    class:
+      'font-oswald uppercase text-lg text-neutral-900 dark:text-neutral-100',
+  },
+  {
+    name: fonts.paragraph,
+    url: `${fontsSpecimen}Zain`,
+    class: 'font-zain bg-cyan-500 text-2xl',
+  },
+  {
+    name: fonts.code,
+    url: `${fontsSpecimen}Fira+Code`,
+    class: 'font-fira-code text-red-600 dark:text-red-400',
+  },
+  {
+    name: fonts.jp,
+    url: `${fontsSpecimen}IBM+Plex+Sans+JP`,
+    class: 'font-ibm-plex-sans-jp text-shadow-[-2px_0_8px] text-sm',
+  },
+]
 </script>
 
 <template>
@@ -110,14 +111,16 @@
     <p>
       {{ l7dDescription }}
     </p>
-    <p v-if="props.button.id === 'philosophy'">{{ l7dReason }}</p>
+    <p v-if="props.button.id === 'philosophy'">
+      {{ l7dReason }}
+    </p>
 
     <template v-if="props.button.id === 'style'">
       <h3 class="text-2xl">
         Colours
         <span class="text-sm text-cyan-500">
           from
-          <i class="devicon-tailwindcss-original"></i>
+          <i class="devicon-tailwindcss-original" />
           tailwindcss
         </span>
       </h3>
@@ -130,7 +133,7 @@
           :class="[
             colorButton.bgClass,
             colorButton.borderClass,
-            colorButton.textClass
+            colorButton.textClass,
           ]"
           :aria-label="`copy ${colorButton.name} color code ${colorButton.hexColor}`"
           @click="copyToClipboard(colorButton.hexColor, colorButton.id)"
@@ -153,7 +156,7 @@
             loading="lazy"
             aria-hidden="true"
             class="inline size-3.5"
-          />
+          >
           Google Fonts
         </span>
       </h3>

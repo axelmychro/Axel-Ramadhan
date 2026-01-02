@@ -1,16 +1,18 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
-import eslintConfigPrettier from 'eslint-config-prettier/flat'
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 
-export default withNuxt(eslintConfigPrettier, {
-  rules: {
-    'vue/multi-word-component-names': 'off'
+export default createConfigForNuxt({
+  features: {
+    tooling: true,
+    stylistic: true,
   },
-  languageOptions: {
-    sourceType: 'module',
-    parserOptions: {
-      parser: '@typescript-eslint/parser',
-      sourceType: 'module'
-    }
-  }
 })
+  .overrideRules({
+    'import/first': 'off',
+    'import/order': 'off',
+    'vue/multi-word-component-names': 'off',
+    'vue/max-attributes-per-line': ['error', { singleline: 5 }],
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-empty-object-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+  })

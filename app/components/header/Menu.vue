@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-  const showLinks = useState('showLinks', () => false)
-  function toggleLinks() {
-    showLinks.value = !showLinks.value
-  }
+const showLinks = useState('showLinks', () => false)
+function toggleLinks() {
+  showLinks.value = !showLinks.value
+}
 </script>
 
 <template>

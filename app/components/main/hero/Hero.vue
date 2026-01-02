@@ -1,7 +1,8 @@
 <script setup>
-  import Section from '~/components/Section.vue'
-  import HeroCard from './HeroCard.vue'
+import Section from '~/components/Section.vue'
+import HeroCard from './HeroCard.vue'
 </script>
+
 <template>
   <Section id="home">
     <div class="flex h-full w-full items-center justify-center">

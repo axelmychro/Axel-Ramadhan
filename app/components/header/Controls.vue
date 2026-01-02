@@ -1,23 +1,24 @@
 <script lang="ts" setup>
-  import { ref } from 'vue'
-  const { locale, setLocale } = useI18n()
+import { ref } from 'vue'
 
-  const colorMode = useColorMode()
-  const sound = ref(false)
+const { locale, setLocale } = useI18n()
 
-  const showLinks = useState('showLinks', () => false)
+const colorMode = useColorMode()
+const sound = ref(false)
 
-  function toggleLocale() {
-    setLocale(locale.value === 'en' ? 'id' : 'en')
-  }
+const showLinks = useState('showLinks', () => false)
 
-  function toggleTheme() {
-    colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light'
-  }
+function toggleLocale() {
+  setLocale(locale.value === 'en' ? 'id' : 'en')
+}
 
-  function toggleSound() {
-    sound.value = !sound.value
-  }
+function toggleTheme() {
+  colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light'
+}
+
+function toggleSound() {
+  sound.value = !sound.value
+}
 </script>
 
 <template>

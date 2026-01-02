@@ -11,23 +11,47 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/i18n',
     'nuxt-lucide-icons',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
 
   ssr: true,
 
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/']
-    }
-  },
-
   devtools: { enabled: true },
+
+  css: ['~/assets/css/main.css', 'devicon/devicon.min.css'],
+
+  colorMode: {
+    classSuffix: '',
+    preference: 'light',
+  },
 
   compatibilityDate: '2025-07-15',
 
-  css: ['~/assets/css/main.css', 'devicon/devicon.min.css'],
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        file: 'en.json',
+      },
+      {
+        code: 'id',
+        file: 'id.json',
+      },
+    ],
+    langDir: 'locales/',
+  },
 
   image: {
     format: ['webp'],
@@ -36,33 +60,9 @@ export default defineNuxtConfig({
       default: {
         modifiers: {
           format: 'webp',
-          quality: 50
-        }
-      }
-    }
-  },
-
-  i18n: {
-    defaultLocale: 'en',
-    locales: [
-      {
-        code: 'en',
-        file: 'en.json'
+          quality: 50,
+        },
       },
-      {
-        code: 'id',
-        file: 'id.json'
-      }
-    ],
-    langDir: 'locales/'
+    },
   },
-
-  colorMode: {
-    classSuffix: '',
-    preference: 'light'
-  },
-
-  vite: {
-    plugins: [tailwindcss()]
-  }
 })

@@ -1,44 +1,44 @@
 <script lang="ts" setup>
-  const { linkItems } = useNavLinks()
+const { linkItems } = useNavLinks()
 
-  const activeSectionIndex = useActiveSection()
-  const isAnimating = useState('isAnimating', () => false)
+const activeSectionIndex = useActiveSection()
+const isAnimating = useState('isAnimating', () => false)
 
-  function goToSection(index: number) {
-    if (isAnimating.value) return
-    activeSectionIndex.value = index
-    closeLinks()
+function goToSection(index: number) {
+  if (isAnimating.value) return
+  activeSectionIndex.value = index
+  closeLinks()
+}
+
+const showLinks = useState('showLinks', () => false)
+
+const isLargeScreen = useState(
+  'isLargeScreen',
+  () => typeof window !== 'undefined' && window.innerWidth >= 1024,
+)
+
+const checkScreenSize = () => {
+  if (typeof window !== 'undefined') {
+    isLargeScreen.value = window.innerWidth >= 1024
   }
+}
 
-  const showLinks = useState('showLinks', () => false)
+onMounted(() => {
+  checkScreenSize()
+  window.addEventListener('resize', checkScreenSize)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenSize)
+})
 
-  const isLargeScreen = useState(
-    'isLargeScreen',
-    () => typeof window !== 'undefined' && window.innerWidth >= 1024
-  )
-
-  const checkScreenSize = () => {
-    if (typeof window !== 'undefined') {
-      isLargeScreen.value = window.innerWidth >= 1024
-    }
-  }
-
-  onMounted(() => {
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
-  })
-  onUnmounted(() => {
-    window.removeEventListener('resize', checkScreenSize)
-  })
-
-  function handleBackdropClick() {
-    if (!isLargeScreen.value) {
-      showLinks.value = false
-    }
-  }
-  function closeLinks() {
+function handleBackdropClick() {
+  if (!isLargeScreen.value) {
     showLinks.value = false
   }
+}
+function closeLinks() {
+  showLinks.value = false
+}
 </script>
 
 <template>
@@ -64,7 +64,7 @@
           :aria-label="`go to ${linkItem.label} section`"
           class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-cyan-500 hover:text-cyan-500 focus:border-cyan-500 focus:text-cyan-500 lg:gap-2 lg:border-transparent"
           :class="{
-            'border-cyan-500 text-cyan-500': activeSectionIndex === linkItem.index
+            'border-cyan-500 text-cyan-500': activeSectionIndex === linkItem.index,
           }"
           @click="(goToSection(linkItem.index), closeLinks())"
         >
@@ -78,11 +78,11 @@
       </div>
       <div
         class="overlays fixed top-16 left-0 w-screen border-b border-white lg:hidden"
-      ></div>
+      />
 
       <div
         class="overlays fixed right-12 bottom-0 h-screen border-l border-white lg:right-32 lg:hidden"
-      ></div>
+      />
     </div>
   </Transition>
 </template>

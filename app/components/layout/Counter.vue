@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  const currentSection = useActiveSection()
-  const { linkItems } = useNavLinks()
+const currentSection = useActiveSection()
+const { linkItems } = useNavLinks()
 
-  const currentSectionLabel = computed(
-    () => linkItems.find((item) => item.index === currentSection.value)?.label
-  )
-  const currentSectionMax = computed(() => linkItems.length - 1)
+const currentSectionLabel = computed(
+  () => linkItems.find(item => item.index === currentSection.value)?.label,
+)
+const currentSectionMax = computed(() => linkItems.length - 1)
 </script>
 
 <template>

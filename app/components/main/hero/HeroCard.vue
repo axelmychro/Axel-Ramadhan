@@ -30,7 +30,7 @@
         >
           Junior Frontend Developer
         </h2>
-        <hr class="my-2 border-white" />
+        <hr class="my-2 border-white">
         <div
           class="[&>a]: flex flex-row items-center justify-center gap-4 md:justify-end [&>a]:rounded-sm [&>a]:p-2 [&>a>*]:size-8"
         >
@@ -75,10 +75,10 @@
         class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-linear-to-tr from-neutral-800 to-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-2 lg:justify-center lg:rounded-bl-none [&>i]:leading-none [&>i]:grayscale-75 [&>i]:transition [&>i]:hover:grayscale-0 [&>i]:sm:text-xl [&>i]:lg:text-4xl"
         aria-description="technologies: Node.js, Vue, Nuxt, JavaScript, Git, Figma, TypeScript, Tailwind CSS, Vite"
       >
-        <i class="devicon-vuejs-plain colored" aria-hidden="true"></i>
-        <i class="devicon-nuxt-original colored" aria-hidden="true"></i>
-        <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
-        <i class="devicon-tailwindcss-original colored" aria-hidden="true"></i>
+        <i class="devicon-vuejs-plain colored" aria-hidden="true" />
+        <i class="devicon-nuxt-original colored" aria-hidden="true" />
+        <i class="devicon-javascript-plain colored" aria-hidden="true" />
+        <i class="devicon-tailwindcss-original colored" aria-hidden="true" />
       </div>
     </div>
   </div>

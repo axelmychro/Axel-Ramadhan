@@ -1,90 +1,90 @@
 <script lang="ts" setup>
-  import Section from '~/components/Section.vue'
-  import AboutCard from './AboutCard.vue'
-  import AboutMagic from './AboutMagic.vue'
+import Section from '~/components/Section.vue'
+import AboutCard from './AboutCard.vue'
+import AboutMagic from './AboutMagic.vue'
 
-  import meImage from '/images/ID_Info_Update_Card.webp'
-  import philosophyImage from '/images/Curio_Written_in_Water.webp'
-  import styleImage from '/images/Curio_Punklorde_Mentality.webp'
+import meImage from '/images/ID_Info_Update_Card.webp'
+import philosophyImage from '/images/Curio_Written_in_Water.webp'
+import styleImage from '/images/Curio_Punklorde_Mentality.webp'
 
-  const { t } = useI18n()
+const { t } = useI18n()
 
-  useHead({
-    link: [
-      {
-        rel: 'preload',
-        as: 'image',
-        href: meImage,
-        type: 'image/webp'
-      },
-      {
-        rel: 'preload',
-        as: 'image',
-        href: philosophyImage,
-        type: 'image/webp'
-      },
-      {
-        rel: 'preload',
-        as: 'image',
-        href: styleImage,
-        type: 'image/webp'
-      }
-    ]
-  })
-
-  const aboutButtons = [
+useHead({
+  link: [
     {
-      id: 'me',
-      katakana: 'わたし',
-      image: meImage
+      rel: 'preload',
+      as: 'image',
+      href: meImage,
+      type: 'image/webp',
     },
     {
-      id: 'philosophy',
-      katakana: '哲学',
-      image: philosophyImage
+      rel: 'preload',
+      as: 'image',
+      href: philosophyImage,
+      type: 'image/webp',
     },
     {
-      id: 'style',
-      katakana: 'スタイル',
-      image: styleImage
-    }
-  ]
+      rel: 'preload',
+      as: 'image',
+      href: styleImage,
+      type: 'image/webp',
+    },
+  ],
+})
 
-  const showButtons = ref(true)
-  const buttons = aboutButtons
+const aboutButtons = [
+  {
+    id: 'me',
+    katakana: 'わたし',
+    image: meImage,
+  },
+  {
+    id: 'philosophy',
+    katakana: '哲学',
+    image: philosophyImage,
+  },
+  {
+    id: 'style',
+    katakana: 'スタイル',
+    image: styleImage,
+  },
+]
 
-  const hoveredButton = ref<(typeof aboutButtons)[0] | null>(null)
-  const selectedButton = ref<(typeof aboutButtons)[0] | null>(null)
+const showButtons = ref(true)
+const buttons = aboutButtons
 
-  const processedButton = computed(() => {
-    const button = selectedButton.value || hoveredButton.value
-    if (!button) return null
+const hoveredButton = ref<(typeof aboutButtons)[0] | null>(null)
+const selectedButton = ref<(typeof aboutButtons)[0] | null>(null)
 
-    return {
-      ...button,
-      description: t(`section.about.${button.id}.description`)
-    }
-  })
+const processedButton = computed(() => {
+  const button = selectedButton.value || hoveredButton.value
+  if (!button) return null
 
-  const activeButton = computed(
-    () => selectedButton.value || hoveredButton.value
-  )
-
-  const mouse = ref({ x: 0, y: 0 })
-  function handleMouseMove(event: MouseEvent) {
-    mouse.value = {
-      x: event.clientX,
-      y: event.clientY
-    }
+  return {
+    ...button,
+    description: t(`section.about.${button.id}.description`),
   }
+})
 
-  function showPreview(button: (typeof buttons)[0]) {
-    hoveredButton.value = button
-  }
+const activeButton = computed(
+  () => selectedButton.value || hoveredButton.value,
+)
 
-  function hidePreview() {
-    hoveredButton.value = null
+const mouse = ref({ x: 0, y: 0 })
+function handleMouseMove(event: MouseEvent) {
+  mouse.value = {
+    x: event.clientX,
+    y: event.clientY,
   }
+}
+
+function showPreview(button: (typeof buttons)[0]) {
+  hoveredButton.value = button
+}
+
+function hidePreview() {
+  hoveredButton.value = null
+}
 </script>
 
 <template>

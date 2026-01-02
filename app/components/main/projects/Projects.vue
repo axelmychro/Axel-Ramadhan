@@ -1,33 +1,33 @@
 <script setup lang="ts">
-  import Section from '~/components/Section.vue'
+import Section from '~/components/Section.vue'
 
-  const myGH = 'https://github.com/axelmychro/'
-  const projects = [
-    {
-      title: 'Priestess',
-      year: '2025',
-      date: '2025-09-28',
-      url: `${myGH}priestess`
-    },
-    {
-      title: 'Scraptab',
-      year: '2025',
-      date: '2025-11-9',
-      url: `${myGH}scraptab-web`
-    },
-    {
-      title: 'Wanderer',
-      year: '2025',
-      date: '2025-12-22',
-      url: `${myGH}Wanderer`
-    },
-    {
-      title: 'Template Vue Portfolio',
-      year: '2025',
-      date: '2025-12-27',
-      url: `${myGH}template-vue-portfolio`
-    }
-  ]
+const myGH = 'https://github.com/axelmychro/'
+const projects = [
+  {
+    title: 'Priestess',
+    year: '2025',
+    date: '2025-09-28',
+    url: `${myGH}priestess`,
+  },
+  {
+    title: 'Scraptab',
+    year: '2025',
+    date: '2025-11-9',
+    url: `${myGH}scraptab-web`,
+  },
+  {
+    title: 'Wanderer',
+    year: '2025',
+    date: '2025-12-22',
+    url: `${myGH}Wanderer`,
+  },
+  {
+    title: 'Template Vue Portfolio',
+    year: '2025',
+    date: '2025-12-27',
+    url: `${myGH}template-vue-portfolio`,
+  },
+]
 </script>
 
 <template>
@@ -44,7 +44,7 @@
         >
           <div
             class="absolute inset-0 -z-10 size-full -translate-x-full bg-gray-900 transition-transform group-hover:translate-x-0 group-focus:translate-x-0 dark:bg-gray-100"
-          ></div>
+          />
           <h2
             class="flex-1 text-2xl group-hover:text-gray-100 group-focus:text-gray-100 dark:group-hover:text-gray-900 dark:group-focus:text-gray-900"
           >

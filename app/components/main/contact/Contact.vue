@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import Section from '~/components/Section.vue'
+import Section from '~/components/Section.vue'
 </script>
 
 <template>
@@ -11,9 +11,13 @@
             <div
               class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
             >
-              <p class="leading-0 text-neutral-200">AR</p>
+              <p class="leading-0 text-neutral-200">
+                AR
+              </p>
             </div>
-            <p class="text-xl">Axel</p>
+            <p class="text-xl">
+              Axel
+            </p>
             <time>4:02</time>
           </div>
 
@@ -47,9 +51,13 @@
             <div
               class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
             >
-              <p class="leading-0 text-neutral-200">U</p>
+              <p class="leading-0 text-neutral-200">
+                U
+              </p>
             </div>
-            <p class="text-xl">You</p>
+            <p class="text-xl">
+              You
+            </p>
             <time>4:11</time>
           </div>
 
@@ -65,9 +73,13 @@
             <div
               class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
             >
-              <p class="leading-0 text-neutral-200">AR</p>
+              <p class="leading-0 text-neutral-200">
+                AR
+              </p>
             </div>
-            <p class="text-xl">Axel</p>
+            <p class="text-xl">
+              Axel
+            </p>
             <time>4:17</time>
           </div>
 
@@ -101,7 +113,9 @@
           <div
             class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"
           >
-            <p class="text-neutral-800">thanks for visiting my portfolio!</p>
+            <p class="text-neutral-800">
+              thanks for visiting my portfolio!
+            </p>
           </div>
         </div>
       </div>
