@@ -52,17 +52,17 @@ function closeLinks() {
   >
     <div
       v-show="showLinks || isLargeScreen"
-      class="absolute inset-0 flex h-screen w-screen bg-black/90 pt-16 pr-12 lg:static lg:h-fit lg:w-full lg:bg-transparent lg:p-0"
+      class="fixed inset-0 flex size-full bg-black/90 pt-16 pr-12 lg:static  lg:bg-transparent lg:p-0"
       @click="handleBackdropClick"
     >
       <div
-        class="flex size-full flex-col justify-start p-4 lg:mx-4 lg:h-fit lg:w-full lg:flex-row lg:items-center lg:justify-end lg:gap-2 lg:p-0"
+        class="flex size-full flex-col p-4 lg:flex-row lg:items-center lg:gap-8"
       >
         <button
           v-for="linkItem in linkItems"
           :key="linkItem.index"
           :aria-label="`go to ${linkItem.label} section`"
-          class="font-oswald animate-slide flex flex-row items-center justify-between border-b-2 p-2 text-lg leading-0 uppercase transition-colors not-lg:text-gray-100 hover:border-cyan-500 hover:text-cyan-500 focus:border-cyan-500 focus:text-cyan-500 lg:gap-2 lg:border-transparent"
+          class="font-oswald tracking-tight font-bold animate-slide flex flex-row leading-none items-center justify-between border-b-2 py-2 text-lg lg:text-2xl uppercase transition-colors not-lg:text-zinc-100 hover:border-cyan-500 hover:text-cyan-500 focus:border-cyan-500 focus:text-cyan-500 lg:gap-2 lg:border-transparent"
           :class="{
             'border-cyan-500 text-cyan-500': activeSectionIndex === linkItem.index,
           }"

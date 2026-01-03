@@ -7,19 +7,8 @@ defineProps<{
 <template>
   <section
     :id="id"
-    class="relative z-0 min-h-screen min-w-screen overflow-hidden pt-16 pr-12 pb-16 lg:pr-32"
+    class="relative min-h-screen min-w-screen overflow-hidden pt-16 pr-12 pb-16 lg:pr-32"
   >
-    <h2
-      class="font-oswald pointer-events-none absolute top-0 left-0 -z-10 text-8xl leading-none font-bold whitespace-nowrap uppercase opacity-10 select-none [writing-mode:vertical-lr]"
-      aria-hidden="true"
-    >
-      ~/{{ id }}
-    </h2>
     <slot />
-    <small
-      class="font-dela-gothic-one pointer-events-none absolute right-2 bottom-2 -z-10 text-xs leading-none whitespace-nowrap lowercase opacity-90 select-none sm:text-sm md:text-base lg:text-lg xl:text-xl"
-    >
-      {{ $t(`section.${id}.txt`) }}
-    </small>
   </section>
 </template>

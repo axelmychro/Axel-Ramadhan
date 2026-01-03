@@ -33,17 +33,17 @@ const colorButtons = ref([
   {
     id: 'main_background',
     name: colours.mainBackground,
-    bgClass: 'bg-gray-800',
-    borderClass: 'border-gray-700',
-    textClass: 'text-gray-50',
+    bgClass: 'bg-zinc-100',
+    borderClass: 'border-zinc-300',
+    textClass: 'text-zinc-900',
     hexColor: '#1f2937',
   },
   {
     id: 'sub_background',
     name: colours.subBackground,
-    bgClass: 'bg-neutral-800',
-    borderClass: 'border-neutral-700',
-    textClass: 'text-neutral-50',
+    bgClass: 'bg-zinc-900',
+    borderClass: 'border-zinc-700',
+    textClass: 'text-zinc-10',
     hexColor: '#262626',
   },
 ])
@@ -83,7 +83,7 @@ const fontLinks = [
     name: fonts.section,
     url: `${fontsSpecimen}Oswald`,
     class:
-      'font-oswald uppercase text-lg text-neutral-900 dark:text-neutral-100',
+      'font-oswald uppercase text-lg text-zinc-900 dark:text-zinc-100',
   },
   {
     name: fonts.paragraph,

@@ -10,7 +10,7 @@
     "scoldme": "pnpm install && pnpm lint && pnpm typecheck",
     "build": "nuxt cleanup && nuxt build",
     "preview": "nuxt preview",
-    "precommit": "pnpm install && pnpm scoldme && pnpm build && pnpm preview"
+    "precommit": "pnpm scoldme && pnpm build && pnpm preview"
   },
   "dependencies": {
     "nuxt": "^4.2.1",

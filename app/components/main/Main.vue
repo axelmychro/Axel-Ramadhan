@@ -21,7 +21,7 @@ type SectionEntry = {
 
 const sectionComponents: SectionEntry[] = [
   { component: Hero, eager: true },
-  { component: Projects },
+  { component: Projects, eager: true },
   { component: About },
   { component: Timeline },
   { component: Contact },

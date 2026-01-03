@@ -23,21 +23,21 @@ function toggleSound() {
 
 <template>
   <div
-    class="flex flex-1 flex-row items-center justify-end gap-2 px-4 lg:flex-none lg:p-0"
+    class="flex shrink-0 flex-row items-center justify-center min-w-32 gap-2 h-full"
   >
     <button
+      class="relative cursor-pointer transition-transform active:scale-90 size-fit"
       type="button"
       :aria-label="`Toggle current language, ${locale === 'en' ? 'EN (English)' : 'ID (Bahasa Indonesia)'}, to ${locale === 'en' ? 'ID (Bahasa Indonesia)' : 'EN (English)'}`"
-      class="relative cursor-pointer transition-transform active:scale-90"
       @click="toggleLocale"
     >
       <lucide-languages
         class="size-8"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
       />
       <span
         class="font-fira-code absolute bottom-0 left-0 text-xs leading-none uppercase opacity-50"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
         aria-hidden="true"
       >
         {{ locale }}
@@ -47,42 +47,42 @@ function toggleSound() {
     <button
       type="button"
       :aria-label="`toggle theme to ${colorMode.value === 'dark' ? 'light' : 'dark'}`"
-      class="cursor-pointer transition-transform active:scale-90"
+      class="cursor-pointer transition-transform active:scale-90 size-fit"
       @click="toggleTheme"
     >
       <lucide-moon
         v-if="colorMode.value === 'dark'"
         class="size-8"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
       />
       <lucide-sun
         v-else-if="colorMode.value === 'light'"
         class="size-8"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
       />
       <lucide-orbit
         v-else
         class="size-8"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
       />
     </button>
 
     <button
       type="button"
       :aria-label="`toggle sound ${sound ? 'off' : 'on'}`"
-      class="cursor-pointer transition-transform active:scale-90"
+      class="cursor-pointer transition-transform active:scale-90 size-fit"
       :class="sound ? 'opacity-100' : 'opacity-50'"
       @click="toggleSound"
     >
       <lucide-headphone-off
         v-if="sound === false"
         class="size-8"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
       />
       <lucide-headphones
         v-else-if="sound === true"
         class="size-8"
-        :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+        :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
       />
     </button>
   </div>

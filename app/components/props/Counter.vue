@@ -40,4 +40,16 @@ const currentSectionMax = computed(() => linkItems.length - 1)
       </div>
     </div>
   </div>
+  <h2
+    class="font-oswald pointer-events-none absolute tracking-tight top-0 left-0 -z-10 text-8xl leading-none font-bold whitespace-nowrap uppercase opacity-20 select-none [writing-mode:vertical-lr]"
+    aria-hidden="true"
+  >
+    ~/{{ $t(`nav.${currentSectionLabel}`) }}
+  </h2>
+  <small
+    class="font-dela-gothic-one pointer-events-none absolute right-16 lg:right-32 bottom-16 -z-10 text-xs leading-relaxed whitespace-nowrap lowercase opacity-80 select-none sm:text-sm md:text-base lg:text-lg xl:text-xl"
+    aria-hidden="true"
+  >
+    {{ $t(`section.${currentSectionLabel}.txt`) }}
+  </small>
 </template>

@@ -131,8 +131,8 @@ function hidePreview() {
         class="relative flex size-full min-w-full flex-col gap-8 p-2 backdrop-blur-xs transition duration-1000 lg:min-w-auto lg:p-8"
         :class="
           showButtons
-            ? 'rounded-xs bg-neutral-800/40 text-neutral-100 opacity-0 lg:opacity-100 dark:bg-neutral-200/40 dark:text-neutral-900'
-            : 'rounded-none bg-neutral-800/10 opacity-100 dark:bg-neutral-200/10'
+            ? 'rounded-xs bg-zinc-800/40 text-zinc-100 opacity-0 lg:opacity-100 dark:bg-zinc-200/40 dark:text-zinc-900'
+            : 'rounded-none bg-zinc-800/10 opacity-100 dark:bg-zinc-200/10'
         "
       >
         <p
@@ -147,12 +147,12 @@ function hidePreview() {
         <button
           type="button"
           aria-label="close current subsection"
-          class="absolute top-2 right-2 flex cursor-pointer bg-neutral-900 transition-transform lg:top-8 lg:right-8 dark:bg-neutral-100"
+          class="absolute top-2 right-2 flex cursor-pointer bg-zinc-900 transition-transform lg:top-8 lg:right-8 dark:bg-zinc-100"
           :class="showButtons ? 'scale-0 rounded-xs' : 'scale-100 rounded-none'"
           @click="((showButtons = true), (selectedButton = null))"
         >
           <LucideChevronLeft
-            class="size-8 text-neutral-100 dark:text-neutral-900"
+            class="size-8 text-zinc-100 dark:text-zinc-900"
           />
         </button>
 

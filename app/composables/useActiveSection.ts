@@ -1,1 +1,1 @@
-export const useActiveSection = () => useState <number> ('activeSection', () => 0)
+export const useActiveSection = () => useState<number>('activeSection', () => 0)

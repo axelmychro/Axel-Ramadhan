@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-neutral-950 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+    class="flex h-fit w-full max-w-xs flex-col items-stretch justify-center rounded-md bg-zinc-950 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
   >
     <div class="flex flex-col md:flex-row">
       <div
-        class="flex max-h-32 min-h-32 min-w-32 items-center justify-center rounded-t-md bg-neutral-950 md:max-h-full md:max-w-full md:rounded-tr-none"
+        class="flex max-h-32 min-h-32 min-w-32 items-center justify-center rounded-t-md bg-zinc-950 md:max-h-full md:max-w-full md:rounded-tr-none"
       >
         <NuxtImg
           src="/images/imathe.webp"
@@ -18,10 +18,10 @@
         class="flex flex-1 flex-col bg-linear-to-tr from-purple-900 via-purple-700 to-purple-800 p-4 md:rounded-tr-md"
       >
         <h1
-          class="text-center text-xl leading-relaxed text-neutral-300 sm:text-2xl md:text-start"
+          class="text-center text-xl leading-relaxed text-zinc-300 sm:text-2xl md:text-start"
         >
           {{ $t('section.home.card.greeting') }}
-          <span class="inline-block text-3xl text-neutral-100 sm:text-4xl">
+          <span class="inline-block text-3xl text-zinc-100 sm:text-4xl">
             Axel Ramadhan!
           </span>
         </h1>
@@ -62,17 +62,17 @@
 
     <div class="flex flex-col lg:flex-row">
       <div
-        class="flex flex-1 items-center justify-center bg-linear-to-tl from-neutral-700 via-neutral-800 to-neutral-900 p-4 lg:rounded-bl-md"
+        class="flex flex-1 items-center justify-center bg-linear-to-tl from-zinc-700 via-zinc-800 to-zinc-900 p-4 lg:rounded-bl-md"
       >
         <p
-          class="text-center text-lg leading-relaxed text-neutral-200 sm:text-xl md:text-start"
+          class="text-center text-lg leading-relaxed text-zinc-200 sm:text-xl md:text-start"
         >
           {{ $t('section.home.card.bio') }}
         </p>
       </div>
 
       <div
-        class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-linear-to-tr from-neutral-800 to-neutral-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-2 lg:justify-center lg:rounded-bl-none [&>i]:leading-none [&>i]:grayscale-75 [&>i]:transition [&>i]:hover:grayscale-0 [&>i]:sm:text-xl [&>i]:lg:text-4xl"
+        class="flex shrink-0 flex-row place-items-center gap-2 rounded-b-md bg-linear-to-tr from-zinc-800 to-zinc-950 p-2 md:justify-end lg:grid lg:aspect-square lg:grid-cols-2 lg:justify-center lg:rounded-bl-none [&>i]:leading-none [&>i]:grayscale-75 [&>i]:transition [&>i]:hover:grayscale-0 [&>i]:sm:text-xl [&>i]:lg:text-4xl"
         aria-description="technologies: Node.js, Vue, Nuxt, JavaScript, Git, Figma, TypeScript, Tailwind CSS, Vite"
       >
         <i class="devicon-vuejs-plain colored" aria-hidden="true" />

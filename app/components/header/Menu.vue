@@ -8,10 +8,10 @@ function toggleLinks() {
 <template>
   <button
     type="button"
+    class="flex cursor-pointer items-center justify-center lg:hidden min-h-full min-w-12"
     :aria-label="showLinks ? 'close menu' : 'open menu'"
     :aria-expanded="showLinks"
-    class="flex cursor-pointer items-center justify-center lg:hidden"
-    :class="showLinks ? 'text-gray-100' : 'text-inherit'"
+    :class="showLinks ? 'text-zinc-100' : 'text-inherit'"
     @click="toggleLinks"
   >
     <lucide-menu class="size-8" aria-hidden="true" />

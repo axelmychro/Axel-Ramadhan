@@ -9,9 +9,9 @@ import Section from '~/components/Section.vue'
         <div class="flex flex-col gap-2">
           <div class="flex items-end gap-2">
             <div
-              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
+              class="flex aspect-square size-8 items-center justify-center rounded-full bg-zinc-800"
             >
-              <p class="leading-0 text-neutral-200">
+              <p class="leading-0 text-zinc-200">
                 AR
               </p>
             </div>
@@ -24,7 +24,7 @@ import Section from '~/components/Section.vue'
           <div
             class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"
           >
-            <p class="text-neutral-800">
+            <p class="text-zinc-800">
               since you've reached this part, why not reach me as well? let's
               talk.
             </p>
@@ -33,7 +33,7 @@ import Section from '~/components/Section.vue'
           <div
             class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"
           >
-            <p class="text-neutral-800">
+            <p class="text-zinc-800">
               <a
                 class="text-cyan-800 underline"
                 href="mailto:axelmychro@gmail.com"
@@ -49,9 +49,9 @@ import Section from '~/components/Section.vue'
         <div class="flex flex-col gap-2">
           <div class="flex items-end gap-2 self-end">
             <div
-              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
+              class="flex aspect-square size-8 items-center justify-center rounded-full bg-zinc-800"
             >
-              <p class="leading-0 text-neutral-200">
+              <p class="leading-0 text-zinc-200">
                 U
               </p>
             </div>
@@ -62,7 +62,7 @@ import Section from '~/components/Section.vue'
           </div>
 
           <p
-            class="max-w-[90%] self-end rounded-xl rounded-br-none bg-cyan-500 p-2 text-neutral-800"
+            class="max-w-[90%] self-end rounded-xl rounded-br-none bg-cyan-500 p-2 text-zinc-800"
           >
             that's cool, but are you okay with casual talks?
           </p>
@@ -71,9 +71,9 @@ import Section from '~/components/Section.vue'
         <div class="flex flex-col gap-2">
           <div class="flex items-end gap-2">
             <div
-              class="flex aspect-square size-8 items-center justify-center rounded-full bg-neutral-800"
+              class="flex aspect-square size-8 items-center justify-center rounded-full bg-zinc-800"
             >
-              <p class="leading-0 text-neutral-200">
+              <p class="leading-0 text-zinc-200">
                 AR
               </p>
             </div>
@@ -86,7 +86,7 @@ import Section from '~/components/Section.vue'
           <div
             class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"
           >
-            <p class="text-neutral-800">
+            <p class="text-zinc-800">
               of course! you wanna just talk about games, it's fine
             </p>
           </div>
@@ -94,7 +94,7 @@ import Section from '~/components/Section.vue'
           <div
             class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"
           >
-            <p class="text-neutral-800">
+            <p class="text-zinc-800">
               <a
                 class="text-purple-700"
                 target="_blank"
@@ -113,7 +113,7 @@ import Section from '~/components/Section.vue'
           <div
             class="max-w-[90%] self-start rounded-xl rounded-tl-none bg-purple-300 p-2"
           >
-            <p class="text-neutral-800">
+            <p class="text-zinc-800">
               thanks for visiting my portfolio!
             </p>
           </div>
