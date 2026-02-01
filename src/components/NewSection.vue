@@ -46,7 +46,6 @@ onUnmounted(() => observer?.disconnect())
       :class="props.header"
       class="bg-primary absolute top-0 -z-10 min-w-full shrink-0"
     />
-
     <slot />
   </section>
 </template>
