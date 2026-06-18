@@ -30,7 +30,7 @@ export const useProjects = (projects, links) => {
 
   const repositoryUrl = computed(() => {
     if (!latestProject.value?.repository) return null
-    return `${githubUrl}${latestProject.value.repository}`
+    return `${githubUrl}/${latestProject.value.repository}`
   })
 
   const daysAgo = computed(() => {
