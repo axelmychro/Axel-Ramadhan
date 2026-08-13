@@ -1,10 +1,6 @@
 <script setup>
-import { useDark } from '@vueuse/core'
-
 import { profile } from '../data/profile'
 import { site } from '../data/site'
-
-const isDark = useDark()
 
 const newAboutCollection = [
   {
@@ -32,41 +28,11 @@ const newAboutCollection = [
       :icon="item.icon"
     >
       <template v-if="item.id === 'about-me'">
-        <p>
-          Just a computer science student who love websites a little too much.
-        </p>
-        <p>
-          My equivalent of people's .txt file would be .html, if that even makes
-          sense. Markdown exists, but that
-          <i>feels</i> like cheating... I want to style everything myself,
-          <b>breakpoint by breakpoint</b>.
-        </p>
-        <p>
-          I also find optimizing SEO somewhat fun, given that I can rest my eyes
-          from jarring lines of codes and design a summary image in Canva.
-        </p>
+        <p>Computer science undergraduate, makes websites and apps.</p>
       </template>
 
       <template v-else-if="item.id === 'about-site'">
-        <p>
-          Have you noticed the familiar accent? This site is essentially a love
-          letter for
-          {{ isDark ? 'TypeScript' : 'JavaScript' }} and the UI is me trying to
-          copy
-          <a
-            class="underline"
-            href="https://www.gryphline.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Gryphline</a>
-          styles.
-        </p>
-        <p>
-          Design aside, your ever-presence here is thanks to
-          <b>Vue wizardry</b> that spices my
-          <code>div Soups&trade;</code> nicely and thus finally be able to
-          <i>hocus focus trulala</i> this very section.
-        </p>
+        <p>Just a portfolio</p>
       </template>
     </NewArticle>
   </div>

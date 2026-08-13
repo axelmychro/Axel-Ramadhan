@@ -1,11 +1,7 @@
 <script setup>
 import CTAButton from '../components/CTAButton.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import { useProjects } from '../composables/useProjects'
 import { profile } from '../data/profile'
-import { projects } from '../data/projects'
-
-const { latestProject } = useProjects(projects, profile.links)
 </script>
 
 <template>
@@ -37,8 +33,7 @@ const { latestProject } = useProjects(projects, profile.links)
           content="#projects"
         >
           <span class="text-base tracking-wide text-pretty">
-            View latest:
-            <b class="font-bold">{{ latestProject.title }}</b>
+            View projects
           </span>
         </CTAButton>
 
@@ -55,7 +50,7 @@ const { latestProject } = useProjects(projects, profile.links)
 
         <CTAButton content="#contact">
           <span class="text-base tracking-wide text-pretty">
-            I'm open for collaboration, let's talk
+            Open for collaboration
           </span>
         </CTAButton>
       </div>

@@ -2,7 +2,7 @@ import profilePicture from '/profile.webp'
 
 export const profile = {
   name: 'Axel Ramadhan',
-  bio: 'CS student, frontend developer, and Vue.js enthusiast',
+  bio: 'CS student',
   picture: profilePicture,
 
   links: [
