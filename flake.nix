@@ -1,23 +1,32 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
   outputs =
-    { self, nixpkgs, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
-    in
     {
-      devShells.${system}.default = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          nodejs
-          pnpm
-        ];
-        shellHook = ''
-          export EDITOR="${pkgs.nvim}/bin/nvim"
-
-          printf '%s\n\n%s\n' "$(node -v)" "$(pnpm -v)"
-        '';
-      };
-    };
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+        };
+      in
+      with pkgs;
+      {
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            nodejs
+            pnpm
+          ];
+          shellHook = ''
+            printf 'node-%s\npnpm-%s' "$(node -v)" "$(pnpm -v)"
+          '';
+        };
+      }
+    );
 }
